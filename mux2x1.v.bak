@@ -1,0 +1,17 @@
+module mux2x1 (
+    input in_a , in_b , select , enable
+
+    output out
+);
+
+    not not0 (notSelect , select);
+
+    and and0 (and0_w , in_a , notSelect);
+    and and1 (and1_w , in_b , select);
+
+    or or0 (out_w , and0_w , and1_w);
+
+    //enable 
+    and andEnable (out , out_w , enable);
+    
+endmodule

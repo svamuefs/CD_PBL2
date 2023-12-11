@@ -1,0 +1,949 @@
+Analysis & Synthesis report for batalha_naval
+Mon Dec 11 07:44:40 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: display_decoder:displayDecoder
+ 11. Port Connectivity Checks: "mux8x1:xCoordMuxLedRgb"
+ 12. Port Connectivity Checks: "d_flipflop:hits_map_register[34]"
+ 13. Port Connectivity Checks: "d_flipflop:hits_map_register[33]"
+ 14. Port Connectivity Checks: "d_flipflop:hits_map_register[32]"
+ 15. Port Connectivity Checks: "d_flipflop:hits_map_register[31]"
+ 16. Port Connectivity Checks: "d_flipflop:hits_map_register[30]"
+ 17. Port Connectivity Checks: "d_flipflop:hits_map_register[29]"
+ 18. Port Connectivity Checks: "d_flipflop:hits_map_register[28]"
+ 19. Port Connectivity Checks: "d_flipflop:hits_map_register[27]"
+ 20. Port Connectivity Checks: "d_flipflop:hits_map_register[26]"
+ 21. Port Connectivity Checks: "d_flipflop:hits_map_register[25]"
+ 22. Port Connectivity Checks: "d_flipflop:hits_map_register[24]"
+ 23. Port Connectivity Checks: "d_flipflop:hits_map_register[23]"
+ 24. Port Connectivity Checks: "d_flipflop:hits_map_register[22]"
+ 25. Port Connectivity Checks: "d_flipflop:hits_map_register[21]"
+ 26. Port Connectivity Checks: "d_flipflop:hits_map_register[20]"
+ 27. Port Connectivity Checks: "d_flipflop:hits_map_register[19]"
+ 28. Port Connectivity Checks: "d_flipflop:hits_map_register[18]"
+ 29. Port Connectivity Checks: "d_flipflop:hits_map_register[17]"
+ 30. Port Connectivity Checks: "d_flipflop:hits_map_register[16]"
+ 31. Port Connectivity Checks: "d_flipflop:hits_map_register[15]"
+ 32. Port Connectivity Checks: "d_flipflop:hits_map_register[14]"
+ 33. Port Connectivity Checks: "d_flipflop:hits_map_register[13]"
+ 34. Port Connectivity Checks: "d_flipflop:hits_map_register[12]"
+ 35. Port Connectivity Checks: "d_flipflop:hits_map_register[11]"
+ 36. Port Connectivity Checks: "d_flipflop:hits_map_register[10]"
+ 37. Port Connectivity Checks: "d_flipflop:hits_map_register[9]"
+ 38. Port Connectivity Checks: "d_flipflop:hits_map_register[8]"
+ 39. Port Connectivity Checks: "d_flipflop:hits_map_register[7]"
+ 40. Port Connectivity Checks: "d_flipflop:hits_map_register[6]"
+ 41. Port Connectivity Checks: "d_flipflop:hits_map_register[5]"
+ 42. Port Connectivity Checks: "d_flipflop:hits_map_register[4]"
+ 43. Port Connectivity Checks: "d_flipflop:hits_map_register[3]"
+ 44. Port Connectivity Checks: "d_flipflop:hits_map_register[2]"
+ 45. Port Connectivity Checks: "d_flipflop:hits_map_register[1]"
+ 46. Port Connectivity Checks: "d_flipflop:hits_map_register[0]"
+ 47. Port Connectivity Checks: "demux1x8:xCoordDemuxHitsMap"
+ 48. Port Connectivity Checks: "display_decoder:displayDecoder"
+ 49. Port Connectivity Checks: "mux4x1:displayCode[2]"
+ 50. Port Connectivity Checks: "mux4x1:displayCode[1]"
+ 51. Port Connectivity Checks: "mux4x1:displayCode[0]"
+ 52. Port Connectivity Checks: "sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0"
+ 53. Port Connectivity Checks: "debouncer:debouncerConfirmAttack|t_flipflop:tff0"
+ 54. Port Connectivity Checks: "sync_freq_divider:freq_div_1|t_flipflop:tff0"
+ 55. Analysis & Synthesis Equations
+ 56. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-----------------------------+------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Dec 11 07:44:40 2023          ;
+; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name               ; batalha_naval                                  ;
+; Top-level Entity Name       ; batalha_naval                                  ;
+; Family                      ; MAX II                                         ;
+; Total logic elements        ; 222                                            ;
+; Total pins                  ; 37                                             ;
+; Total virtual pins          ; 0                                              ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
++-----------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; batalha_naval      ; batalha_naval      ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+; map_decoder_5maps.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v ;         ;
+; sync_3b_counter.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v   ;         ;
+; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v ;         ;
+; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/t_flipflop.v        ;         ;
+; register5bitSIPO.v               ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v  ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/display_decoder.v   ;         ;
+; demux1x2.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x2.v          ;         ;
+; demux1x4.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x4.v          ;         ;
+; mux2x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux2x1.v            ;         ;
+; demux1x8.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x8.v          ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/debouncer.v         ;         ;
+; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux8x1.v            ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux4x1.v            ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/d_flipflop.v        ;         ;
+; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/batalha_naval.v     ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 222      ;
+;     -- Combinational with no register       ; 164      ;
+;     -- Register only                        ; 7        ;
+;     -- Combinational with a register        ; 51       ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 131      ;
+;     -- 3 input functions                    ; 36       ;
+;     -- 2 input functions                    ; 14       ;
+;     -- 1 input functions                    ; 3        ;
+;     -- 0 input functions                    ; 31       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 222      ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 58       ;
+;                                             ;          ;
+; Total registers                             ; 58       ;
+; I/O pins                                    ; 37       ;
+; Maximum fan-out node                        ; orEnable ;
+; Maximum fan-out                             ; 42       ;
+; Total fan-out                               ; 812      ;
+; Average fan-out                             ; 3.14     ;
++---------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                 ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Entity Name       ; Library Name ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
+; |batalha_naval                              ; 222 (15)    ; 58           ; 0          ; 37   ; 0            ; 164 (15)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
+;    |d_flipflop:hits_map_register[0]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[0]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[10]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[10]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[11]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[11]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[12]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[12]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[14]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[14]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[15]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[15]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[16]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[16]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[17]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[17]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[18]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[18]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[19]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[19]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[1]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[1]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[21]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[21]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[22]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[22]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[23]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[23]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[24]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[24]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[25]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[25]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[26]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[26]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[27]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[27]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[28]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[28]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[29]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[29]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[2]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[2]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[30]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[30]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[31]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[31]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[32]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[32]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[33]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[33]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[34]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[34]                               ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[3]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[3]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[4]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[4]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[7]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[7]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[8]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[8]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:hits_map_register[9]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[9]                                ; d_flipflop        ; work         ;
+;    |d_flipflop:saveMapCode[0]|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:saveMapCode[0]                                      ; d_flipflop        ; work         ;
+;    |d_flipflop:saveMapCode[1]|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:saveMapCode[1]                                      ; d_flipflop        ; work         ;
+;    |d_flipflop:saveMapCode[2]|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:saveMapCode[2]                                      ; d_flipflop        ; work         ;
+;    |debouncer:debouncerConfirmAttack|       ; 5 (2)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack                               ; debouncer         ; work         ;
+;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff0               ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff1               ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff2               ; t_flipflop        ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[1]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[4]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |display_decoder:displayDecoder|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
+;    |map_decoder_5maps:mapDecoder|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
+;    |mux2x1:codeSelect[0]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[0]                                           ; mux2x1            ; work         ;
+;    |mux2x1:codeSelect[1]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[1]                                           ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[0]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[0]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[1]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[1]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[2]|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[2]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[3]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[3]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[4]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[4]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[5]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[5]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[6]|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[6]                                   ; mux2x1            ; work         ;
+;    |mux4x1:displayCode[0]|                  ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[0]                                          ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[0]|mux2x1:mux2                              ; mux2x1            ; work         ;
+;    |mux4x1:displayCode[1]|                  ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[1]                                          ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[1]|mux2x1:mux2                              ; mux2x1            ; work         ;
+;    |mux4x1:displayCode[2]|                  ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]                                          ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]|mux2x1:mux2                              ; mux2x1            ; work         ;
+;    |mux8x1:xCoordMuxLedRgb|                 ; 37 (0)      ; 0            ; 0          ; 0    ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb                                         ; mux8x1            ; work         ;
+;       |mux2x1:mux_2|                        ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
+;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
+;          |mux2x1:mux2|                      ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0|mux2x1:mux2                ; mux2x1            ; work         ;
+;    |register5bitSIPO:registerMatrixDisplay| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay                         ; register5bitSIPO  ; work         ;
+;       |d_flipflop:d_flipflop_0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0 ; d_flipflop        ; work         ;
+;       |d_flipflop:d_flipflop_1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1 ; d_flipflop        ; work         ;
+;       |d_flipflop:d_flipflop_2|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2 ; d_flipflop        ; work         ;
+;       |d_flipflop:d_flipflop_3|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3 ; d_flipflop        ; work         ;
+;       |d_flipflop:d_flipflop_4|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4 ; d_flipflop        ; work         ;
+;    |sync_3b_counter:counterMatrixDisplay|   ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_3b_counter:counterMatrixDisplay                           ; sync_3b_counter   ; work         ;
+;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0           ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1           ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2           ; t_flipflop        ; work         ;
+;    |sync_freq_divider:freq_div_1|           ; 16 (3)      ; 13           ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 13 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1                                   ; sync_freq_divider ; work         ;
+;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff0                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff10|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff10                  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff11|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff11                  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff12|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff12                  ; t_flipflop        ; work         ;
+;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff1                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff2                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff3|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff3                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff4|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff4                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff5|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff5                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff6|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff6                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff7|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff7                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff8|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff8                   ; t_flipflop        ; work         ;
+;       |t_flipflop:tff9|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|sync_freq_divider:freq_div_1|t_flipflop:tff9                   ; t_flipflop        ; work         ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; d_flipflop:hits_map_register[5]|out   ; Lost fanout        ;
+; d_flipflop:hits_map_register[6]|out   ; Lost fanout        ;
+; d_flipflop:hits_map_register[13]|out  ; Lost fanout        ;
+; d_flipflop:hits_map_register[20]|out  ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 58    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display_decoder:displayDecoder ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; DATA_WIDTH     ; 28    ; Signed Integer                                     ;
+; COLUNE_SIZE    ; 7     ; Signed Integer                                     ;
+; TOTAL_COLUNES  ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux8x1:xCoordMuxLedRgb"                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_h ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[34]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[33]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[32]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[31]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[30]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[29]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[28]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[27]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[26]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[25]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[24]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[23]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[22]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[21]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[20]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[19]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[18]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[17]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[16]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[15]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[14]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[13]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[12]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[11]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[10]" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[9]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[8]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[7]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[6]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[5]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[4]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[3]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[2]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[1]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "d_flipflop:hits_map_register[0]" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d    ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "demux1x8:xCoordDemuxHitsMap"                                                                              ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; out_h ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_decoder:displayDecoder"                                                                                                                           ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                             ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary_code ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "binary_code[3..3]" will be connected to GND. ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode[2]"                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode[1]"                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode[0]"                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncerConfirmAttack|t_flipflop:tff0" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync_freq_divider:freq_div_1|t_flipflop:tff0" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; t    ; Input ; Info     ; Stuck at VCC                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/CD/CD_PBL_2 - Copia/output_files/batalha_naval.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Mon Dec 11 07:44:29 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
+Info (16303): Aggressive Area optimization mode selected -- logic area will be prioritized at the potential cost of reduced timing performance
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file map_decoder_5maps.v
+    Info (12023): Found entity 1: map_decoder_5maps File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sync_3b_counter.v
+    Info (12023): Found entity 1: sync_3b_counter File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sync_freq_divider.v
+    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
+    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_2 - Copia/t_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register5bitsipo.v
+    Info (12023): Found entity 1: register5bitSIPO File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file display_decoder.v
+    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_2 - Copia/display_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux1x2.v
+    Info (12023): Found entity 1: demux1x2 File: C:/CD/CD_PBL_2 - Copia/demux1x2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux1x4.v
+    Info (12023): Found entity 1: demux1x4 File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2x1.v
+    Info (12023): Found entity 1: mux2x1 File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file map_decoder.v
+    Info (12023): Found entity 1: map_decoder File: C:/CD/CD_PBL_2 - Copia/map_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux1x8.v
+    Info (12023): Found entity 1: demux1x8 File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux8x1.v
+    Info (12023): Found entity 1: mux8x1 File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
+    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 1
+Warning (12019): Can't analyze file -- file freq_div.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
+    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2 - Copia/d_flipflop.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(141): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 141
+Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
+    Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(9): created implicit net for "enable" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(111): created implicit net for "nor110Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(112): created implicit net for "nor111Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(127): created implicit net for "nor120Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(129): created implicit net for "and120Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 129
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(137): created implicit net for "nor130Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 137
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(13): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(23): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(28): created implicit net for "and0Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(35): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 80
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(21): created implicit net for "notEnable" File: C:/CD/CD_PBL_2 - Copia/display_decoder.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at demux1x2.v(6): created implicit net for "notSelect" File: C:/CD/CD_PBL_2 - Copia/demux1x2.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(9): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(11): created implicit net for "enable0" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(12): created implicit net for "enable1" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(7): created implicit net for "notSelect" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(9): created implicit net for "and0_w" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(10): created implicit net for "and1_w" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(9): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(11): created implicit net for "enable1" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(12): created implicit net for "enable2" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(6): created implicit net for "clk_w" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(6): created implicit net for "max" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "notButton" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(14): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(23): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(26): created implicit net for "and2Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(33): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(36): created implicit net for "and3Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(18): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(29): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(15): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(23): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(20): created implicit net for "enable" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(22): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(25): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(31): created implicit net for "clk" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(38): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(49): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(127): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(145): created implicit net for "notYCoordCode2" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(147): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(246): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 246
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(249): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 249
+Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 32
+Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:freq_div_1|t_flipflop:tff0" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 12
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 39
+Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 51
+Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 63
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 11
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode[0]" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 85
+Info (12128): Elaborating entity "mux2x1" for hierarchy "mux4x1:displayCode[0]|mux2x1:mux0" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 16
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 94
+Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 123
+Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:xCoordDemuxHitsMap" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 141
+Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 23
+Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 21
+Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:xCoordMuxLedRgb" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 247
+Info (13014): Ignored 45 buffer(s)
+    Info (13019): Ignored 45 SOFT buffer(s)
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 259 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 222 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Mon Dec 11 07:44:40 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:30
+
+

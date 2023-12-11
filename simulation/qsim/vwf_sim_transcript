@@ -1,0 +1,228 @@
+Determining the location of the ModelSim executable...
+
+Using: C:/intelFPGA_lite/22.1std/modelsim_ase/win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source="C:/CD/CD_PBL_2 - Copia/Waveform.vwf" --testbench_file="C:/CD/CD_PBL_2 - Copia/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Mon Dec 11 07:31:37 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source="C:/CD/CD_PBL_2 - Copia/Waveform.vwf" --testbench_file="C:/CD/CD_PBL_2 - Copia/simulation/qsim/Waveform.vwf.vt"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+ when writing test bench files
+
+t bench files
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/CD/CD_PBL_2 - Copia/simulation/qsim/" batalha_naval -c batalha_naval
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Mon Dec 11 07:31:38 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/CD/CD_PBL_2 - Copia/simulation/qsim/" batalha_naval -c batalha_naval
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file batalha_naval.vo in folder "C:/CD/CD_PBL_2 - Copia/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4629 megabytes
+    Info: Processing ended: Mon Dec 11 07:31:39 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/CD/CD_PBL_2 - Copia/simulation/qsim/batalha_naval.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+C:/intelFPGA_lite/22.1std/modelsim_ase/win32aloem/vsim -c -do batalha_naval.do
+
+Reading pref.tcl
+
+
+# 2020.1
+
+
+# do batalha_naval.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 07:31:40 on Dec 11,2023
+# vlog -work work batalha_naval.vo 
+
+# -- Compiling module batalha_naval
+
+# 
+
+# Top level modules:
+# 	batalha_naval
+
+# End time: 07:31:40 on Dec 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 07:31:40 on Dec 11,2023
+# vlog -work work Waveform.vwf.vt 
+
+# -- Compiling module batalha_naval_vlg_vec_tst
+
+# 
+
+# Top level modules:
+# 	batalha_naval_vlg_vec_tst
+
+# End time: 07:31:41 on Dec 11,2023, Elapsed time: 0:00:01
+
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.batalha_naval_vlg_vec_tst 
+# Start time: 07:31:41 on Dec 11,2023
+# Loading work.batalha_naval_vlg_vec_tst
+# Loading work.batalha_naval
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+
+# after#25
+
+# ** Note: $finish    : Waveform.vwf.vt(61)
+#    Time: 1 us  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst
+
+# End time: 07:31:41 on Dec 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/CD/CD_PBL_2 - Copia/Waveform.vwf...
+
+Reading C:/CD/CD_PBL_2 - Copia/simulation/qsim/batalha_naval.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: teste[34] - signal not found in VCD.
+
+Warning: teste[33] - signal not found in VCD.
+
+Warning: teste[32] - signal not found in VCD.
+
+Warning: teste[31] - signal not found in VCD.
+
+Warning: teste[30] - signal not found in VCD.
+
+Warning: teste[29] - signal not found in VCD.
+
+Warning: teste[28] - signal not found in VCD.
+
+Warning: teste[27] - signal not found in VCD.
+
+Warning: teste[26] - signal not found in VCD.
+
+Warning: teste[25] - signal not found in VCD.
+
+Warning: teste[24] - signal not found in VCD.
+
+Warning: teste[23] - signal not found in VCD.
+
+Warning: teste[22] - signal not found in VCD.
+
+Warning: teste[21] - signal not found in VCD.
+
+Warning: teste[20] - signal not found in VCD.
+
+Warning: teste[19] - signal not found in VCD.
+
+Warning: teste[18] - signal not found in VCD.
+
+Warning: teste[17] - signal not found in VCD.
+
+Warning: teste[16] - signal not found in VCD.
+
+Warning: teste[15] - signal not found in VCD.
+
+Warning: teste[14] - signal not found in VCD.
+
+Warning: teste[13] - signal not found in VCD.
+
+Warning: teste[12] - signal not found in VCD.
+
+Warning: teste[11] - signal not found in VCD.
+
+Warning: teste[10] - signal not found in VCD.
+
+Warning: teste[9] - signal not found in VCD.
+
+Warning: teste[8] - signal not found in VCD.
+
+Warning: teste[7] - signal not found in VCD.
+
+Warning: teste[6] - signal not found in VCD.
+
+Warning: teste[5] - signal not found in VCD.
+
+Warning: teste[4] - signal not found in VCD.
+
+Warning: teste[3] - signal not found in VCD.
+
+Warning: teste[2] - signal not found in VCD.
+
+Warning: teste[1] - signal not found in VCD.
+
+Warning: teste[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/CD/CD_PBL_2 - Copia/simulation/qsim/batalha_naval_20231211073141.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

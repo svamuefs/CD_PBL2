@@ -1,0 +1,33 @@
+# do batalha_naval.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:31:40 on Dec 11,2023
+# vlog -work work batalha_naval.vo 
+# -- Compiling module batalha_naval
+# 
+# Top level modules:
+# 	batalha_naval
+# End time: 07:31:40 on Dec 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 07:31:40 on Dec 11,2023
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module batalha_naval_vlg_vec_tst
+# 
+# Top level modules:
+# 	batalha_naval_vlg_vec_tst
+# End time: 07:31:41 on Dec 11,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.batalha_naval_vlg_vec_tst 
+# Start time: 07:31:41 on Dec 11,2023
+# Loading work.batalha_naval_vlg_vec_tst
+# Loading work.batalha_naval
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+# after#25
+# ** Note: $finish    : Waveform.vwf.vt(61)
+#    Time: 1 us  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst
+# End time: 07:31:41 on Dec 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
