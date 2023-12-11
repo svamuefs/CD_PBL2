@@ -3,43 +3,43 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'cpld_clk'
-Slack : -4.247
-TNS   : -44.808
+Slack : -4.846
+TNS   : -41.167
 
 Type  : Setup 'sync_freq_divider:freq_div_1|t_flipflop:tff12|out'
-Slack : -1.877
-TNS   : -16.741
+Slack : -1.741
+TNS   : -16.064
 
 Type  : Hold 'cpld_clk'
-Slack : -1.788
-TNS   : -1.788
+Slack : -1.379
+TNS   : -1.379
 
 Type  : Hold 'sync_freq_divider:freq_div_1|t_flipflop:tff12|out'
-Slack : 1.414
+Slack : 1.413
 TNS   : 0.000
 
 Type  : Recovery 'cpld_clk'
-Slack : -4.476
-TNS   : -54.702
+Slack : -4.740
+TNS   : -61.605
 
 Type  : Recovery 'sync_freq_divider:freq_div_1|t_flipflop:tff12|out'
-Slack : -3.022
-TNS   : -24.012
+Slack : -3.225
+TNS   : -25.800
 
 Type  : Recovery 'game_state_code[0]'
-Slack : -1.060
-TNS   : -3.180
+Slack : -1.138
+TNS   : -3.225
 
 Type  : Removal 'game_state_code[0]'
-Slack : -3.698
-TNS   : -69.487
+Slack : -4.102
+TNS   : -69.265
 
 Type  : Removal 'sync_freq_divider:freq_div_1|t_flipflop:tff12|out'
-Slack : 2.927
+Slack : 3.171
 TNS   : 0.000
 
 Type  : Removal 'cpld_clk'
-Slack : 3.841
+Slack : 4.683
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'cpld_clk'

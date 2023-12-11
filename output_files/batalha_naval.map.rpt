@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Mon Dec 11 07:44:40 2023
+Mon Dec 11 11:38:12 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -88,12 +88,12 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 11 07:44:40 2023          ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 11 11:38:12 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 222                                            ;
+; Total logic elements        ; 221                                            ;
 ; Total pins                  ; 37                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
@@ -187,27 +187,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; map_decoder_5maps.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v ;         ;
-; sync_3b_counter.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v   ;         ;
-; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v ;         ;
-; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/t_flipflop.v        ;         ;
-; register5bitSIPO.v               ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v  ;         ;
-; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/display_decoder.v   ;         ;
-; demux1x2.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x2.v          ;         ;
-; demux1x4.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x4.v          ;         ;
-; mux2x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux2x1.v            ;         ;
-; demux1x8.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/demux1x8.v          ;         ;
-; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/debouncer.v         ;         ;
-; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux8x1.v            ;         ;
-; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/mux4x1.v            ;         ;
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/d_flipflop.v        ;         ;
-; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2 - Copia/batalha_naval.v     ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
+; map_decoder_5maps.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/map_decoder_5maps.v ;         ;
+; sync_3b_counter.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/sync_3b_counter.v   ;         ;
+; sync_freq_divider.v              ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/sync_freq_divider.v ;         ;
+; t_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_flipflop.v        ;         ;
+; register5bitSIPO.v               ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/register5bitSIPO.v  ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/display_decoder.v   ;         ;
+; demux1x2.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/demux1x2.v          ;         ;
+; demux1x4.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/demux1x4.v          ;         ;
+; mux2x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux2x1.v            ;         ;
+; demux1x8.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/demux1x8.v          ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/debouncer.v         ;         ;
+; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux8x1.v            ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux4x1.v            ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/d_flipflop.v        ;         ;
+; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v     ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -215,20 +215,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Total logic elements                        ; 222      ;
-;     -- Combinational with no register       ; 164      ;
+; Total logic elements                        ; 221      ;
+;     -- Combinational with no register       ; 163      ;
 ;     -- Register only                        ; 7        ;
 ;     -- Combinational with a register        ; 51       ;
 ;                                             ;          ;
 ; Logic element usage by number of LUT inputs ;          ;
 ;     -- 4 input functions                    ; 131      ;
 ;     -- 3 input functions                    ; 36       ;
-;     -- 2 input functions                    ; 14       ;
+;     -- 2 input functions                    ; 13       ;
 ;     -- 1 input functions                    ; 3        ;
 ;     -- 0 input functions                    ; 31       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 222      ;
+;     -- normal mode                          ; 221      ;
 ;     -- arithmetic mode                      ; 0        ;
 ;     -- qfbk mode                            ; 0        ;
 ;     -- register cascade mode                ; 0        ;
@@ -239,7 +239,7 @@ https://fpgasoftware.intel.com/eula.
 ; I/O pins                                    ; 37       ;
 ; Maximum fan-out node                        ; orEnable ;
 ; Maximum fan-out                             ; 42       ;
-; Total fan-out                               ; 812      ;
+; Total fan-out                               ; 810      ;
 ; Average fan-out                             ; 3.14     ;
 +---------------------------------------------+----------+
 
@@ -249,7 +249,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Entity Name       ; Library Name ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
-; |batalha_naval                              ; 222 (15)    ; 58           ; 0          ; 37   ; 0            ; 164 (15)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
+; |batalha_naval                              ; 221 (15)    ; 58           ; 0          ; 37   ; 0            ; 163 (15)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
 ;    |d_flipflop:hits_map_register[0]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[0]                                ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[10]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[10]                               ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[11]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[11]                               ; d_flipflop        ; work         ;
@@ -288,14 +288,14 @@ https://fpgasoftware.intel.com/eula.
 ;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff0               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff1               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff2               ; t_flipflop        ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[0]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
 ;    |demux1x4:yCoordDemuxHitsMap_0[1]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
 ;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[2]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
 ;    |demux1x4:yCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
 ;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
@@ -306,16 +306,16 @@ https://fpgasoftware.intel.com/eula.
 ;    |demux1x4:yCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
 ;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
-;    |display_decoder:displayDecoder|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
-;    |map_decoder_5maps:mapDecoder|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
+;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |display_decoder:displayDecoder|         ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
+;    |map_decoder_5maps:mapDecoder|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
 ;    |mux2x1:codeSelect[0]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[0]                                           ; mux2x1            ; work         ;
 ;    |mux2x1:codeSelect[1]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[1]                                           ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[0]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[0]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[1]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[1]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[2]|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[2]                                   ; mux2x1            ; work         ;
-;    |mux2x1:matrixColuneData_1[3]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[3]                                   ; mux2x1            ; work         ;
+;    |mux2x1:matrixColuneData_1[3]|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[3]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[4]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[4]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[5]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[5]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[6]|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[6]                                   ; mux2x1            ; work         ;
@@ -323,8 +323,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |mux2x1:mux2|                         ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[0]|mux2x1:mux2                              ; mux2x1            ; work         ;
 ;    |mux4x1:displayCode[1]|                  ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[1]                                          ; mux4x1            ; work         ;
 ;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[1]|mux2x1:mux2                              ; mux2x1            ; work         ;
-;    |mux4x1:displayCode[2]|                  ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]                                          ; mux4x1            ; work         ;
-;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]|mux2x1:mux2                              ; mux2x1            ; work         ;
+;    |mux4x1:displayCode[2]|                  ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]                                          ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode[2]|mux2x1:mux2                              ; mux2x1            ; work         ;
 ;    |mux8x1:xCoordMuxLedRgb|                 ; 37 (0)      ; 0            ; 0          ; 0    ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb                                         ; mux8x1            ; work         ;
 ;       |mux2x1:mux_2|                        ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
 ;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
@@ -744,6 +744,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_a ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -753,6 +754,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_a ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -762,6 +764,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_a ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
 ; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -796,7 +799,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------+
 ; Analysis & Synthesis Equations ;
 +--------------------------------+
-The equations can be found in C:/CD/CD_PBL_2 - Copia/output_files/batalha_naval.map.eqn.
+The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 
 
 +-------------------------------+
@@ -805,145 +808,151 @@ The equations can be found in C:/CD/CD_PBL_2 - Copia/output_files/batalha_naval.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Dec 11 07:44:29 2023
+    Info: Processing started: Mon Dec 11 11:37:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Info (16303): Aggressive Area optimization mode selected -- logic area will be prioritized at the potential cost of reduced timing performance
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file map_decoder_5maps.v
-    Info (12023): Found entity 1: map_decoder_5maps File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 1
+    Info (12023): Found entity 1: map_decoder_5maps File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sync_3b_counter.v
-    Info (12023): Found entity 1: sync_3b_counter File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 1
+    Info (12023): Found entity 1: sync_3b_counter File: C:/CD/CD_PBL_2/sync_3b_counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sync_freq_divider.v
-    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 1
+    Info (12023): Found entity 1: sync_freq_divider File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
-    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_2 - Copia/t_flipflop.v Line: 1
+    Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_2/t_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register5bitsipo.v
-    Info (12023): Found entity 1: register5bitSIPO File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 1
+    Info (12023): Found entity 1: register5bitSIPO File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display_decoder.v
-    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_2 - Copia/display_decoder.v Line: 1
+    Info (12023): Found entity 1: display_decoder File: C:/CD/CD_PBL_2/display_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1x2.v
-    Info (12023): Found entity 1: demux1x2 File: C:/CD/CD_PBL_2 - Copia/demux1x2.v Line: 1
+    Info (12023): Found entity 1: demux1x2 File: C:/CD/CD_PBL_2/demux1x2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1x4.v
-    Info (12023): Found entity 1: demux1x4 File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 1
+    Info (12023): Found entity 1: demux1x4 File: C:/CD/CD_PBL_2/demux1x4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2x1.v
-    Info (12023): Found entity 1: mux2x1 File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 1
+    Info (12023): Found entity 1: mux2x1 File: C:/CD/CD_PBL_2/mux2x1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file map_decoder.v
-    Info (12023): Found entity 1: map_decoder File: C:/CD/CD_PBL_2 - Copia/map_decoder.v Line: 1
+    Info (12023): Found entity 1: map_decoder File: C:/CD/CD_PBL_2/map_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1x8.v
-    Info (12023): Found entity 1: demux1x8 File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 1
+    Info (12023): Found entity 1: demux1x8 File: C:/CD/CD_PBL_2/demux1x8.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
-    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 1
+    Info (12023): Found entity 1: debouncer File: C:/CD/CD_PBL_2/debouncer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux8x1.v
-    Info (12023): Found entity 1: mux8x1 File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 1
+    Info (12023): Found entity 1: mux8x1 File: C:/CD/CD_PBL_2/mux8x1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
-    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 1
+    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_2/mux4x1.v Line: 1
 Warning (12019): Can't analyze file -- file freq_div.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
-    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2 - Copia/d_flipflop.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(141): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 141
+    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2/d_flipflop.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(141): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 141
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(253): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 253
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(254): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 254
 Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
-    Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(9): created implicit net for "enable" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(111): created implicit net for "nor110Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 111
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(112): created implicit net for "nor111Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 112
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(127): created implicit net for "nor120Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 127
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(129): created implicit net for "and120Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 129
-Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(137): created implicit net for "nor130Out" File: C:/CD/CD_PBL_2 - Copia/map_decoder_5maps.v Line: 137
-Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(13): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(23): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(28): created implicit net for "and0Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(35): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/sync_3b_counter.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 30
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 43
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 63
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 70
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 73
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 80
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 83
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 93
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 100
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 103
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 110
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 113
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 120
-Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 123
-Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(21): created implicit net for "notEnable" File: C:/CD/CD_PBL_2 - Copia/display_decoder.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at demux1x2.v(6): created implicit net for "notSelect" File: C:/CD/CD_PBL_2 - Copia/demux1x2.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(9): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(11): created implicit net for "enable0" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(12): created implicit net for "enable1" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(7): created implicit net for "notSelect" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(9): created implicit net for "and0_w" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(10): created implicit net for "and1_w" File: C:/CD/CD_PBL_2 - Copia/mux2x1.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(9): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(11): created implicit net for "enable1" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(12): created implicit net for "enable2" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(6): created implicit net for "clk_w" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(6): created implicit net for "max" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "notButton" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(14): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(23): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(26): created implicit net for "and2Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(33): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(36): created implicit net for "and3Out" File: C:/CD/CD_PBL_2 - Copia/debouncer.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(18): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(29): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2 - Copia/mux8x1.v Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(15): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(23): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(20): created implicit net for "enable" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(22): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(25): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(31): created implicit net for "clk" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 31
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(38): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(49): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 49
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(127): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 127
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(145): created implicit net for "notYCoordCode2" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 145
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(147): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 147
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(246): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 246
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(249): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 249
+    Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2/batalha_naval.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(9): created implicit net for "enable" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(111): created implicit net for "nor110Out" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(112): created implicit net for "nor111Out" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(127): created implicit net for "nor120Out" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(129): created implicit net for "and120Out" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 129
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(137): created implicit net for "nor130Out" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 137
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(13): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2/sync_3b_counter.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(23): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2/sync_3b_counter.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(28): created implicit net for "and0Out" File: C:/CD/CD_PBL_2/sync_3b_counter.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at sync_3b_counter.v(35): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2/sync_3b_counter.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(11): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(20): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(23): created implicit net for "and2Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(30): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(33): created implicit net for "and3Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(40): created implicit net for "tff3Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(43): created implicit net for "and4Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(50): created implicit net for "tff4Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(53): created implicit net for "and5Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(60): created implicit net for "tff5Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(63): created implicit net for "and6Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(70): created implicit net for "tff6Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(73): created implicit net for "and7Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(80): created implicit net for "tff7Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 80
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(83): created implicit net for "and8Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(90): created implicit net for "tff8Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(93): created implicit net for "and9Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(100): created implicit net for "tff9Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(103): created implicit net for "and10Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(110): created implicit net for "tff10Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(113): created implicit net for "and11Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(120): created implicit net for "tff11Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at sync_freq_divider.v(123): created implicit net for "and12Out" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(21): created implicit net for "notEnable" File: C:/CD/CD_PBL_2/display_decoder.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at demux1x2.v(6): created implicit net for "notSelect" File: C:/CD/CD_PBL_2/demux1x2.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(9): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2/demux1x4.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(11): created implicit net for "enable0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(12): created implicit net for "enable1" File: C:/CD/CD_PBL_2/demux1x4.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(7): created implicit net for "notSelect" File: C:/CD/CD_PBL_2/mux2x1.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(9): created implicit net for "and0_w" File: C:/CD/CD_PBL_2/mux2x1.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(10): created implicit net for "and1_w" File: C:/CD/CD_PBL_2/mux2x1.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(9): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2/demux1x8.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(11): created implicit net for "enable1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(12): created implicit net for "enable2" File: C:/CD/CD_PBL_2/demux1x8.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "clk_w" File: C:/CD/CD_PBL_2/debouncer.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "enable" File: C:/CD/CD_PBL_2/debouncer.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "notButton" File: C:/CD/CD_PBL_2/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(15): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(24): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "and2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(34): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(18): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2/mux8x1.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(29): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux8x1.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(15): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(23): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(20): created implicit net for "enable" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(22): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(25): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(31): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(38): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(49): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(78): created implicit net for "game_state_code_w" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(127): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(145): created implicit net for "notYCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(147): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(246): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 246
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(249): created implicit net for "invalidXCoord" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 249
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(251): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 251
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 32
-Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:freq_div_1|t_flipflop:tff0" File: C:/CD/CD_PBL_2 - Copia/sync_freq_divider.v Line: 12
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 39
-Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 51
-Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 63
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2 - Copia/register5bitSIPO.v Line: 11
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode[0]" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 85
-Info (12128): Elaborating entity "mux2x1" for hierarchy "mux4x1:displayCode[0]|mux2x1:mux0" File: C:/CD/CD_PBL_2 - Copia/mux4x1.v Line: 16
-Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 94
-Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 123
-Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:xCoordDemuxHitsMap" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 141
-Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2 - Copia/demux1x8.v Line: 23
-Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2 - Copia/demux1x4.v Line: 21
-Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:xCoordMuxLedRgb" File: C:/CD/CD_PBL_2 - Copia/batalha_naval.v Line: 247
+Warning (10030): Net "game_state_code_w" at batalha_naval.v(78) has no driver or initial value, using a default initial value '0' File: C:/CD/CD_PBL_2/batalha_naval.v Line: 78
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 32
+Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:freq_div_1|t_flipflop:tff0" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 12
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 39
+Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 51
+Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 63
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 11
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 85
+Info (12128): Elaborating entity "mux2x1" for hierarchy "mux4x1:displayCode[0]|mux2x1:mux0" File: C:/CD/CD_PBL_2/mux4x1.v Line: 16
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 94
+Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 123
+Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:xCoordDemuxHitsMap" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 141
+Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 23
+Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 21
+Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:xCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 247
 Info (13014): Ignored 45 buffer(s)
     Info (13019): Ignored 45 SOFT buffer(s)
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 259 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "game_state_code[2]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 4
+Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 222 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4715 megabytes
-    Info: Processing ended: Mon Dec 11 07:44:40 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (21061): Implemented 221 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Mon Dec 11 11:38:12 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:38
 
 

@@ -128,3 +128,5 @@ set_location_assignment PIN_87 -to matrix_colune_data[3]
 set_location_assignment PIN_81 -to matrix_colune_data[4]
 set_location_assignment PIN_91 -to matrix_colune_data[5]
 set_location_assignment PIN_89 -to matrix_colune_data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to game_state_code[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to game_state_code

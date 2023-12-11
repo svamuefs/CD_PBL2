@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Dec 11 07:44:40 2023
+Analysis & Synthesis Status : Successful - Mon Dec 11 11:38:12 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : batalha_naval
 Top-level Entity Name : batalha_naval
 Family : MAX II
-Total logic elements : 222
+Total logic elements : 221
 Total pins : 37
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

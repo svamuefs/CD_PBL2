@@ -1,9 +1,10 @@
 module debouncer (
     input button , clk ,
-    output out 
+    
+    output out
 );
 
-    or or0 (clk_w , button , clk , max);
+    or or0 (clk_w , button , clk , enable);
     not not0 (notButton , button);
 
    t_flipflop tff0 (
@@ -33,10 +34,8 @@ module debouncer (
         .out (tff2Out)
     );
 
-    and and3 (and3Out , tff2Out , and2Out);
+    and and0 (enable , tff0Out , tff1Out , tff2Out);
 
-    nand nand0 (max , tff0Out , tff1Out , tff2Out);
-
-    not not1 (out , max);
+    not notEnable (out , enable);
 
 endmodule

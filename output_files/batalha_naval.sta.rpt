@@ -1,5 +1,5 @@
 Timing Analyzer report for batalha_naval
-Mon Dec 11 07:44:47 2023
+Mon Dec 11 11:28:27 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -108,8 +108,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note ;
 +------------+-----------------+---------------------------------------------------+------+
-; 190.59 MHz ; 190.59 MHz      ; cpld_clk                                          ;      ;
-; 347.58 MHz ; 347.58 MHz      ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ;      ;
+; 171.06 MHz ; 171.06 MHz      ; cpld_clk                                          ;      ;
+; 364.83 MHz ; 364.83 MHz      ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ;      ;
 +------------+-----------------+---------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -119,8 +119,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; cpld_clk                                          ; -4.247 ; -44.808       ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -1.877 ; -16.741       ;
+; cpld_clk                                          ; -4.846 ; -41.167       ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -1.741 ; -16.064       ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -129,8 +129,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; cpld_clk                                          ; -1.788 ; -1.788        ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.414  ; 0.000         ;
+; cpld_clk                                          ; -1.379 ; -1.379        ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.413  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -139,9 +139,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; cpld_clk                                          ; -4.476 ; -54.702       ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -3.022 ; -24.012       ;
-; game_state_code[0]                                ; -1.060 ; -3.180        ;
+; cpld_clk                                          ; -4.740 ; -61.605       ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -3.225 ; -25.800       ;
+; game_state_code[0]                                ; -1.138 ; -3.225        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -150,9 +150,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; game_state_code[0]                                ; -3.698 ; -69.487       ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 2.927  ; 0.000         ;
-; cpld_clk                                          ; 3.841  ; 0.000         ;
+; game_state_code[0]                                ; -4.102 ; -69.265       ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 3.171  ; 0.000         ;
+; cpld_clk                                          ; 4.683  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -172,98 +172,98 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                         ; To Node                                           ; Launch Clock                                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
-; -4.247 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.914      ;
-; -4.244 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.911      ;
-; -4.221 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.888      ;
-; -4.218 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.885      ;
-; -4.211 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.878      ;
-; -3.920 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.587      ;
-; -3.917 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.584      ;
-; -3.894 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.561      ;
-; -3.894 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.561      ;
-; -3.891 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.558      ;
-; -3.884 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.551      ;
-; -3.801 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.468      ;
-; -3.761 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.428      ;
-; -3.710 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.377      ;
-; -3.707 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.374      ;
-; -3.684 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.351      ;
-; -3.681 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.348      ;
-; -3.674 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.341      ;
-; -3.599 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.266      ;
-; -3.596 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.263      ;
-; -3.573 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.240      ;
-; -3.570 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.237      ;
-; -3.567 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.234      ;
-; -3.563 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.230      ;
-; -3.563 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.230      ;
-; -3.560 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.227      ;
-; -3.548 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.215      ;
-; -3.510 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.177      ;
-; -3.508 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.175      ;
-; -3.474 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.141      ;
-; -3.433 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.100      ;
-; -3.430 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.097      ;
-; -3.407 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.074      ;
-; -3.404 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.071      ;
-; -3.397 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.064      ;
-; -3.388 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.055      ;
-; -3.385 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.052      ;
-; -3.362 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.029      ;
-; -3.359 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.026      ;
-; -3.357 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.024      ;
-; -3.352 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.019      ;
-; -3.279 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.946      ;
-; -3.276 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.943      ;
-; -3.264 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.931      ;
-; -3.253 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.920      ;
-; -3.250 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.917      ;
-; -3.246 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.913      ;
-; -3.243 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.910      ;
-; -3.241 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.908      ;
-; -3.238 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.905      ;
-; -3.211 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.878      ;
-; -3.183 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.850      ;
-; -3.181 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.848      ;
-; -3.153 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.820      ;
-; -3.117 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.784      ;
-; -3.071 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.738      ;
-; -3.068 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.735      ;
-; -2.987 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.654      ;
-; -2.973 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.640      ;
-; -2.971 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.638      ;
-; -2.942 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.609      ;
-; -2.934 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.601      ;
-; -2.862 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.529      ;
-; -2.860 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.527      ;
-; -2.833 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.500      ;
-; -2.795 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.462      ;
-; -2.625 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.292      ;
-; -2.579 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.246      ;
-; -2.567 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.234      ;
-; -2.408 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.075      ;
-; -2.406 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.073      ;
-; -2.330 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.997      ;
-; -2.167 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.834      ;
-; -2.164 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.831      ;
-; -2.161 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.828      ;
-; -2.118 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.785      ;
-; -1.822 ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.489      ;
-; -1.804 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.471      ;
-; -1.743 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.410      ;
-; -1.741 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.408      ;
-; -1.738 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.405      ;
-; -1.734 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.401      ;
-; -1.648 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.315      ;
-; -1.501 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.168      ;
-; -1.499 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.166      ;
-; -1.495 ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.162      ;
-; -1.274 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.941      ;
-; -1.269 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.936      ;
-; -1.262 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.929      ;
-; -1.213 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.880      ;
-; 1.734  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 0.500        ; 3.348      ; 2.157      ;
-; 2.234  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 1.000        ; 3.348      ; 2.157      ;
+; -4.846 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.513      ;
+; -4.845 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.512      ;
+; -4.784 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.451      ;
+; -4.783 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.450      ;
+; -4.643 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.310      ;
+; -4.642 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.309      ;
+; -4.404 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.071      ;
+; -4.392 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.059      ;
+; -4.391 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.058      ;
+; -4.342 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 5.009      ;
+; -4.281 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.948      ;
+; -4.280 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.947      ;
+; -4.201 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.868      ;
+; -4.146 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.813      ;
+; -4.145 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.812      ;
+; -4.141 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.808      ;
+; -4.140 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.807      ;
+; -3.959 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.626      ;
+; -3.958 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.625      ;
+; -3.950 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.617      ;
+; -3.839 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.506      ;
+; -3.704 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.371      ;
+; -3.699 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.366      ;
+; -3.517 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.184      ;
+; -3.460 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.127      ;
+; -3.457 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.124      ;
+; -3.398 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.065      ;
+; -3.395 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 4.062      ;
+; -3.274 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.941      ;
+; -3.273 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.940      ;
+; -3.268 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.935      ;
+; -3.257 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.924      ;
+; -3.254 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.921      ;
+; -3.248 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.915      ;
+; -3.247 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.914      ;
+; -3.212 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.879      ;
+; -3.211 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.878      ;
+; -3.206 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.873      ;
+; -3.071 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.738      ;
+; -3.070 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.737      ;
+; -3.065 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.732      ;
+; -3.032 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.699      ;
+; -3.006 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.673      ;
+; -3.003 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.670      ;
+; -2.970 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.637      ;
+; -2.921 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.588      ;
+; -2.920 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.587      ;
+; -2.895 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.562      ;
+; -2.892 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.559      ;
+; -2.829 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.496      ;
+; -2.820 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.487      ;
+; -2.819 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.486      ;
+; -2.814 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.481      ;
+; -2.806 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.473      ;
+; -2.755 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.422      ;
+; -2.752 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.419      ;
+; -2.667 ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.334      ;
+; -2.659 ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.326      ;
+; -2.578 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.245      ;
+; -2.573 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.240      ;
+; -2.570 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.237      ;
+; -2.479 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.146      ;
+; -2.467 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 3.134      ;
+; -2.327 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.994      ;
+; -2.310 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.977      ;
+; -2.303 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.970      ;
+; -2.236 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.903      ;
+; -2.174 ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.841      ;
+; -2.145 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.812      ;
+; -1.928 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.595      ;
+; -1.836 ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.503      ;
+; -1.821 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.488      ;
+; -1.750 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.417      ;
+; -1.748 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.415      ;
+; -1.741 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.408      ;
+; -1.737 ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.404      ;
+; -1.737 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.404      ;
+; -1.736 ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.403      ;
+; -1.731 ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.398      ;
+; -1.534 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.201      ;
+; -1.529 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.196      ;
+; -1.523 ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.190      ;
+; -1.513 ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.180      ;
+; -1.500 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.167      ;
+; -1.500 ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.167      ;
+; -1.481 ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 2.148      ;
+; -1.276 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.943      ;
+; -1.268 ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.935      ;
+; -1.218 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.885      ;
+; -1.214 ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; cpld_clk                                          ; cpld_clk    ; 1.000        ; 0.000      ; 1.881      ;
+; 1.325  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 0.500        ; 3.348      ; 2.566      ;
+; 1.825  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 1.000        ; 3.348      ; 2.566      ;
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
 
 
@@ -272,25 +272,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock                                      ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
-; -1.877 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.544      ;
-; -1.873 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.540      ;
+; -1.741 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.408      ;
+; -1.739 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.406      ;
 ; -1.662 ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.329      ;
-; -1.650 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.317      ;
-; -1.606 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.273      ;
-; -1.566 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.233      ;
-; -1.562 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.229      ;
-; -1.559 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.226      ;
-; -1.542 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.209      ;
-; -1.539 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.206      ;
-; -1.476 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.143      ;
-; -1.474 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.141      ;
-; -1.407 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.074      ;
-; -1.348 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.015      ;
-; -1.337 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.004      ;
-; -1.248 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.915      ;
-; -1.246 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.913      ;
-; -1.241 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.908      ;
-; -0.968 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.635      ;
+; -1.569 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.236      ;
+; -1.562 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.229      ;
+; -1.558 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.225      ;
+; -1.534 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.201      ;
+; -1.519 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.186      ;
+; -1.501 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.168      ;
+; -1.500 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.167      ;
+; -1.403 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.070      ;
+; -1.390 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 2.057      ;
+; -1.247 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.914      ;
+; -1.246 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.913      ;
+; -1.242 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.909      ;
+; -1.235 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.902      ;
+; -1.234 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.901      ;
+; -0.982 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.649      ;
+; -0.967 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 0.000      ; 1.634      ;
 +--------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
 
 
@@ -299,98 +299,98 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                         ; To Node                                           ; Launch Clock                                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
-; -1.788 ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 0.000        ; 3.348      ; 2.157      ;
-; -1.288 ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; -0.500       ; 3.348      ; 2.157      ;
-; 1.659  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.880      ;
-; 1.708  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.929      ;
-; 1.715  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.936      ;
-; 1.720  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.941      ;
-; 1.941  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.162      ;
-; 1.945  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.166      ;
-; 1.947  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.168      ;
-; 2.094  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.315      ;
-; 2.180  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.401      ;
-; 2.184  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.405      ;
-; 2.187  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.408      ;
-; 2.189  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.410      ;
-; 2.250  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.471      ;
-; 2.268  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.489      ;
-; 2.564  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.785      ;
-; 2.607  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.828      ;
-; 2.610  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.831      ;
-; 2.613  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.834      ;
-; 2.776  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.997      ;
-; 2.852  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.073      ;
-; 2.854  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.075      ;
-; 3.013  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.234      ;
-; 3.025  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.246      ;
-; 3.071  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.292      ;
-; 3.241  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.462      ;
-; 3.279  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.500      ;
-; 3.306  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.527      ;
-; 3.308  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.529      ;
-; 3.380  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.601      ;
-; 3.388  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.609      ;
-; 3.417  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.638      ;
-; 3.419  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.640      ;
-; 3.433  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.654      ;
-; 3.514  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.735      ;
-; 3.517  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.738      ;
-; 3.563  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.784      ;
-; 3.599  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.820      ;
-; 3.627  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.848      ;
-; 3.629  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.850      ;
-; 3.657  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.878      ;
-; 3.684  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.905      ;
-; 3.687  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.908      ;
-; 3.689  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.910      ;
-; 3.692  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.913      ;
-; 3.696  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.917      ;
-; 3.699  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.920      ;
-; 3.710  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.931      ;
-; 3.722  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.943      ;
-; 3.725  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.946      ;
-; 3.798  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.019      ;
-; 3.803  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.024      ;
-; 3.805  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.026      ;
-; 3.808  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.029      ;
-; 3.831  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.052      ;
-; 3.834  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.055      ;
-; 3.843  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.064      ;
-; 3.850  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.071      ;
-; 3.853  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.074      ;
-; 3.876  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.097      ;
-; 3.879  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.100      ;
-; 3.920  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.141      ;
-; 3.954  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.175      ;
-; 3.956  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.177      ;
-; 3.994  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.215      ;
-; 4.006  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.227      ;
-; 4.009  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.230      ;
-; 4.009  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.230      ;
-; 4.013  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.234      ;
-; 4.016  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.237      ;
-; 4.019  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.240      ;
-; 4.042  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.263      ;
-; 4.045  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.266      ;
-; 4.120  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.341      ;
-; 4.127  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.348      ;
-; 4.130  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.351      ;
-; 4.153  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.374      ;
-; 4.156  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.377      ;
-; 4.207  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.428      ;
-; 4.247  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.468      ;
-; 4.330  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.551      ;
-; 4.337  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.558      ;
-; 4.340  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.561      ;
-; 4.340  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.561      ;
-; 4.363  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.584      ;
-; 4.366  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.587      ;
-; 4.657  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.878      ;
-; 4.664  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.885      ;
-; 4.667  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.888      ;
-; 4.690  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.911      ;
-; 4.693  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.914      ;
+; -1.379 ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; 0.000        ; 3.348      ; 2.566      ;
+; -0.879 ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk    ; -0.500       ; 3.348      ; 2.566      ;
+; 1.660  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.881      ;
+; 1.664  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.885      ;
+; 1.714  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.935      ;
+; 1.722  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 1.943      ;
+; 1.927  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.148      ;
+; 1.946  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.167      ;
+; 1.946  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.167      ;
+; 1.959  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.180      ;
+; 1.969  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.190      ;
+; 1.975  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.196      ;
+; 1.980  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.201      ;
+; 2.177  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.398      ;
+; 2.182  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.403      ;
+; 2.183  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.404      ;
+; 2.183  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.404      ;
+; 2.187  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.408      ;
+; 2.194  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.415      ;
+; 2.196  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.417      ;
+; 2.267  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.488      ;
+; 2.282  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.503      ;
+; 2.374  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.595      ;
+; 2.591  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.812      ;
+; 2.620  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.841      ;
+; 2.682  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.903      ;
+; 2.749  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.970      ;
+; 2.756  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.977      ;
+; 2.773  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 2.994      ;
+; 2.913  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.134      ;
+; 2.925  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.146      ;
+; 3.016  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.237      ;
+; 3.019  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.240      ;
+; 3.024  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.245      ;
+; 3.105  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.326      ;
+; 3.113  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.334      ;
+; 3.198  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.419      ;
+; 3.201  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.422      ;
+; 3.252  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.473      ;
+; 3.260  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.481      ;
+; 3.265  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.486      ;
+; 3.266  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.487      ;
+; 3.275  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.496      ;
+; 3.338  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.559      ;
+; 3.341  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.562      ;
+; 3.366  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.587      ;
+; 3.367  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.588      ;
+; 3.416  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.637      ;
+; 3.449  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.670      ;
+; 3.452  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.673      ;
+; 3.478  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.699      ;
+; 3.511  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.732      ;
+; 3.516  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.737      ;
+; 3.517  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.738      ;
+; 3.652  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.873      ;
+; 3.657  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.878      ;
+; 3.658  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.879      ;
+; 3.693  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.914      ;
+; 3.694  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.915      ;
+; 3.700  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.921      ;
+; 3.703  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.924      ;
+; 3.714  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.935      ;
+; 3.719  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.940      ;
+; 3.720  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 3.941      ;
+; 3.841  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.062      ;
+; 3.844  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.065      ;
+; 3.903  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.124      ;
+; 3.906  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.127      ;
+; 3.963  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.184      ;
+; 4.145  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.366      ;
+; 4.150  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.371      ;
+; 4.285  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.506      ;
+; 4.396  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.617      ;
+; 4.404  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.625      ;
+; 4.405  ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.626      ;
+; 4.586  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.807      ;
+; 4.587  ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.808      ;
+; 4.591  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.812      ;
+; 4.592  ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.813      ;
+; 4.647  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.868      ;
+; 4.726  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.947      ;
+; 4.727  ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 4.948      ;
+; 4.788  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.009      ;
+; 4.837  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.058      ;
+; 4.838  ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.059      ;
+; 4.850  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.071      ;
+; 5.088  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.309      ;
+; 5.089  ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.310      ;
+; 5.229  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.450      ;
+; 5.230  ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.451      ;
+; 5.291  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.512      ;
+; 5.292  ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; cpld_clk                                          ; cpld_clk    ; 0.000        ; 0.000      ; 5.513      ;
 +--------+---------------------------------------------------+---------------------------------------------------+---------------------------------------------------+-------------+--------------+------------+------------+
 
 
@@ -399,25 +399,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock                                      ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
-; 1.414 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.635      ;
-; 1.687 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.908      ;
-; 1.692 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.913      ;
-; 1.694 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.915      ;
-; 1.783 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.004      ;
-; 1.794 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.015      ;
-; 1.853 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.074      ;
-; 1.920 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.141      ;
-; 1.922 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.143      ;
-; 1.985 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.206      ;
-; 1.988 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.209      ;
-; 2.005 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.226      ;
-; 2.008 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.229      ;
-; 2.012 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.233      ;
-; 2.052 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.273      ;
-; 2.096 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.317      ;
+; 1.413 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.634      ;
+; 1.428 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.649      ;
+; 1.680 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.901      ;
+; 1.681 ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.902      ;
+; 1.688 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.909      ;
+; 1.692 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.913      ;
+; 1.693 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 1.914      ;
+; 1.836 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.057      ;
+; 1.849 ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.070      ;
+; 1.946 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.167      ;
+; 1.947 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.168      ;
+; 1.965 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.186      ;
+; 1.980 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.201      ;
+; 2.004 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.225      ;
+; 2.008 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.229      ;
+; 2.015 ; debouncer:debouncerConfirmAttack|t_flipflop:tff0|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff1|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.236      ;
 ; 2.108 ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; debouncer:debouncerConfirmAttack|t_flipflop:tff2|out               ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.329      ;
-; 2.319 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.540      ;
-; 2.323 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.544      ;
+; 2.185 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.406      ;
+; 2.187 ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 0.000      ; 2.408      ;
 +-------+--------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------+---------------------------------------------------+--------------+------------+------------+
 
 
@@ -426,32 +426,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node          ; To Node                                           ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -4.476 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.976 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.991      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.895 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
-; -3.395 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 7.410      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.740 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.255      ;
+; -4.737 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.252      ;
+; -4.737 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.252      ;
+; -4.737 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.252      ;
+; -4.737 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.252      ;
+; -4.737 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 0.500        ; 3.348      ; 8.252      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.240 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.255      ;
+; -4.237 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.252      ;
+; -4.237 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.252      ;
+; -4.237 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.252      ;
+; -4.237 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.252      ;
+; -4.237 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 1.000        ; 3.348      ; 8.252      ;
 +--------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
 
 
@@ -460,22 +460,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
 ; Slack  ; From Node          ; To Node                                                            ; Launch Clock       ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
-; -3.022 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.410      ;
-; -3.022 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.410      ;
-; -3.022 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.410      ;
-; -3.022 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.410      ;
-; -2.981 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.369      ;
-; -2.981 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.369      ;
-; -2.981 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.369      ;
-; -2.981 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 4.221      ; 7.369      ;
-; -2.522 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.410      ;
-; -2.522 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.410      ;
-; -2.522 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.410      ;
-; -2.522 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.410      ;
-; -2.481 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.369      ;
-; -2.481 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.369      ;
-; -2.481 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.369      ;
-; -2.481 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 4.221      ; 7.369      ;
+; -3.225 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -3.225 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.500        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
+; -2.725 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 1.000        ; 5.049      ; 8.441      ;
 +--------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
 
 
@@ -484,74 +484,74 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
 ; Slack  ; From Node          ; To Node                              ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
-; -1.060 ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.405      ; 8.632      ;
-; -1.060 ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.405      ; 8.632      ;
-; -1.060 ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.405      ; 8.632      ;
-; -0.560 ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.405      ; 8.632      ;
-; -0.560 ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.405      ; 8.632      ;
-; -0.560 ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.405      ; 8.632      ;
-; 0.693  ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.797      ; 9.271      ;
-; 0.712  ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.816      ; 9.271      ;
-; 1.072  ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.161     ; 9.256      ;
-; 1.193  ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.797      ; 9.271      ;
-; 1.212  ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.816      ; 9.271      ;
-; 1.269  ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.410     ; 9.308      ;
-; 1.374  ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.463     ; 9.256      ;
-; 1.572  ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.161     ; 9.256      ;
-; 1.639  ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.760     ; 9.288      ;
-; 1.645  ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.750     ; 9.272      ;
-; 1.678  ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.799     ; 9.288      ;
-; 1.692  ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.797     ; 9.272      ;
-; 1.769  ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.410     ; 9.308      ;
-; 1.821  ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.910     ; 9.256      ;
-; 1.840  ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.929     ; 9.256      ;
-; 1.856  ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.978     ; 9.289      ;
-; 1.874  ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.463     ; 9.256      ;
-; 1.879  ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.968     ; 9.256      ;
-; 2.042  ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.183     ; 9.308      ;
-; 2.066  ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.188     ; 9.289      ;
-; 2.066  ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.188     ; 9.289      ;
-; 2.139  ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.760     ; 9.288      ;
-; 2.145  ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.750     ; 9.272      ;
-; 2.178  ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.799     ; 9.288      ;
-; 2.192  ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.797     ; 9.272      ;
-; 2.230  ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.352     ; 9.289      ;
-; 2.233  ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.337     ; 9.271      ;
-; 2.321  ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.910     ; 9.256      ;
-; 2.340  ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.929     ; 9.256      ;
-; 2.356  ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.978     ; 9.289      ;
-; 2.379  ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.968     ; 9.256      ;
-; 2.417  ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.521     ; 9.271      ;
-; 2.542  ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.183     ; 9.308      ;
-; 2.558  ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.768     ; 9.377      ;
-; 2.563  ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.773     ; 9.377      ;
-; 2.566  ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.188     ; 9.289      ;
-; 2.566  ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.188     ; 9.289      ;
-; 2.651  ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.810     ; 9.326      ;
-; 2.681  ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.907     ; 9.393      ;
-; 2.694  ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.816     ; 9.289      ;
-; 2.730  ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.352     ; 9.289      ;
-; 2.733  ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.337     ; 9.271      ;
-; 2.787  ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.909     ; 9.289      ;
-; 2.917  ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.521     ; 9.271      ;
-; 2.982  ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.104     ; 9.289      ;
-; 3.058  ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.768     ; 9.377      ;
-; 3.063  ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.773     ; 9.377      ;
-; 3.132  ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.358     ; 9.393      ;
-; 3.151  ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.810     ; 9.326      ;
-; 3.181  ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.907     ; 9.393      ;
-; 3.194  ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.816     ; 9.289      ;
-; 3.266  ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.460     ; 9.361      ;
-; 3.270  ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.392     ; 9.289      ;
-; 3.287  ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.909     ; 9.289      ;
-; 3.361  ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.450     ; 9.256      ;
-; 3.482  ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.104     ; 9.289      ;
-; 3.632  ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.358     ; 9.393      ;
-; 3.644  ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.766     ; 9.289      ;
-; 3.766  ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.460     ; 9.361      ;
-; 3.770  ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.392     ; 9.289      ;
-; 3.861  ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.450     ; 9.256      ;
-; 4.144  ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.766     ; 9.289      ;
+; -1.138 ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.136      ; 8.441      ;
+; -1.138 ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.136      ; 8.441      ;
+; -0.949 ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 7.136      ; 8.252      ;
+; -0.638 ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.136      ; 8.441      ;
+; -0.638 ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.136      ; 8.441      ;
+; -0.449 ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 7.136      ; 8.252      ;
+; 1.000  ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.835      ; 9.002      ;
+; 1.150  ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.970      ; 8.987      ;
+; 1.156  ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.976      ; 8.987      ;
+; 1.156  ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 9.976      ; 8.987      ;
+; 1.500  ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.835      ; 9.002      ;
+; 1.560  ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.395     ; 9.002      ;
+; 1.602  ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.422     ; 8.987      ;
+; 1.623  ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.476     ; 9.020      ;
+; 1.624  ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.444     ; 8.987      ;
+; 1.629  ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.482     ; 9.020      ;
+; 1.630  ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.450     ; 8.987      ;
+; 1.633  ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.453     ; 8.987      ;
+; 1.650  ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.970      ; 8.987      ;
+; 1.656  ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.976      ; 8.987      ;
+; 1.656  ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 9.976      ; 8.987      ;
+; 2.007  ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.842     ; 9.002      ;
+; 2.017  ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.852     ; 9.002      ;
+; 2.037  ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.872     ; 9.002      ;
+; 2.049  ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.884     ; 9.002      ;
+; 2.060  ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.395     ; 9.002      ;
+; 2.069  ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.889     ; 8.987      ;
+; 2.102  ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.422     ; 8.987      ;
+; 2.120  ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.955     ; 9.002      ;
+; 2.123  ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.476     ; 9.020      ;
+; 2.124  ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.444     ; 8.987      ;
+; 2.129  ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.482     ; 9.020      ;
+; 2.130  ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.450     ; 8.987      ;
+; 2.133  ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.453     ; 8.987      ;
+; 2.144  ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 10.979     ; 9.002      ;
+; 2.162  ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.033     ; 9.038      ;
+; 2.347  ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.200     ; 9.020      ;
+; 2.386  ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.221     ; 9.002      ;
+; 2.507  ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.842     ; 9.002      ;
+; 2.517  ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.852     ; 9.002      ;
+; 2.517  ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.352     ; 9.002      ;
+; 2.537  ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.872     ; 9.002      ;
+; 2.549  ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.884     ; 9.002      ;
+; 2.567  ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.402     ; 9.002      ;
+; 2.569  ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.889     ; 8.987      ;
+; 2.620  ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.955     ; 9.002      ;
+; 2.623  ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.458     ; 9.002      ;
+; 2.644  ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 10.979     ; 9.002      ;
+; 2.662  ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.033     ; 9.038      ;
+; 2.686  ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.611     ; 9.092      ;
+; 2.690  ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.615     ; 9.092      ;
+; 2.785  ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.656     ; 9.038      ;
+; 2.789  ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 11.642     ; 9.020      ;
+; 2.847  ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.200     ; 9.020      ;
+; 2.886  ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.221     ; 9.002      ;
+; 3.017  ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.352     ; 9.002      ;
+; 3.067  ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.402     ; 9.002      ;
+; 3.123  ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.458     ; 9.002      ;
+; 3.186  ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.611     ; 9.092      ;
+; 3.190  ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.615     ; 9.092      ;
+; 3.285  ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.656     ; 9.038      ;
+; 3.289  ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 11.642     ; 9.020      ;
+; 3.834  ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.704     ; 9.037      ;
+; 3.951  ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.841     ; 9.057      ;
+; 4.048  ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 0.500        ; 12.883     ; 9.002      ;
+; 4.334  ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.704     ; 9.037      ;
+; 4.451  ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.841     ; 9.057      ;
+; 4.548  ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 1.000        ; 12.883     ; 9.002      ;
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
 
 
@@ -560,74 +560,74 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
 ; Slack  ; From Node          ; To Node                              ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
-; -3.698 ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.766     ; 9.289      ;
-; -3.415 ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.450     ; 9.256      ;
-; -3.324 ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.392     ; 9.289      ;
-; -3.320 ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.460     ; 9.361      ;
-; -3.198 ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.766     ; 9.289      ;
-; -3.186 ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.358     ; 9.393      ;
-; -3.036 ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.104     ; 9.289      ;
-; -2.915 ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.450     ; 9.256      ;
-; -2.841 ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.909     ; 9.289      ;
-; -2.824 ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.392     ; 9.289      ;
-; -2.820 ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.460     ; 9.361      ;
-; -2.748 ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.816     ; 9.289      ;
-; -2.735 ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.907     ; 9.393      ;
-; -2.705 ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.810     ; 9.326      ;
-; -2.686 ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.358     ; 9.393      ;
-; -2.617 ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.773     ; 9.377      ;
-; -2.612 ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.768     ; 9.377      ;
-; -2.536 ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.104     ; 9.289      ;
-; -2.471 ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.521     ; 9.271      ;
-; -2.341 ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.909     ; 9.289      ;
-; -2.287 ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.337     ; 9.271      ;
-; -2.284 ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.352     ; 9.289      ;
-; -2.248 ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.816     ; 9.289      ;
-; -2.235 ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.907     ; 9.393      ;
-; -2.205 ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.810     ; 9.326      ;
-; -2.120 ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.188     ; 9.289      ;
-; -2.120 ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.188     ; 9.289      ;
-; -2.117 ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.773     ; 9.377      ;
-; -2.112 ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.768     ; 9.377      ;
-; -2.096 ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.183     ; 9.308      ;
-; -1.971 ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.521     ; 9.271      ;
-; -1.933 ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.968     ; 9.256      ;
-; -1.910 ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.978     ; 9.289      ;
-; -1.894 ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.929     ; 9.256      ;
-; -1.875 ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.910     ; 9.256      ;
-; -1.787 ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.337     ; 9.271      ;
-; -1.784 ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.352     ; 9.289      ;
-; -1.746 ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.797     ; 9.272      ;
-; -1.732 ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.799     ; 9.288      ;
-; -1.699 ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.750     ; 9.272      ;
-; -1.693 ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.760     ; 9.288      ;
-; -1.620 ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.188     ; 9.289      ;
-; -1.620 ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.188     ; 9.289      ;
-; -1.596 ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.183     ; 9.308      ;
-; -1.433 ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.968     ; 9.256      ;
-; -1.428 ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.463     ; 9.256      ;
-; -1.410 ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.978     ; 9.289      ;
-; -1.394 ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.929     ; 9.256      ;
-; -1.375 ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.910     ; 9.256      ;
-; -1.323 ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.410     ; 9.308      ;
-; -1.246 ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.797     ; 9.272      ;
-; -1.232 ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.799     ; 9.288      ;
-; -1.199 ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.750     ; 9.272      ;
-; -1.193 ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.760     ; 9.288      ;
-; -1.126 ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.161     ; 9.256      ;
-; -0.928 ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.463     ; 9.256      ;
-; -0.823 ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.410     ; 9.308      ;
-; -0.766 ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.816      ; 9.271      ;
-; -0.747 ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.797      ; 9.271      ;
-; -0.626 ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.161     ; 9.256      ;
-; -0.266 ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.816      ; 9.271      ;
-; -0.247 ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.797      ; 9.271      ;
-; 1.006  ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.405      ; 8.632      ;
-; 1.006  ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.405      ; 8.632      ;
-; 1.006  ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.405      ; 8.632      ;
-; 1.506  ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.405      ; 8.632      ;
-; 1.506  ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.405      ; 8.632      ;
-; 1.506  ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.405      ; 8.632      ;
+; -4.102 ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.883     ; 9.002      ;
+; -4.005 ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.841     ; 9.057      ;
+; -3.888 ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 12.704     ; 9.037      ;
+; -3.602 ; game_state_code[0] ; d_flipflop:hits_map_register[26]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.883     ; 9.002      ;
+; -3.505 ; game_state_code[0] ; d_flipflop:hits_map_register[18]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.841     ; 9.057      ;
+; -3.388 ; game_state_code[0] ; d_flipflop:hits_map_register[19]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 12.704     ; 9.037      ;
+; -2.843 ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.642     ; 9.020      ;
+; -2.839 ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.656     ; 9.038      ;
+; -2.744 ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.615     ; 9.092      ;
+; -2.740 ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.611     ; 9.092      ;
+; -2.677 ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.458     ; 9.002      ;
+; -2.621 ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.402     ; 9.002      ;
+; -2.571 ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.352     ; 9.002      ;
+; -2.440 ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.221     ; 9.002      ;
+; -2.401 ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.200     ; 9.020      ;
+; -2.343 ; game_state_code[0] ; d_flipflop:hits_map_register[11]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.642     ; 9.020      ;
+; -2.339 ; game_state_code[0] ; d_flipflop:hits_map_register[21]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.656     ; 9.038      ;
+; -2.244 ; game_state_code[0] ; d_flipflop:hits_map_register[25]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.615     ; 9.092      ;
+; -2.240 ; game_state_code[0] ; d_flipflop:hits_map_register[32]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.611     ; 9.092      ;
+; -2.216 ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 11.033     ; 9.038      ;
+; -2.198 ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.979     ; 9.002      ;
+; -2.177 ; game_state_code[0] ; d_flipflop:hits_map_register[12]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.458     ; 9.002      ;
+; -2.174 ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.955     ; 9.002      ;
+; -2.123 ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.889     ; 8.987      ;
+; -2.121 ; game_state_code[0] ; d_flipflop:hits_map_register[0]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.402     ; 9.002      ;
+; -2.103 ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.884     ; 9.002      ;
+; -2.091 ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.872     ; 9.002      ;
+; -2.071 ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.852     ; 9.002      ;
+; -2.071 ; game_state_code[0] ; d_flipflop:hits_map_register[28]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.352     ; 9.002      ;
+; -2.061 ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.842     ; 9.002      ;
+; -1.940 ; game_state_code[0] ; d_flipflop:hits_map_register[16]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.221     ; 9.002      ;
+; -1.901 ; game_state_code[0] ; d_flipflop:hits_map_register[9]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.200     ; 9.020      ;
+; -1.716 ; game_state_code[0] ; d_flipflop:hits_map_register[24]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 11.033     ; 9.038      ;
+; -1.698 ; game_state_code[0] ; d_flipflop:hits_map_register[30]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.979     ; 9.002      ;
+; -1.687 ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.453     ; 8.987      ;
+; -1.684 ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.450     ; 8.987      ;
+; -1.683 ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.482     ; 9.020      ;
+; -1.678 ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.444     ; 8.987      ;
+; -1.677 ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.476     ; 9.020      ;
+; -1.674 ; game_state_code[0] ; d_flipflop:hits_map_register[14]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.955     ; 9.002      ;
+; -1.656 ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.422     ; 8.987      ;
+; -1.623 ; game_state_code[0] ; d_flipflop:hits_map_register[8]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.889     ; 8.987      ;
+; -1.614 ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 10.395     ; 9.002      ;
+; -1.603 ; game_state_code[0] ; d_flipflop:hits_map_register[33]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.884     ; 9.002      ;
+; -1.591 ; game_state_code[0] ; d_flipflop:hits_map_register[4]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.872     ; 9.002      ;
+; -1.571 ; game_state_code[0] ; d_flipflop:hits_map_register[7]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.852     ; 9.002      ;
+; -1.561 ; game_state_code[0] ; d_flipflop:hits_map_register[3]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.842     ; 9.002      ;
+; -1.210 ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.976      ; 8.987      ;
+; -1.210 ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.976      ; 8.987      ;
+; -1.204 ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.970      ; 8.987      ;
+; -1.187 ; game_state_code[0] ; d_flipflop:hits_map_register[1]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.453     ; 8.987      ;
+; -1.184 ; game_state_code[0] ; d_flipflop:hits_map_register[29]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.450     ; 8.987      ;
+; -1.183 ; game_state_code[0] ; d_flipflop:hits_map_register[34]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.482     ; 9.020      ;
+; -1.178 ; game_state_code[0] ; d_flipflop:hits_map_register[15]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.444     ; 8.987      ;
+; -1.177 ; game_state_code[0] ; d_flipflop:hits_map_register[27]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.476     ; 9.020      ;
+; -1.156 ; game_state_code[0] ; d_flipflop:hits_map_register[22]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.422     ; 8.987      ;
+; -1.114 ; game_state_code[0] ; d_flipflop:hits_map_register[10]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 10.395     ; 9.002      ;
+; -1.054 ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 9.835      ; 9.002      ;
+; -0.710 ; game_state_code[0] ; d_flipflop:hits_map_register[23]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.976      ; 8.987      ;
+; -0.710 ; game_state_code[0] ; d_flipflop:hits_map_register[31]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.976      ; 8.987      ;
+; -0.704 ; game_state_code[0] ; d_flipflop:hits_map_register[2]|out  ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.970      ; 8.987      ;
+; -0.554 ; game_state_code[0] ; d_flipflop:hits_map_register[17]|out ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 9.835      ; 9.002      ;
+; 0.895  ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.136      ; 8.252      ;
+; 1.084  ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.136      ; 8.441      ;
+; 1.084  ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; 0.000        ; 7.136      ; 8.441      ;
+; 1.395  ; game_state_code[0] ; d_flipflop:saveMapCode[1]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.136      ; 8.252      ;
+; 1.584  ; game_state_code[0] ; d_flipflop:saveMapCode[2]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.136      ; 8.441      ;
+; 1.584  ; game_state_code[0] ; d_flipflop:saveMapCode[0]|out        ; game_state_code[0] ; game_state_code[0] ; -0.500       ; 7.136      ; 8.441      ;
 +--------+--------------------+--------------------------------------+--------------------+--------------------+--------------+------------+------------+
 
 
@@ -636,22 +636,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
 ; Slack ; From Node          ; To Node                                                            ; Launch Clock       ; Latch Clock                                       ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
-; 2.927 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.369      ;
-; 2.927 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.369      ;
-; 2.927 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.369      ;
-; 2.927 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.369      ;
-; 2.968 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.410      ;
-; 2.968 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.410      ;
-; 2.968 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.410      ;
-; 2.968 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 4.221      ; 7.410      ;
-; 3.427 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.369      ;
-; 3.427 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.369      ;
-; 3.427 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.369      ;
-; 3.427 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.369      ;
-; 3.468 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.410      ;
-; 3.468 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.410      ;
-; 3.468 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.410      ;
-; 3.468 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 4.221      ; 7.410      ;
+; 3.171 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.171 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; 0.000        ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff2|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff1|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; sync_3b_counter:counterMatrixDisplay|t_flipflop:tff0|out           ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_3|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_2|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
+; 3.671 ; game_state_code[0] ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; -0.500       ; 5.049      ; 8.441      ;
 +-------+--------------------+--------------------------------------------------------------------+--------------------+---------------------------------------------------+--------------+------------+------------+
 
 
@@ -660,32 +660,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
 ; Slack ; From Node          ; To Node                                           ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 3.841 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.341 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.410      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.422 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
-; 4.922 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 7.991      ;
+; 4.683 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.252      ;
+; 4.683 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.252      ;
+; 4.683 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.252      ;
+; 4.683 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.252      ;
+; 4.683 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.252      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 4.686 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; 0.000        ; 3.348      ; 8.255      ;
+; 5.183 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.252      ;
+; 5.183 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff0|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.252      ;
+; 5.183 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff1|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.252      ;
+; 5.183 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff10|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.252      ;
+; 5.183 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff11|out ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.252      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff2|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff3|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff4|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff5|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff6|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff7|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff8|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
+; 5.186 ; game_state_code[0] ; sync_freq_divider:freq_div_1|t_flipflop:tff9|out  ; game_state_code[0] ; cpld_clk    ; -0.500       ; 3.348      ; 8.255      ;
 +-------+--------------------+---------------------------------------------------+--------------------+-------------+--------------+------------+------------+
 
 
@@ -756,10 +756,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 175   ; 175  ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 168   ; 168  ;
 ; Unconstrained Output Ports      ; 26    ; 26   ;
-; Unconstrained Output Port Paths ; 285   ; 285  ;
+; Unconstrained Output Port Paths ; 278   ; 278  ;
 +---------------------------------+-------+------+
 
 
@@ -782,7 +782,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; confirmAttack           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; game_state_code[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; game_state_code[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; game_state_code[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -834,7 +833,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; confirmAttack           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; game_state_code[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; game_state_code[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; game_state_code[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; x_coord_and_map_code[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -884,7 +882,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Dec 11 07:44:46 2023
+    Info: Processing started: Mon Dec 11 11:28:25 2023
 Info: Command: quartus_sta batalha_naval -c batalha_naval
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -902,28 +900,28 @@ Info (332105): Deriving Clocks
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.247
+Info (332146): Worst-case setup slack is -4.846
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.247             -44.808 cpld_clk 
-    Info (332119):    -1.877             -16.741 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
-Info (332146): Worst-case hold slack is -1.788
+    Info (332119):    -4.846             -41.167 cpld_clk 
+    Info (332119):    -1.741             -16.064 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
+Info (332146): Worst-case hold slack is -1.379
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.788              -1.788 cpld_clk 
-    Info (332119):     1.414               0.000 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
-Info (332146): Worst-case recovery slack is -4.476
+    Info (332119):    -1.379              -1.379 cpld_clk 
+    Info (332119):     1.413               0.000 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
+Info (332146): Worst-case recovery slack is -4.740
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.476             -54.702 cpld_clk 
-    Info (332119):    -3.022             -24.012 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
-    Info (332119):    -1.060              -3.180 game_state_code[0] 
-Info (332146): Worst-case removal slack is -3.698
+    Info (332119):    -4.740             -61.605 cpld_clk 
+    Info (332119):    -3.225             -25.800 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
+    Info (332119):    -1.138              -3.225 game_state_code[0] 
+Info (332146): Worst-case removal slack is -4.102
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.698             -69.487 game_state_code[0] 
-    Info (332119):     2.927               0.000 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
-    Info (332119):     3.841               0.000 cpld_clk 
+    Info (332119):    -4.102             -69.265 game_state_code[0] 
+    Info (332119):     3.171               0.000 sync_freq_divider:freq_div_1|t_flipflop:tff12|out 
+    Info (332119):     4.683               0.000 cpld_clk 
 Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -935,8 +933,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Mon Dec 11 07:44:47 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Mon Dec 11 11:28:27 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

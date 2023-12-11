@@ -1,7 +1,8 @@
 module batalha_naval 
 (
 
-    input [2:0] x_coord_and_map_code , y_coord_code , game_state_code ,
+    input [2:0] x_coord_and_map_code , y_coord_code , 
+    input [1:0] game_state_code ,
     input confirmAttack , cpld_clk ,
 
     output [6:0] matrix_colune_data , display_colune_data ,
@@ -74,14 +75,18 @@ module batalha_naval
     //na array de 35 bits, os 7 bits de maior valor correspondem à coluna esquerda...
     //e assim respectivamente para as outras colunas
 
-    mux4x1 displayCode [2:0](
-        .in_a (game_state_code) , //1
+    wire game_state_code_w;
+
+    and andGambiarra [1:0](game_state_code_w[1:0] , game_state_code);
+
+    mux4x1 displayCode0 [2:0](
+        .in_a (game_state_code_w) , //1
         .in_c (x_coord_code) , //3
         .in_d (y_coord_code) , //4
         .select (counterOut[1:0]) ,
         .enable (enable) ,
 
-        .out (displayCodeOut)
+        .out (displayCodeOut0)
     );
 
     wire[2:0] displayCodeOut;
@@ -246,10 +251,12 @@ module batalha_naval
         .out    (ledRgbRed)
     );
 
+    nand nandInvalidXCoord ( invalidXCoord , x_coord_code[2] , x_coord_code[1] , x_coord_code[0] );
+
     not notRed (ledRgbGreen , ledRgbRed);
 
-    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack);
-    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack);
+    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , );
+    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , );
 
 
 endmodule
