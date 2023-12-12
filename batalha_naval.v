@@ -255,8 +255,8 @@ module batalha_naval
 
     not notRed (ledRgbGreen , ledRgbRed);
 
-    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , invalidXCoord);
-    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , invalidXCoord);
+    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , invalidXCoord , enableAttack);
+    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , invalidXCoord , enableAttack);
 
 
 endmodule
