@@ -86,7 +86,7 @@ module batalha_naval
         .select (counterOut[1:0]) ,
         .enable (enable) ,
 
-        .out (displayCodeOut0)
+        .out (displayCodeOut)
     );
 
     wire[2:0] displayCodeOut;

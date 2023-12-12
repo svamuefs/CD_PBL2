@@ -137,8 +137,8 @@ GND*                         : 71        :        :                   :         
 ledRgb[0]                    : 72        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 73        :        :                   :         : 2         :                
 GND*                         : 74        :        :                   :         : 2         :                
-GND*                         : 75        :        :                   :         : 2         :                
-display_colune_activator[0]  : 76        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_activator[0]  : 75        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 76        :        :                   :         : 2         :                
 GND*                         : 77        :        :                   :         : 2         :                
 matrix_colune_activator[0]   : 78        : output : 3.3-V LVTTL       :         : 2         : Y              
 GNDIO                        : 79        : gnd    :                   :         :           :                

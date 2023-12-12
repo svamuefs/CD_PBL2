@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Mon Dec 11 23:43:31 2023
+Tue Dec 12 15:42:00 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -88,12 +88,12 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 11 23:43:31 2023          ;
+; Analysis & Synthesis Status ; Successful - Tue Dec 12 15:42:00 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 208                                            ;
+; Total logic elements        ; 222                                            ;
 ; Total pins                  ; 36                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
@@ -210,38 +210,38 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Total logic elements                        ; 208             ;
-;     -- Combinational with no register       ; 150             ;
-;     -- Register only                        ; 7               ;
-;     -- Combinational with a register        ; 51              ;
-;                                             ;                 ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 117             ;
-;     -- 3 input functions                    ; 34              ;
-;     -- 2 input functions                    ; 16              ;
-;     -- 1 input functions                    ; 3               ;
-;     -- 0 input functions                    ; 31              ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 208             ;
-;     -- arithmetic mode                      ; 0               ;
-;     -- qfbk mode                            ; 0               ;
-;     -- register cascade mode                ; 0               ;
-;     -- synchronous clear/load mode          ; 0               ;
-;     -- asynchronous clear/load mode         ; 58              ;
-;                                             ;                 ;
-; Total registers                             ; 58              ;
-; I/O pins                                    ; 36              ;
-; Maximum fan-out node                        ; andEnableAttack ;
-; Maximum fan-out                             ; 41              ;
-; Total fan-out                               ; 753             ;
-; Average fan-out                             ; 3.09            ;
-+---------------------------------------------+-----------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 222      ;
+;     -- Combinational with no register       ; 164      ;
+;     -- Register only                        ; 7        ;
+;     -- Combinational with a register        ; 51       ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 130      ;
+;     -- 3 input functions                    ; 37       ;
+;     -- 2 input functions                    ; 14       ;
+;     -- 1 input functions                    ; 3        ;
+;     -- 0 input functions                    ; 31       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 222      ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 58       ;
+;                                             ;          ;
+; Total registers                             ; 58       ;
+; I/O pins                                    ; 36       ;
+; Maximum fan-out node                        ; orEnable ;
+; Maximum fan-out                             ; 42       ;
+; Total fan-out                               ; 811      ;
+; Average fan-out                             ; 3.14     ;
++---------------------------------------------+----------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -249,7 +249,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Entity Name       ; Library Name ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
-; |batalha_naval                              ; 208 (16)    ; 58           ; 0          ; 36   ; 0            ; 150 (16)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
+; |batalha_naval                              ; 222 (16)    ; 58           ; 0          ; 36   ; 0            ; 164 (16)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
 ;    |d_flipflop:hits_map_register[0]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[0]                                ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[10]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[10]                               ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[11]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[11]                               ; d_flipflop        ; work         ;
@@ -308,9 +308,10 @@ https://fpgasoftware.intel.com/eula.
 ;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
 ;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
 ;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |display_decoder:displayDecoder|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
 ;    |map_decoder_5maps:mapDecoder|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
 ;    |mux2x1:codeSelect[0]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[0]                                           ; mux2x1            ; work         ;
-;    |mux2x1:codeSelect[1]|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[1]                                           ; mux2x1            ; work         ;
+;    |mux2x1:codeSelect[1]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[1]                                           ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[0]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[0]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[1]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[1]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[2]|           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[2]                                   ; mux2x1            ; work         ;
@@ -318,6 +319,12 @@ https://fpgasoftware.intel.com/eula.
 ;    |mux2x1:matrixColuneData_1[4]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[4]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[5]|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[5]                                   ; mux2x1            ; work         ;
 ;    |mux2x1:matrixColuneData_1[6]|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:matrixColuneData_1[6]                                   ; mux2x1            ; work         ;
+;    |mux4x1:displayCode0[0]|                 ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[0]                                         ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[0]|mux2x1:mux2                             ; mux2x1            ; work         ;
+;    |mux4x1:displayCode0[1]|                 ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[1]                                         ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[1]|mux2x1:mux2                             ; mux2x1            ; work         ;
+;    |mux4x1:displayCode0[2]|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]                                         ; mux4x1            ; work         ;
+;       |mux2x1:mux2|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]|mux2x1:mux2                             ; mux2x1            ; work         ;
 ;    |mux8x1:xCoordMuxLedRgb|                 ; 37 (0)      ; 0            ; 0          ; 0    ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb                                         ; mux8x1            ; work         ;
 ;       |mux2x1:mux_2|                        ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
 ;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
@@ -732,35 +739,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux4x1:displayCode0[2]"                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; in_a ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; in_b ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode0[2]"                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_a ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux4x1:displayCode0[1]"                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; in_b ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode0[1]"                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux4x1:displayCode0[0]"                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; in_b ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4x1:displayCode0[0]"                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; in_b ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -802,7 +806,7 @@ The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Dec 11 23:43:12 2023
+    Info: Processing started: Tue Dec 12 15:41:48 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Info (16303): Aggressive Area optimization mode selected -- logic area will be prioritized at the potential cost of reduced timing performance
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -908,7 +912,6 @@ Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): create
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(32): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 32
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(39): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 39
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(50): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(89): created implicit net for "displayCodeOut0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 89
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(132): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 132
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(150): created implicit net for "notYCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 150
 Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(152): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 152
@@ -931,20 +934,18 @@ Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:xCoordDemuxH
 Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 23
 Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 21
 Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:xCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 252
-Info (13014): Ignored 45 buffer(s)
-    Info (13019): Ignored 45 SOFT buffer(s)
+Info (13014): Ignored 47 buffer(s)
+    Info (13019): Ignored 47 SOFT buffer(s)
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "display_colune_data[6]" is stuck at VCC File: C:/CD/CD_PBL_2/batalha_naval.v Line: 8
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 244 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 208 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info (21061): Implemented 222 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
     Info: Peak virtual memory: 4718 megabytes
-    Info: Processing ended: Mon Dec 11 23:43:31 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Processing ended: Tue Dec 12 15:42:00 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 
