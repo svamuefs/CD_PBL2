@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/11/2023 10:47:53"
+// Generated on "12/11/2023 20:10:18"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          debouncer
 // 
@@ -51,15 +51,13 @@ end
 initial
 begin
 	button = 1'b1;
-	button = #490000 1'b0;
+	button = #40000 1'b0;
+	button = #20000 1'b1;
+	button = #20000 1'b0;
 	button = #10000 1'b1;
-	button = #10000 1'b0;
-	button = #10000 1'b1;
-	button = #10000 1'b0;
-	button = #30000 1'b1;
-	button = #10000 1'b0;
-	button = #50000 1'b1;
-	button = #10000 1'b0;
+	button = #40000 1'b0;
+	button = #20000 1'b1;
+	button = #40000 1'b0;
 	button = #150000 1'b1;
 end 
 

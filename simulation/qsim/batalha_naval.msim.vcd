@@ -3,7 +3,7 @@ $comment
 		vcd file batalha_naval.msim.vcd -direction
 $end
 $date
-	Mon Dec 11 11:08:42 2023
+	Mon Dec 11 20:38:43 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,1370 +12,750 @@ $timescale
 	1ps
 $end
 
-$scope module batalha_naval_vlg_vec_tst $end
-$var reg 1 ! confirmAttack $end
-$var reg 1 " cpld_clk $end
-$var reg 3 # game_state_code [2:0] $end
-$var reg 3 $ x_coord_and_map_code [2:0] $end
-$var reg 3 % y_coord_code [2:0] $end
-$var wire 1 & display_colune_activator [4] $end
-$var wire 1 ' display_colune_activator [3] $end
-$var wire 1 ( display_colune_activator [2] $end
-$var wire 1 ) display_colune_activator [1] $end
-$var wire 1 * display_colune_activator [0] $end
-$var wire 1 + display_colune_data [6] $end
-$var wire 1 , display_colune_data [5] $end
-$var wire 1 - display_colune_data [4] $end
-$var wire 1 . display_colune_data [3] $end
-$var wire 1 / display_colune_data [2] $end
-$var wire 1 0 display_colune_data [1] $end
-$var wire 1 1 display_colune_data [0] $end
-$var wire 1 2 ledRgb [1] $end
-$var wire 1 3 ledRgb [0] $end
-$var wire 1 4 matrix_colune_activator [4] $end
-$var wire 1 5 matrix_colune_activator [3] $end
-$var wire 1 6 matrix_colune_activator [2] $end
-$var wire 1 7 matrix_colune_activator [1] $end
-$var wire 1 8 matrix_colune_activator [0] $end
-$var wire 1 9 matrix_colune_data [6] $end
-$var wire 1 : matrix_colune_data [5] $end
-$var wire 1 ; matrix_colune_data [4] $end
-$var wire 1 < matrix_colune_data [3] $end
-$var wire 1 = matrix_colune_data [2] $end
-$var wire 1 > matrix_colune_data [1] $end
-$var wire 1 ? matrix_colune_data [0] $end
+$scope module sync_freq_divider_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " enable $end
+$var wire 1 # final_clk $end
 
 $scope module i1 $end
-$var wire 1 @ gnd $end
-$var wire 1 A vcc $end
-$var wire 1 B unknown $end
-$var tri1 1 C devclrn $end
-$var tri1 1 D devpor $end
-$var tri1 1 E devoe $end
-$var wire 1 F saveMapCode[2]|out~regout $end
-$var wire 1 G cpld_clk~combout $end
-$var wire 1 H andEnableAttack~combout $end
-$var wire 1 I codeSelect[0]|or0 $end
-$var wire 1 J correctHits[24]~0 $end
-$var wire 1 K codeSelect[1]|or0~0 $end
-$var wire 1 L mapDecoder|or30 $end
-$var wire 1 M counterMatrixDisplay|tff0|out~regout $end
-$var wire 1 N counterMatrixDisplay|tff1|out~regout $end
-$var wire 1 O counterMatrixDisplay|tff2|out~regout $end
-$var wire 1 P registerMatrixDisplay|d_flipflop_0|out~regout $end
-$var wire 1 Q confirmAttack~combout $end
-$var wire 1 R debouncerConfirmAttack|tff0|out~regout $end
-$var wire 1 S debouncerConfirmAttack|tff1|out~regout $end
-$var wire 1 T debouncerConfirmAttack|and2~0_combout $end
-$var wire 1 U debouncerConfirmAttack|or0~combout $end
-$var wire 1 V debouncerConfirmAttack|tff2|out~regout $end
-$var wire 1 W yCoordDemuxHitsMap_0[0]|demux0|and0~0_combout $end
-$var wire 1 X andHitsMapClk[2]~0_combout $end
-$var wire 1 Y andHitsMapClk[1]~combout $end
-$var wire 1 Z hits_map_register[1]|out~regout $end
-$var wire 1 [ registerMatrixDisplay|d_flipflop_1|out~regout $end
-$var wire 1 \ registerMatrixDisplay|d_flipflop_2|out~regout $end
-$var wire 1 ] orEnable $end
-$var wire 1 ^ freq_div_1|tff0|out~regout $end
-$var wire 1 _ freq_div_1|tff1|out~regout $end
-$var wire 1 ` freq_div_1|tff2|out~regout $end
-$var wire 1 a freq_div_1|tff3|out~regout $end
-$var wire 1 b freq_div_1|and4~combout $end
-$var wire 1 c freq_div_1|tff4|out~regout $end
-$var wire 1 d freq_div_1|tff5|out~regout $end
-$var wire 1 e freq_div_1|tff6|out~regout $end
-$var wire 1 f freq_div_1|and7~combout $end
-$var wire 1 g freq_div_1|tff7|out~regout $end
-$var wire 1 h freq_div_1|tff8|out~regout $end
-$var wire 1 i freq_div_1|tff9|out~regout $end
-$var wire 1 j freq_div_1|and10~combout $end
-$var wire 1 k freq_div_1|tff10|out~regout $end
-$var wire 1 l freq_div_1|tff11|out~regout $end
-$var wire 1 m freq_div_1|tff12|out~regout $end
-$var wire 1 n registerMatrixDisplay|d_flipflop_3|out~regout $end
-$var wire 1 o mapDecoder|or10 $end
-$var wire 1 p yCoordDemuxHitsMap_0[0]|demux0|and0~1_combout $end
-$var wire 1 q yCoordDemuxHitsMap_0[0]|demux1|and1~combout $end
-$var wire 1 r hits_map_register[7]|out~regout $end
-$var wire 1 s yCoordDemuxHitsMap_0[0]|demux1|and0~combout $end
-$var wire 1 t hits_map_register[14]|out~regout $end
-$var wire 1 u matrixColuneData_1[0]|or0~0_combout $end
-$var wire 1 v matrixColuneData_1[0]|or0~1_combout $end
-$var wire 1 w yCoordDemuxHitsMap_0[0]|demux0|and0~combout $end
-$var wire 1 x hits_map_register[28]|out~regout $end
-$var wire 1 y matrixColuneData_1[0]|or0~5_combout $end
-$var wire 1 z yCoordDemuxHitsMap_0[0]|demux0|and1~combout $end
-$var wire 1 { hits_map_register[21]|out~regout $end
-$var wire 1 | matrixColuneData_1[0]|or0~3_combout $end
-$var wire 1 } matrixColuneData_1[0]|or0~4_combout $end
-$var wire 1 ~ matrixColuneData_1[0]|or0~6_combout $end
-$var wire 1 !! andHitsMapClk[0]~combout $end
-$var wire 1 "! hits_map_register[0]|out~regout $end
-$var wire 1 #! matrixColuneData_1[0]|or0~2_combout $end
-$var wire 1 $! matrixColuneData_1[0]|or0~7_combout $end
-$var wire 1 %! yCoordDemuxHitsMap_0[1]|demux0|and1~combout $end
-$var wire 1 &! hits_map_register[22]|out~regout $end
-$var wire 1 '! matrixColuneData_1[1]|or0~2_combout $end
-$var wire 1 (! yCoordDemuxHitsMap_0[1]|demux0|and0~combout $end
-$var wire 1 )! hits_map_register[29]|out~regout $end
-$var wire 1 *! matrixColuneData_1[1]|or0~3_combout $end
-$var wire 1 +! matrixColuneData_1[1]|or0~4_combout $end
-$var wire 1 ,! yCoordDemuxHitsMap_0[1]|demux1|and1~combout $end
-$var wire 1 -! hits_map_register[8]|out~regout $end
-$var wire 1 .! matrixColuneData_1[1]|or0~5_combout $end
-$var wire 1 /! yCoordDemuxHitsMap_0[1]|demux1|and0~combout $end
-$var wire 1 0! hits_map_register[15]|out~regout $end
-$var wire 1 1! matrixColuneData_1[1]|or0~1_combout $end
-$var wire 1 2! matrixColuneData_1[1]|or0~6_combout $end
-$var wire 1 3! matrixColuneData_1[1]|or0~0 $end
-$var wire 1 4! matrixColuneData_1[1]|or0~7_combout $end
-$var wire 1 5! yCoordDemuxHitsMap_0[2]|demux0|and0~0_combout $end
-$var wire 1 6! yCoordDemuxHitsMap_0[2]|demux1|and1~combout $end
-$var wire 1 7! hits_map_register[9]|out~regout $end
-$var wire 1 8! mapDecoder|or80~0_combout $end
-$var wire 1 9! yCoordDemuxHitsMap_0[2]|demux0|and1~combout $end
-$var wire 1 :! hits_map_register[23]|out~regout $end
-$var wire 1 ;! xCoordMuxLedRgb|mux_0|mux2|and1~0_combout $end
-$var wire 1 <! matrixColuneData_1[2]|or0~1_combout $end
-$var wire 1 =! matrixColuneData_1[2]|or0~4_combout $end
-$var wire 1 >! mapDecoder|or20~combout $end
-$var wire 1 ?! yCoordDemuxHitsMap_0[2]|demux0|and0~combout $end
-$var wire 1 @! hits_map_register[30]|out~regout $end
-$var wire 1 A! yCoordDemuxHitsMap_0[2]|demux1|and0~combout $end
-$var wire 1 B! hits_map_register[16]|out~regout $end
-$var wire 1 C! matrixColuneData_1[2]|or0~2_combout $end
-$var wire 1 D! matrixColuneData_1[2]|or0~3_combout $end
-$var wire 1 E! matrixColuneData_1[2]|or0~5_combout $end
-$var wire 1 F! andHitsMapClk[2]~combout $end
-$var wire 1 G! hits_map_register[2]|out~regout $end
-$var wire 1 H! matrixColuneData_1[2]|or0~0_combout $end
-$var wire 1 I! matrixColuneData_1[2]|or0~6_combout $end
-$var wire 1 J! andHitsMapClk[3]~combout $end
-$var wire 1 K! hits_map_register[3]|out~regout $end
-$var wire 1 L! mapDecoder|xor100~combout $end
-$var wire 1 M! matrixColuneData_1[3]|or0~0_combout $end
-$var wire 1 N! yCoordDemuxHitsMap_0[3]|demux0|and0~combout $end
-$var wire 1 O! hits_map_register[31]|out~regout $end
-$var wire 1 P! yCoordDemuxHitsMap_0[3]|demux1|and0~combout $end
-$var wire 1 Q! hits_map_register[17]|out~regout $end
-$var wire 1 R! matrixColuneData_1[3]|or0~2_combout $end
-$var wire 1 S! yCoordDemuxHitsMap_0[3]|demux1|and1~combout $end
-$var wire 1 T! hits_map_register[10]|out~regout $end
-$var wire 1 U! yCoordDemuxHitsMap_0[3]|demux0|and1~combout $end
-$var wire 1 V! hits_map_register[24]|out~regout $end
-$var wire 1 W! correctHits[24]~1_combout $end
-$var wire 1 X! matrixColuneData_1[3]|or0~1_combout $end
-$var wire 1 Y! matrixColuneData_1[3]|or0~3_combout $end
-$var wire 1 Z! mapDecoder|or110~0_combout $end
-$var wire 1 [! saveMapCode[0]|out~regout $end
-$var wire 1 \! codeSelect[0]|and1~combout $end
-$var wire 1 ]! correctHits[18]~2_combout $end
-$var wire 1 ^! mapDecoder|andEnable[0]~0_combout $end
-$var wire 1 _! matrixColuneData_1[3]|or0~4_combout $end
-$var wire 1 `! matrixColuneData_1[3]|or0~5_combout $end
-$var wire 1 a! matrixColuneData_1[3]|or0~6_combout $end
-$var wire 1 b! andHitsMapClk[4]~combout $end
-$var wire 1 c! hits_map_register[4]|out~regout $end
-$var wire 1 d! matrixColuneData_1[4]|or0~0_combout $end
-$var wire 1 e! yCoordDemuxHitsMap_0[4]|demux0|and0~0_combout $end
-$var wire 1 f! yCoordDemuxHitsMap_0[4]|demux0|and0~combout $end
-$var wire 1 g! hits_map_register[32]|out~regout $end
-$var wire 1 h! matrixColuneData_1[4]|or0~3_combout $end
-$var wire 1 i! yCoordDemuxHitsMap_0[4]|demux0|and1~combout $end
-$var wire 1 j! hits_map_register[25]|out~regout $end
-$var wire 1 k! matrixColuneData_1[4]|or0~2_combout $end
-$var wire 1 l! matrixColuneData_1[4]|or0~4_combout $end
-$var wire 1 m! yCoordDemuxHitsMap_0[4]|demux1|and1~combout $end
-$var wire 1 n! hits_map_register[11]|out~regout $end
-$var wire 1 o! matrixColuneData_1[4]|or0~5_combout $end
-$var wire 1 p! yCoordDemuxHitsMap_0[4]|demux1|and0~combout $end
-$var wire 1 q! hits_map_register[18]|out~regout $end
-$var wire 1 r! saveMapCode[1]|out~regout $end
-$var wire 1 s! codeSelect[1]|or0~1_combout $end
-$var wire 1 t! correctHits[18]~3_combout $end
-$var wire 1 u! correctHits[18]~4_combout $end
-$var wire 1 v! mapDecoder|or120~0_combout $end
-$var wire 1 w! matrixColuneData_1[4]|or0~1_combout $end
-$var wire 1 x! matrixColuneData_1[4]|or0~6_combout $end
-$var wire 1 y! matrixColuneData_1[4]|or0~7_combout $end
-$var wire 1 z! yCoordDemuxHitsMap_0[5]|demux0|and1~combout $end
-$var wire 1 {! hits_map_register[26]|out~regout $end
-$var wire 1 |! matrixColuneData_1[5]|or0~2_combout $end
-$var wire 1 }! yCoordDemuxHitsMap_0[5]|demux0|and0~combout $end
-$var wire 1 ~! hits_map_register[33]|out~regout $end
-$var wire 1 !" matrixColuneData_1[5]|or0~4_combout $end
-$var wire 1 "" yCoordDemuxHitsMap_0[5]|demux1|and0~combout $end
-$var wire 1 #" hits_map_register[19]|out~regout $end
-$var wire 1 $" matrixColuneData_1[5]|or0~3_combout $end
-$var wire 1 %" matrixColuneData_1[5]|or0~5_combout $end
-$var wire 1 &" yCoordDemuxHitsMap_0[5]|demux1|and1~combout $end
-$var wire 1 '" hits_map_register[12]|out~regout $end
-$var wire 1 (" matrixColuneData_1[5]|or0~6_combout $end
-$var wire 1 )" matrixColuneData_1[5]|or0~7_combout $end
-$var wire 1 *" matrixColuneData_1[5]|or0~8_combout $end
-$var wire 1 +" matrixColuneData_1[5]|or0~9_combout $end
-$var wire 1 ," yCoordDemuxHitsMap_0[6]|demux0|and0~0_combout $end
-$var wire 1 -" yCoordDemuxHitsMap_0[6]|demux0|and0~combout $end
-$var wire 1 ." hits_map_register[34]|out~regout $end
-$var wire 1 /" yCoordDemuxHitsMap_0[6]|demux0|and1~combout $end
-$var wire 1 0" hits_map_register[27]|out~regout $end
-$var wire 1 1" matrixColuneData_1[6]|or0~0_combout $end
-$var wire 1 2" matrixColuneData_1[6]|or0~1_combout $end
-$var wire 1 3" matrixColuneData_1[6]|or0~2_combout $end
-$var wire 1 4" displayCode[0]|mux2|or0~0_combout $end
-$var wire 1 5" displayCode[0]|mux2|or0~1_combout $end
-$var wire 1 6" displayCode[0]|mux2|or0~2_combout $end
-$var wire 1 7" displayCode[2]|mux2|or0~0_combout $end
-$var wire 1 8" displayCode[2]|mux2|or0~1_combout $end
-$var wire 1 9" displayCode[1]|mux2|or0~0_combout $end
-$var wire 1 :" displayCode[1]|mux2|or0~1_combout $end
-$var wire 1 ;" displayDecoder|orEnable[0]~0_combout $end
-$var wire 1 <" displayDecoder|orEnable[1]~1_combout $end
-$var wire 1 =" displayDecoder|orEnable[2]~combout $end
-$var wire 1 >" displayDecoder|orEnable[3]~2_combout $end
-$var wire 1 ?" displayDecoder|orEnable[4]~combout $end
-$var wire 1 @" displayDecoder|orEnable[5]~3_combout $end
-$var wire 1 A" displayDecoder|orEnable[6]~combout $end
-$var wire 1 B" registerMatrixDisplay|d_flipflop_4|out~regout $end
-$var wire 1 C" xCoordMuxLedRgb|mux_2|and1~9_combout $end
-$var wire 1 D" xCoordMuxLedRgb|mux_2|and1~10_combout $end
-$var wire 1 E" xCoordMuxLedRgb|mux_2|and1~7_combout $end
-$var wire 1 F" xCoordMuxLedRgb|mux_2|and1~8_combout $end
-$var wire 1 G" xCoordMuxLedRgb|mux_2|or0~2_combout $end
-$var wire 1 H" xCoordMuxLedRgb|mux_2|and1~3_combout $end
-$var wire 1 I" xCoordMuxLedRgb|mux_2|and1~4_combout $end
-$var wire 1 J" xCoordMuxLedRgb|mux_2|and1~5_combout $end
-$var wire 1 K" xCoordMuxLedRgb|mux_2|and1~6_combout $end
-$var wire 1 L" xCoordMuxLedRgb|mux_2|and1~0_combout $end
-$var wire 1 M" xCoordMuxLedRgb|mux_2|and1~1_combout $end
-$var wire 1 N" xCoordMuxLedRgb|mux_2|and1~2_combout $end
-$var wire 1 O" xCoordMuxLedRgb|mux_2|or0~0_combout $end
-$var wire 1 P" xCoordMuxLedRgb|mux_2|or0~1_combout $end
-$var wire 1 Q" xCoordMuxLedRgb|mux_2|or0~3_combout $end
-$var wire 1 R" xCoordMuxLedRgb|mux_0|mux2|and0~5_combout $end
-$var wire 1 S" xCoordMuxLedRgb|mux_0|mux2|and0~6_combout $end
-$var wire 1 T" xCoordMuxLedRgb|mux_0|mux2|and0~7_combout $end
-$var wire 1 U" xCoordMuxLedRgb|mux_0|mux2|and0~8_combout $end
-$var wire 1 V" xCoordMuxLedRgb|mux_0|mux2|and0~1_combout $end
-$var wire 1 W" xCoordMuxLedRgb|mux_0|mux2|and0~2_combout $end
-$var wire 1 X" xCoordMuxLedRgb|mux_0|mux2|and0~3_combout $end
-$var wire 1 Y" xCoordMuxLedRgb|mux_0|mux2|and0~4_combout $end
-$var wire 1 Z" xCoordMuxLedRgb|mux_0|mux2|and0~9_combout $end
-$var wire 1 [" xCoordMuxLedRgb|mux_0|mux2|and1~3_combout $end
-$var wire 1 \" xCoordMuxLedRgb|mux_0|mux2|and1~2_combout $end
-$var wire 1 ]" xCoordMuxLedRgb|mux_0|mux2|and1~4_combout $end
-$var wire 1 ^" xCoordMuxLedRgb|mux_0|mux2|and1~1_combout $end
-$var wire 1 _" xCoordMuxLedRgb|mux_0|mux2|and1~5_combout $end
-$var wire 1 `" xCoordMuxLedRgb|mux_0|mux2|and1~6_combout $end
-$var wire 1 a" xCoordMuxLedRgb|mux_2|or0~4_combout $end
-$var wire 1 b" xCoordMuxLedRgb|mux_0|mux2|and1~7_combout $end
-$var wire 1 c" xCoordMuxLedRgb|mux_0|mux2|and1~8_combout $end
-$var wire 1 d" xCoordMuxLedRgb|mux_0|mux2|and0~0_combout $end
-$var wire 1 e" xCoordMuxLedRgb|mux_2|or0~5_combout $end
-$var wire 1 f" xCoordMuxLedRgb|mux_2|or0~6_combout $end
-$var wire 1 g" andGreen~2_combout $end
-$var wire 1 h" andRed~2_combout $end
-$var wire 1 i" y_coord_code~combout [2] $end
-$var wire 1 j" y_coord_code~combout [1] $end
-$var wire 1 k" y_coord_code~combout [0] $end
-$var wire 1 l" game_state_code~combout [2] $end
-$var wire 1 m" game_state_code~combout [1] $end
-$var wire 1 n" game_state_code~combout [0] $end
-$var wire 1 o" x_coord_and_map_code~combout [2] $end
-$var wire 1 p" x_coord_and_map_code~combout [1] $end
-$var wire 1 q" x_coord_and_map_code~combout [0] $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var tri1 1 ' devclrn $end
+$var tri1 1 ( devpor $end
+$var tri1 1 ) devoe $end
+$var wire 1 * clk~combout $end
+$var wire 1 + enable~combout $end
+$var wire 1 , tff0|out~regout $end
+$var wire 1 - tff1|out~regout $end
+$var wire 1 . tff2|out~regout $end
+$var wire 1 / tff3|out~regout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1!
-0"
-b0 #
-b0 $
-b0 %
-1*
-1)
-1(
+0!
+1"
+0#
+0$
+1%
+x&
 1'
-1&
-11
-10
-1/
-1.
-1-
-1,
+1(
+1)
+0*
 1+
-03
-02
-08
-07
-06
-05
-04
-0?
-0>
-0=
-0<
-0;
-0:
-09
-0@
-1A
-xB
-1C
-1D
-1E
-0F
-0G
-0H
-0I
-1J
-0K
-0L
-0M
-0N
-0O
-0P
-1Q
-0R
-0S
-0T
-1U
-0V
-0W
-0X
-0Y
-0Z
-0[
-0\
-1]
-0^
-0_
-0`
-0a
-0b
-0c
-0d
-0e
-0f
-0g
-0h
-0i
-0j
-0k
-0l
-0m
-0n
-1o
-0p
-0q
-0r
-0s
-0t
-1u
-0v
-0w
-0x
-1y
-0z
-0{
-0|
-0}
-1~
-0!!
-0"!
-0#!
-0$!
-0%!
-0&!
-1'!
-0(!
-0)!
-1*!
-1+!
-0,!
-0-!
-1.!
-0/!
-00!
-11!
-12!
-13!
-04!
-05!
-06!
-07!
-18!
-09!
-0:!
-1;!
-1<!
-1=!
-1>!
-0?!
-0@!
-0A!
-0B!
-0C!
-1D!
-1E!
-0F!
-0G!
-1H!
-0I!
-0J!
-0K!
-1L!
-1M!
-0N!
-0O!
-0P!
-0Q!
-1R!
-0S!
-0T!
-0U!
-0V!
-1W!
-1X!
-1Y!
-1Z!
-0[!
-0\!
-0]!
-0^!
-0_!
-1`!
-0a!
-0b!
-0c!
-1d!
-0e!
-0f!
-0g!
-1h!
-0i!
-0j!
-1k!
-1l!
-0m!
-0n!
-1o!
-0p!
-0q!
-0r!
-0s!
-1t!
-1u!
-0v!
-1w!
-1x!
-0y!
-0z!
-0{!
-1|!
-0}!
-0~!
-1!"
-0""
-0#"
-1$"
-1%"
-0&"
-0'"
-1("
-1)"
-1*"
-0+"
-0,"
-0-"
-0."
-0/"
-00"
-01"
-02"
-03"
-04"
-05"
-06"
-07"
-08"
-09"
-0:"
-0;"
-1<"
-1="
-1>"
-1?"
-1@"
-1A"
-0B"
-1C"
-1D"
-1E"
-1F"
-0G"
-1H"
-1I"
-1J"
-1K"
-0L"
-0M"
-0N"
-1O"
-0P"
-1Q"
-0R"
-0S"
-0T"
-1U"
-0V"
-0W"
-0X"
-1Y"
-1Z"
-1["
-1\"
-1]"
-1^"
-1_"
-1`"
-1a"
-1b"
-1c"
-1d"
-1e"
-0f"
-0g"
-0h"
-0k"
-0j"
-0i"
-0n"
-0m"
-0l"
-0q"
-0p"
-0o"
+0,
+0-
+0.
+0/
 $end
 #5000
-1"
-1G
+1!
+1*
+1,
 #10000
-0"
-0G
+0!
+0*
 #15000
-1"
-1G
+1!
+1*
+1-
+0,
 #20000
-0"
-0G
+0!
+0*
 #25000
-1"
-1G
+1!
+1*
+1,
 #30000
-0"
-0G
+0!
+0*
 #35000
-1"
-1G
+1!
+1*
+1.
+0-
+0,
 #40000
-0"
-0G
+0!
+0*
 #45000
-1"
-1G
+1!
+1*
+1,
 #50000
-0"
-0G
+0!
+0*
 #55000
-1"
-1G
+1!
+1*
+1-
+0,
 #60000
-0"
-0G
+0!
+0*
 #65000
-1"
-1G
+1!
+1*
+1,
 #70000
-0"
-0G
+0!
+0*
 #75000
-1"
-1G
+1!
+1*
+1/
+0.
+0-
+0,
+1#
 #80000
-0"
-0G
+0!
+0*
 #85000
-1"
-1G
+1!
+1*
+1,
 #90000
-0"
-0G
+0!
+0*
 #95000
-1"
-1G
+1!
+1*
+1-
+0,
 #100000
-0"
-0G
+0!
+0*
 #105000
-1"
-1G
+1!
+1*
+1,
 #110000
-0"
-0G
+0!
+0*
 #115000
-1"
-1G
+1!
+1*
+1.
+0-
+0,
 #120000
-b1 #
-0"
-1n"
-0G
-16"
-11"
-1+"
-0("
-0!"
-1_!
-0Y!
-0M!
-0H!
-0*!
-0y
-0u
-0]
-03!
-0="
-0<"
-0%"
-1a!
-1I!
-0+!
-0~
-1y!
-14!
-1$!
-1:
-0*"
-02!
-0$!
-0/
-00
-1<
-1=
-1;
-1>
-1?
-0+"
-04!
-0?
-0:
-0>
+0!
+0*
 #125000
-1"
-1G
-1^
+1!
+1*
+1,
 #130000
-0"
-0G
+0!
+0*
 #135000
-1"
-1G
-1_
-0^
+1!
+1*
+1-
+0,
 #140000
-0"
-0G
+0!
+0*
 #145000
-1"
-1G
-1^
+1!
+1*
+1,
 #150000
-0"
-0G
+0!
+0*
 #155000
-1"
-1G
-1`
-0_
-0^
+1!
+1*
+0/
+0.
+0-
+0,
+0#
 #160000
-0"
-0G
+0!
+0*
 #165000
-1"
-1G
-1^
+1!
+1*
+1,
 #170000
-0"
-0G
+0!
+0*
 #175000
-1"
-1G
-1_
-0^
+1!
+1*
+1-
+0,
 #180000
-0"
-0G
+0!
+0*
 #185000
-1"
-1G
-1^
+1!
+1*
+1,
 #190000
-0"
-0G
+0!
+0*
 #195000
-1"
-1G
-1a
-0`
-0_
-0^
+1!
+1*
+1.
+0-
+0,
 #200000
-0"
-0G
+0!
+0*
 #205000
-1"
-1G
-1^
+1!
+1*
+1,
 #210000
-0"
-0G
+0!
+0*
 #215000
-1"
-1G
-1_
-0^
+1!
+1*
+1-
+0,
 #220000
-0"
-0G
+0!
+0*
 #225000
-1"
-1G
-1^
+1!
+1*
+1,
 #230000
-0"
-0G
+0!
+0*
 #235000
-1"
-1G
-1`
-0_
-0^
+1!
+1*
+1/
+0.
+0-
+0,
+1#
 #240000
-0"
-0G
+0!
+0*
 #245000
-1"
-1G
-1^
+1!
+1*
+1,
 #250000
 0"
-0G
-#255000
-1"
-1G
-1_
-0^
-#260000
-0"
-0G
-#265000
-1"
-1G
-1^
-1b
-#270000
-b11 #
-0"
-1m"
-0G
-1:"
-0A"
-0>"
-1;"
+0!
 0+
-0.
-01
+0*
+0/
+0,
+0#
+#255000
+1!
+1*
+#260000
+0!
+0*
+#265000
+1!
+1*
+#270000
+0!
+0*
 #275000
-1"
-1G
-1c
-0a
-0`
-0_
-0^
-0b
+1!
+1*
 #280000
-0"
-0G
+0!
+0*
 #285000
-1"
-1G
-1^
+1!
+1*
 #290000
-0"
-0G
+0!
+0*
 #295000
-1"
-1G
-1_
-0^
+1!
+1*
 #300000
-0"
-0G
+0!
+0*
 #305000
-1"
-1G
-1^
+1!
+1*
 #310000
-0"
-0G
+0!
+0*
 #315000
-1"
-1G
-1`
-0_
-0^
+1!
+1*
 #320000
-0"
-0G
+0!
+0*
 #325000
-1"
-1G
-1^
+1!
+1*
 #330000
-0"
-0G
+0!
+0*
 #335000
-1"
-1G
-1_
-0^
+1!
+1*
 #340000
-0"
-0G
+0!
+0*
 #345000
-1"
-1G
-1^
+1!
+1*
 #350000
-0"
-0G
+0!
+0*
 #355000
-1"
-1G
-1a
-0`
-0_
-0^
+1!
+1*
 #360000
-0"
-0G
+0!
+0*
 #365000
-1"
-1G
-1^
+1!
+1*
 #370000
-0"
-0G
+0!
+0*
 #375000
-1"
-1G
-1_
-0^
+1!
+1*
 #380000
-0"
-0G
+0!
+0*
 #385000
-1"
-1G
-1^
+1!
+1*
 #390000
-0"
-0G
+0!
+0*
 #395000
-1"
-1G
-1`
-0_
-0^
+1!
+1*
 #400000
-0"
-0G
+0!
+0*
 #405000
-1"
-1G
-1^
+1!
+1*
 #410000
-b10 #
-0"
-0n"
-0G
-06"
-01"
-1("
-1!"
-0_!
-1Y!
-1M!
-1H!
-1*!
-1y
-1u
-13!
-1H
-0?"
-1="
-13"
-1%"
-1+!
-1~
-1f"
-1*"
-12!
-1$!
-0-
-1/
-19
-1+"
-14!
-1?
-1:
-1>
+0!
+0*
 #415000
-1"
-1G
-1_
-0^
+1!
+1*
 #420000
-0"
-0G
+0!
+0*
 #425000
-1"
-1G
-1^
-1b
+1!
+1*
 #430000
-0"
-0G
+0!
+0*
 #435000
-1"
-1G
-1d
-0c
-0a
-0`
-0_
-0^
-0b
+1!
+1*
 #440000
-0"
-0G
+0!
+0*
 #445000
-1"
-1G
-1^
+1!
+1*
 #450000
-0"
-0G
+0!
+0*
 #455000
-1"
-1G
-1_
-0^
+1!
+1*
 #460000
-0"
-0G
+0!
+0*
 #465000
-1"
-1G
-1^
+1!
+1*
 #470000
-0"
-0G
+0!
+0*
 #475000
-1"
-1G
-1`
-0_
-0^
+1!
+1*
 #480000
-0"
-0G
+0!
+0*
 #485000
-1"
-1G
-1^
+1!
+1*
 #490000
-0"
-0G
+0!
+0*
 #495000
-1"
-1G
-1_
-0^
+1!
+1*
 #500000
-0"
-0G
-#505000
 1"
-1G
-1^
-#510000
-0"
-0G
-#515000
-1"
-1G
-1a
-0`
-0_
-0^
-#520000
-0"
-0G
-#525000
-1"
-1G
-1^
-#530000
-0"
-0G
-#535000
-1"
-1G
-1_
-0^
-#540000
-0"
-0G
-#545000
-1"
-1G
-1^
-#550000
-0"
-0G
-#555000
-1"
-1G
-1`
-0_
-0^
-#560000
-0"
-0G
-#565000
-1"
-1G
-1^
-#570000
-0"
-0G
-#575000
-1"
-1G
-1_
-0^
-#580000
-0"
-0G
-#585000
-1"
-1G
-1^
-1b
-#590000
-0"
-0G
-#595000
-1"
-1G
-1c
-0a
-0`
-0_
-0^
-0b
-#600000
-0"
-0G
-#605000
-1"
-1G
-1^
-#610000
-0"
-0G
-#615000
-1"
-1G
-1_
-0^
-#620000
-0"
-0G
-#625000
-1"
-1G
-1^
-#630000
-b0 #
-0"
-0m"
-0G
-0:"
-0+"
-1]
-0H
-1A"
-1?"
-1>"
-1<"
-0;"
-03"
-0y!
-0a!
-0I!
-04!
-0$!
-0f"
-0:
+0!
 1+
+0*
+#505000
+1!
+1*
+1,
+#510000
+0!
+0*
+#515000
+1!
+1*
 1-
+0,
+#520000
+0!
+0*
+#525000
+1!
+1*
+1,
+#530000
+0!
+0*
+#535000
+1!
+1*
 1.
-10
-09
-0;
-0<
-0=
-0>
-0?
-11
-0d
-0c
-0_
-0^
+0-
+0,
+#540000
+0!
+0*
+#545000
+1!
+1*
+1,
+#550000
+0!
+0*
+#555000
+1!
+1*
+1-
+0,
+#560000
+0!
+0*
+#565000
+1!
+1*
+1,
+#570000
+0!
+0*
+#575000
+1!
+1*
+1/
+0.
+0-
+0,
+1#
+#580000
+0!
+0*
+#585000
+1!
+1*
+1,
+#590000
+0!
+0*
+#595000
+1!
+1*
+1-
+0,
+#600000
+0!
+0*
+#605000
+1!
+1*
+1,
+#610000
+0!
+0*
+#615000
+1!
+1*
+1.
+0-
+0,
+#620000
+0!
+0*
+#625000
+1!
+1*
+1,
+#630000
+0!
+0*
 #635000
-1"
-1G
+1!
+1*
+1-
+0,
 #640000
-0"
-0G
+0!
+0*
 #645000
-1"
-1G
+1!
+1*
+1,
 #650000
-0"
-0G
+0!
+0*
 #655000
-1"
-1G
+1!
+1*
+0/
+0.
+0-
+0,
+0#
 #660000
-0"
-0G
+0!
+0*
 #665000
-1"
-1G
+1!
+1*
+1,
 #670000
-0"
-0G
+0!
+0*
 #675000
-1"
-1G
+1!
+1*
+1-
+0,
 #680000
-0"
-0G
+0!
+0*
 #685000
-1"
-1G
+1!
+1*
+1,
 #690000
-0"
-0G
+0!
+0*
 #695000
-1"
-1G
+1!
+1*
+1.
+0-
+0,
 #700000
-0"
-0G
+0!
+0*
 #705000
-1"
-1G
+1!
+1*
+1,
 #710000
-0"
-0G
+0!
+0*
 #715000
-1"
-1G
+1!
+1*
+1-
+0,
 #720000
-0"
-0G
+0!
+0*
 #725000
-1"
-1G
+1!
+1*
+1,
 #730000
-0"
-0G
+0!
+0*
 #735000
-1"
-1G
+1!
+1*
+1/
+0.
+0-
+0,
+1#
 #740000
-0"
-0G
+0!
+0*
 #745000
-1"
-1G
+1!
+1*
+1,
 #750000
 0"
-0G
+0!
+0+
+0*
+0/
+0,
+0#
 #755000
-1"
-1G
+1!
+1*
 #760000
-0"
-0G
+0!
+0*
 #765000
-1"
-1G
+1!
+1*
 #770000
-0"
-0G
+0!
+0*
 #775000
-1"
-1G
+1!
+1*
 #780000
-0"
-0G
+0!
+0*
 #785000
-1"
-1G
+1!
+1*
 #790000
-0"
-0G
+0!
+0*
 #795000
-1"
-1G
+1!
+1*
 #800000
-0"
-0G
+0!
+0*
 #805000
-1"
-1G
+1!
+1*
 #810000
-0"
-0G
+0!
+0*
 #815000
-1"
-1G
+1!
+1*
 #820000
-0"
-0G
+0!
+0*
 #825000
-1"
-1G
+1!
+1*
 #830000
-0"
-0G
+0!
+0*
 #835000
-1"
-1G
+1!
+1*
 #840000
-0"
-0G
+0!
+0*
 #845000
-1"
-1G
+1!
+1*
 #850000
-0"
-0G
+0!
+0*
 #855000
-1"
-1G
+1!
+1*
 #860000
-0"
-0G
+0!
+0*
 #865000
-1"
-1G
+1!
+1*
 #870000
-0"
-0G
+0!
+0*
 #875000
-1"
-1G
+1!
+1*
 #880000
-0"
-0G
+0!
+0*
 #885000
-1"
-1G
+1!
+1*
 #890000
-0"
-0G
+0!
+0*
 #895000
-1"
-1G
+1!
+1*
 #900000
-0"
-0G
+0!
+0*
 #905000
-1"
-1G
+1!
+1*
 #910000
-0"
-0G
+0!
+0*
 #915000
-1"
-1G
+1!
+1*
 #920000
-0"
-0G
+0!
+0*
 #925000
-1"
-1G
+1!
+1*
 #930000
-0"
-0G
+0!
+0*
 #935000
-1"
-1G
+1!
+1*
 #940000
-0"
-0G
+0!
+0*
 #945000
-1"
-1G
+1!
+1*
 #950000
-0"
-0G
+0!
+0*
 #955000
-1"
-1G
+1!
+1*
 #960000
-0"
-0G
+0!
+0*
 #965000
-1"
-1G
+1!
+1*
 #970000
-0"
-0G
+0!
+0*
 #975000
-1"
-1G
+1!
+1*
 #980000
-0"
-0G
+0!
+0*
 #985000
-1"
-1G
+1!
+1*
 #990000
-0"
-0G
+0!
+0*
 #995000
-1"
-1G
+1!
+1*
 #1000000

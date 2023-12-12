@@ -130,3 +130,4 @@ set_location_assignment PIN_91 -to matrix_colune_data[5]
 set_location_assignment PIN_89 -to matrix_colune_data[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to game_state_code[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to game_state_code
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf

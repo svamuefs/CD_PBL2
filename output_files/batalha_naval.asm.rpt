@@ -1,5 +1,5 @@
 Assembler report for batalha_naval
-Mon Dec 11 11:28:24 2023
+Mon Dec 11 23:43:39 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Dec 11 11:28:24 2023 ;
+; Assembler Status      ; Successful - Mon Dec 11 23:43:39 2023 ;
 ; Revision Name         ; batalha_naval                         ;
 ; Top-level Entity Name ; batalha_naval                         ;
 ; Family                ; MAX II                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------+
 ; Option         ; Setting                                                ;
 +----------------+--------------------------------------------------------+
-; JTAG usercode  ; 0x0016C5CA                                             ;
-; Checksum       ; 0x0016C942                                             ;
+; JTAG usercode  ; 0x001723BC                                             ;
+; Checksum       ; 0x0017263C                                             ;
 +----------------+--------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Dec 11 11:28:23 2023
+    Info: Processing started: Mon Dec 11 23:43:38 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Mon Dec 11 11:28:24 2023
+    Info: Processing ended: Mon Dec 11 23:43:39 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

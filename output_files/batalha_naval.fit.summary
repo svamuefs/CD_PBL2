@@ -1,11 +1,11 @@
-Fitter Status : Failed - Mon Dec 11 11:38:15 2023
+Fitter Status : Successful - Mon Dec 11 23:43:36 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : batalha_naval
 Top-level Entity Name : batalha_naval
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 221 / 240 ( 92 % )
-Total pins : 38 / 80 ( 48 % )
+Total logic elements : 201 / 240 ( 84 % )
+Total pins : 37 / 80 ( 46 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

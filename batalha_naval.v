@@ -75,7 +75,7 @@ module batalha_naval
     //na array de 35 bits, os 7 bits de maior valor correspondem à coluna esquerda...
     //e assim respectivamente para as outras colunas
 
-    wire game_state_code_w;
+    wire [2:0] game_state_code_w;
 
     and andGambiarra [1:0](game_state_code_w[1:0] , game_state_code);
 
@@ -255,8 +255,8 @@ module batalha_naval
 
     not notRed (ledRgbGreen , ledRgbRed);
 
-    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , );
-    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , );
+    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , invalidXCoord);
+    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , invalidXCoord);
 
 
 endmodule

@@ -12,12 +12,6 @@
 -- Intel and sold by Intel or its authorized distributors.  Please
 -- refer to the applicable agreement for further details, at
 -- https://fpgasoftware.intel.com/eula.
---game_state_code[2] is game_state_code[2]
---operation mode is input
-
-game_state_code[2] = INPUT();
-
-
 --matrix_colune_data[0] is matrix_colune_data[0]
 --operation mode is output
 
@@ -63,43 +57,43 @@ matrix_colune_data[6] = OUTPUT(B75L3);
 --display_colune_data[0] is display_colune_data[0]
 --operation mode is output
 
-display_colune_data[0] = OUTPUT(F1L2);
+display_colune_data[0] = OUTPUT(orEnable);
 
 
 --display_colune_data[1] is display_colune_data[1]
 --operation mode is output
 
-display_colune_data[1] = OUTPUT(F1L3);
+display_colune_data[1] = OUTPUT(orEnable);
 
 
 --display_colune_data[2] is display_colune_data[2]
 --operation mode is output
 
-display_colune_data[2] = OUTPUT(F1_orEnable[2]);
+display_colune_data[2] = OUTPUT(orEnable);
 
 
 --display_colune_data[3] is display_colune_data[3]
 --operation mode is output
 
-display_colune_data[3] = OUTPUT(F1L5);
+display_colune_data[3] = OUTPUT(orEnable);
 
 
 --display_colune_data[4] is display_colune_data[4]
 --operation mode is output
 
-display_colune_data[4] = OUTPUT(F1_orEnable[4]);
+display_colune_data[4] = OUTPUT(orEnable);
 
 
 --display_colune_data[5] is display_colune_data[5]
 --operation mode is output
 
-display_colune_data[5] = OUTPUT(F1L8);
+display_colune_data[5] = OUTPUT(orEnable);
 
 
 --display_colune_data[6] is display_colune_data[6]
 --operation mode is output
 
-display_colune_data[6] = OUTPUT(F1_orEnable[6]);
+display_colune_data[6] = OUTPUT(VCC);
 
 
 --matrix_colune_activator[0] is matrix_colune_activator[0]
@@ -378,19 +372,6 @@ H10_out = DFFEAS(H10_out_lut_out, andHitsMapClk[1], andEnableAttack, , , , , , )
 B70L1 = (J1_or30) # (((!game_state_code[0] & !H10_out)));
 
 
---H31_out is d_flipflop:hits_map_register[22]|out
---operation mode is normal
-
-H31_out_lut_out = VCC;
-H31_out = DFFEAS(H31_out_lut_out, Q7_and1, andEnableAttack, , , , , , );
-
-
---B70L2 is mux2x1:matrixColuneData_1[1]|or0~1
---operation mode is normal
-
-B70L2 = (((!game_state_code[0] & !H31_out)) # (!B10_or0)) # (!A1L15);
-
-
 --H24_out is d_flipflop:hits_map_register[15]|out
 --operation mode is normal
 
@@ -398,10 +379,23 @@ H24_out_lut_out = VCC;
 H24_out = DFFEAS(H24_out_lut_out, Q8_and0, andEnableAttack, , , , , , );
 
 
+--B70L2 is mux2x1:matrixColuneData_1[1]|or0~1
+--operation mode is normal
+
+B70L2 = (((!game_state_code[0] & !H24_out)) # (!A1L15)) # (!B11L1);
+
+
+--H31_out is d_flipflop:hits_map_register[22]|out
+--operation mode is normal
+
+H31_out_lut_out = VCC;
+H31_out = DFFEAS(H31_out_lut_out, Q7_and1, andEnableAttack, , , , , , );
+
+
 --B70L3 is mux2x1:matrixColuneData_1[1]|or0~2
 --operation mode is normal
 
-B70L3 = (((!game_state_code[0] & !H24_out)) # (!A1L15)) # (!B11L1);
+B70L3 = (((!game_state_code[0] & !H31_out)) # (!B10_or0)) # (!A1L15);
 
 
 --H38_out is d_flipflop:hits_map_register[29]|out
@@ -420,7 +414,7 @@ B70L4 = (B11L1) # (((!game_state_code[0] & !H38_out)) # (!A1L15));
 --B70L5 is mux2x1:matrixColuneData_1[1]|or0~4
 --operation mode is normal
 
-B70L5 = (P17_out & (((P18_out)))) # (!P17_out & ((P18_out & (B70L3)) # (!P18_out & ((B70L4)))));
+B70L5 = (P18_out & (((P17_out)))) # (!P18_out & ((P17_out & (B70L3)) # (!P17_out & ((B70L4)))));
 
 
 --H17_out is d_flipflop:hits_map_register[8]|out
@@ -439,7 +433,7 @@ B70L6 = (J1_or10) # (((!game_state_code[0] & !H17_out)));
 --B70L7 is mux2x1:matrixColuneData_1[1]|or0~6
 --operation mode is normal
 
-B70L7 = (P17_out & ((B70L5 & ((B70L6))) # (!B70L5 & (B70L2)))) # (!P17_out & (((B70L5))));
+B70L7 = (P18_out & ((B70L5 & ((B70L6))) # (!B70L5 & (B70L2)))) # (!P18_out & (((B70L5))));
 
 
 --B70L8 is mux2x1:matrixColuneData_1[1]|or0~7
@@ -669,18 +663,6 @@ H13_out = DFFEAS(H13_out_lut_out, andHitsMapClk[4], andEnableAttack, , , , , , )
 B73L1 = (J1_or10) # (((!game_state_code[0] & !H13_out)));
 
 
---B11L2 is mux2x1:codeSelect[1]|or0~1
---operation mode is normal
-
-B11L2 = ((andEnableAttack & (H7_out)) # (!andEnableAttack & ((x_coord_and_map_code[1]))));
-
-
---A1L13 is correctHits[18]~3
---operation mode is normal
-
-A1L13 = (orEnable & (((!B10_and1 & !A1L12)))) # (!orEnable & (B11L2 $ (((!B10_and1 & !A1L12)))));
-
-
 --H27_out is d_flipflop:hits_map_register[18]|out
 --operation mode is normal
 
@@ -688,16 +670,22 @@ H27_out_lut_out = VCC;
 H27_out = DFFEAS(H27_out_lut_out, Q14_and0, andEnableAttack, , , , , , );
 
 
+--A1L13 is correctHits[18]~3
+--operation mode is normal
+
+A1L13 = (((!H27_out) # (!A1L15)));
+
+
 --A1L14 is correctHits[18]~4
 --operation mode is normal
 
-A1L14 = (A1L13) # (((!H27_out) # (!A1L15)));
+A1L14 = (A1L13) # (B11L1 $ (((!B10_and1 & !A1L12))));
 
 
 --J1L7 is map_decoder_5maps:mapDecoder|or120~0
 --operation mode is normal
 
-J1L7 = (B10_and1 & (((orEnable) # (!B11L2)))) # (!B10_and1 & (A1L12 $ (((!orEnable & B11L2)))));
+J1L7 = ((B11L1 $ (B10_or0)));
 
 
 --B73L2 is mux2x1:matrixColuneData_1[4]|or0~1
@@ -763,19 +751,6 @@ B73L7 = (P18_out & ((B73L5 & ((B73L6))) # (!B73L5 & (B73L2)))) # (!P18_out & (((
 B73L8 = (!orEnable & ((P19_out & (B73L1)) # (!P19_out & ((B73L7)))));
 
 
---H28_out is d_flipflop:hits_map_register[19]|out
---operation mode is normal
-
-H28_out_lut_out = VCC;
-H28_out = DFFEAS(H28_out_lut_out, Q16_and0, andEnableAttack, , , , , , );
-
-
---B74L1 is mux2x1:matrixColuneData_1[5]|or0~2
---operation mode is normal
-
-B74L1 = (J1_or20) # (((!game_state_code[0] & !H28_out)));
-
-
 --H35_out is d_flipflop:hits_map_register[26]|out
 --operation mode is normal
 
@@ -783,10 +758,23 @@ H35_out_lut_out = VCC;
 H35_out = DFFEAS(H35_out_lut_out, Q15_and1, andEnableAttack, , , , , , );
 
 
+--B74L1 is mux2x1:matrixColuneData_1[5]|or0~2
+--operation mode is normal
+
+B74L1 = (J1L6) # (((!game_state_code[0] & !H35_out)));
+
+
+--H28_out is d_flipflop:hits_map_register[19]|out
+--operation mode is normal
+
+H28_out_lut_out = VCC;
+H28_out = DFFEAS(H28_out_lut_out, Q16_and0, andEnableAttack, , , , , , );
+
+
 --B74L2 is mux2x1:matrixColuneData_1[5]|or0~3
 --operation mode is normal
 
-B74L2 = (J1L6) # (((!game_state_code[0] & !H35_out)));
+B74L2 = (J1_or20) # (((!game_state_code[0] & !H28_out)));
 
 
 --H42_out is d_flipflop:hits_map_register[33]|out
@@ -805,7 +793,7 @@ B74L3 = (((!game_state_code[0] & !H42_out)) # (!J1_or10));
 --B74L4 is mux2x1:matrixColuneData_1[5]|or0~5
 --operation mode is normal
 
-B74L4 = (P18_out & (((P17_out)))) # (!P18_out & ((P17_out & (B74L2)) # (!P17_out & ((B74L3)))));
+B74L4 = (P17_out & (((P18_out)))) # (!P17_out & ((P18_out & (B74L2)) # (!P18_out & ((B74L3)))));
 
 
 --H21_out is d_flipflop:hits_map_register[12]|out
@@ -830,7 +818,7 @@ B74L6 = (B74L5) # ((A1L15 & ((B10_or0) # (!B11L1))));
 --B74L7 is mux2x1:matrixColuneData_1[5]|or0~8
 --operation mode is normal
 
-B74L7 = (P18_out & ((B74L4 & ((B74L6))) # (!B74L4 & (B74L1)))) # (!P18_out & (((B74L4))));
+B74L7 = (P17_out & ((B74L4 & ((B74L6))) # (!B74L4 & (B74L1)))) # (!P17_out & (((B74L4))));
 
 
 --H36_out is d_flipflop:hits_map_register[27]|out
@@ -863,96 +851,6 @@ B75L2 = (P19_out) # ((P17_out & (J1_or30)) # (!P17_out & ((J1L1))));
 --operation mode is normal
 
 B75L3 = (!orEnable & ((P18_out) # ((B75L2) # (!B75L1))));
-
-
---B3L1 is mux4x1:displayCode[0]|mux2x1:mux2|and1~4
---operation mode is normal
-
-B3L1 = (P18_out & ((game_state_code[0]) # ((game_state_code[1]))));
-
-
---y_coord_code[0] is y_coord_code[0]
---operation mode is input
-
-y_coord_code[0] = INPUT();
-
-
---B3L2 is mux4x1:displayCode[0]|mux2x1:mux2|and1~5
---operation mode is normal
-
-B3L2 = ((P17_out & (y_coord_code[0])) # (!P17_out & ((x_coord_and_map_code[0]))));
-
-
---y_coord_code[2] is y_coord_code[2]
---operation mode is input
-
-y_coord_code[2] = INPUT();
-
-
---B9L1 is mux4x1:displayCode[2]|mux2x1:mux2|and1~0
---operation mode is normal
-
-B9L1 = (B3L1 & ((P17_out & (y_coord_code[2])) # (!P17_out & ((x_coord_and_map_code[2])))));
-
-
---y_coord_code[1] is y_coord_code[1]
---operation mode is input
-
-y_coord_code[1] = INPUT();
-
-
---B6L1 is mux4x1:displayCode[1]|mux2x1:mux2|and1~4
---operation mode is normal
-
-B6L1 = ((P17_out & (y_coord_code[1])) # (!P17_out & ((x_coord_and_map_code[1]))));
-
-
---F1L2 is display_decoder:displayDecoder|orEnable[0]~0
---operation mode is normal
-
-F1L2 = (orEnable) # ((!B6L2 & (B3L3 $ (B9L1))));
-
-
---F1L3 is display_decoder:displayDecoder|orEnable[1]~1
---operation mode is normal
-
-F1L3 = (orEnable) # ((B9L1 & (B6L2 $ (B3L3))));
-
-
---F1_orEnable[2] is display_decoder:displayDecoder|orEnable[2]
---operation mode is normal
-
-F1_orEnable[2] = (orEnable) # ((B6L2 & (!B3L3 & !B9L1)));
-
-
---F1L5 is display_decoder:displayDecoder|orEnable[3]~2
---operation mode is normal
-
-F1L5 = (orEnable) # ((B3L3 & (B9L1 $ (!B6L2))) # (!B3L3 & (B9L1 & !B6L2)));
-
-
---F1_orEnable[4] is display_decoder:displayDecoder|orEnable[4]
---operation mode is normal
-
-F1_orEnable[4] = (B3L3) # ((orEnable) # ((B9L1 & !B6L2)));
-
-
---F1L7 is display_decoder:displayDecoder|orEnable[5]~3
---operation mode is normal
-
-F1L7 = (orEnable) # ((P18_out & (B6L1 & B3L2)));
-
-
---F1L8 is display_decoder:displayDecoder|orEnable[5]~4
---operation mode is normal
-
-F1L8 = (F1L7) # ((!B9L1 & ((B6L2) # (B3L3))));
-
-
---F1_orEnable[6] is display_decoder:displayDecoder|orEnable[6]
---operation mode is normal
-
-F1_orEnable[6] = (orEnable) # ((B6L2 & (B3L3 & B9L1)) # (!B6L2 & ((!B9L1))));
 
 
 --H5_out is register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_4|out
@@ -1011,10 +909,34 @@ P15_out_lut_out = ((P14_out $ (P15_out)));
 P15_out = DFFEAS(P15_out_lut_out, D1_or0, !confirmAttack, , , , , , );
 
 
---D1L1 is debouncer:debouncerConfirmAttack|and2~0
+--D1L1 is debouncer:debouncerConfirmAttack|and0~0
 --operation mode is normal
 
-D1L1 = (P14_out & (P15_out));
+D1L1 = (P16_out & (P14_out & (P15_out)));
+
+
+--A1L52 is nandInvalidXCoord~0
+--operation mode is normal
+
+A1L52 = (x_coord_and_map_code[1] & (x_coord_and_map_code[0]));
+
+
+--y_coord_code[1] is y_coord_code[1]
+--operation mode is input
+
+y_coord_code[1] = INPUT();
+
+
+--y_coord_code[2] is y_coord_code[2]
+--operation mode is input
+
+y_coord_code[2] = INPUT();
+
+
+--y_coord_code[0] is y_coord_code[0]
+--operation mode is input
+
+y_coord_code[0] = INPUT();
 
 
 --B110L1 is mux8x1:xCoordMuxLedRgb|mux2x1:mux_2|and1~0
@@ -1233,6 +1155,18 @@ B110L17 = (y_coord_code[2] & ((B110L16 & ((B106L19))) # (!B110L16 & (B106L1)))) 
 B110L18 = (andEnableAttack & ((x_coord_and_map_code[2] & (B110L15)) # (!x_coord_and_map_code[2] & ((B110L17)))));
 
 
+--A1L2 is andGreen~0
+--operation mode is normal
+
+A1L2 = (D1L1 & (!B110L18 & ((!A1L52) # (!x_coord_and_map_code[2]))));
+
+
+--A1L10 is andRed~0
+--operation mode is normal
+
+A1L10 = (B110L18 & (D1L1 & ((!A1L52) # (!x_coord_and_map_code[2]))));
+
+
 --P13_out is sync_freq_divider:freq_div_1|t_flipflop:tff12|out
 --operation mode is normal
 
@@ -1360,13 +1294,13 @@ P12_out = DFFEAS(P12_out_lut_out, cpld_clk, !orEnable, , , , , , );
 cpld_clk = INPUT();
 
 
---Q5L2 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~0
+--Q5L2 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~2
 --operation mode is normal
 
 Q5L2 = (andEnableAttack & (P16_out & (P14_out & P15_out)));
 
 
---Q5L3 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~1
+--Q5L3 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~3
 --operation mode is normal
 
 Q5L3 = (Q5L2 & (!x_coord_and_map_code[1] & (!x_coord_and_map_code[2] & !y_coord_code[2])));
@@ -1381,43 +1315,31 @@ Q6_and0 = LCELL((y_coord_code[1] & (Q5L3 & (!x_coord_and_map_code[0] & !y_coord_
 --Q6_and1 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q6_and1 = LCELL((y_coord_code[1] & (y_coord_code[0] & (Q5L3 & !x_coord_and_map_code[0]))));
+Q6_and1 = LCELL((y_coord_code[0] & (y_coord_code[1] & (Q5L3 & !x_coord_and_map_code[0]))));
 
 
---A1L7 is andHitsMapClk[2]~0
+--A1L5 is andHitsMapClk[0]~0
 --operation mode is normal
 
-A1L7 = (y_coord_code[2] & (Q5L2));
+A1L5 = (y_coord_code[2] & (Q5L2));
 
 
 --andHitsMapClk[0] is andHitsMapClk[0]
 --operation mode is normal
 
-andHitsMapClk[0] = LCELL((A1L7 & (!x_coord_and_map_code[1] & (!x_coord_and_map_code[2] & !x_coord_and_map_code[0]))));
+andHitsMapClk[0] = LCELL((A1L5 & (!x_coord_and_map_code[1] & (!x_coord_and_map_code[2] & !x_coord_and_map_code[0]))));
 
 
---Q5_and1 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and1
+--Q5L4 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~4
 --operation mode is normal
 
-Q5_and1 = LCELL((y_coord_code[0] & (Q5L3 & (!x_coord_and_map_code[0] & !y_coord_code[1]))));
-
-
---Q5_and0 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0
---operation mode is normal
-
-Q5_and0 = LCELL((Q5L3 & (!x_coord_and_map_code[0] & (!y_coord_code[1] & !y_coord_code[0]))));
+Q5L4 = (((!x_coord_and_map_code[0] & !y_coord_code[1])));
 
 
 --andHitsMapClk[1] is andHitsMapClk[1]
 --operation mode is normal
 
-andHitsMapClk[1] = LCELL((x_coord_and_map_code[0] & (A1L7 & (!x_coord_and_map_code[1] & !x_coord_and_map_code[2]))));
-
-
---Q7_and1 is demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0|and1
---operation mode is normal
-
-Q7_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (Q5L3 & !y_coord_code[1]))));
+andHitsMapClk[1] = LCELL((x_coord_and_map_code[0] & (A1L5 & (!x_coord_and_map_code[1] & !x_coord_and_map_code[2]))));
 
 
 --Q8_and0 is demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1|and0
@@ -1426,40 +1348,40 @@ Q7_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (Q5L3 & !y_coord_c
 Q8_and0 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (Q5L3 & !y_coord_code[0]))));
 
 
+--Q7_and1 is demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0|and1
+--operation mode is normal
+
+Q7_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (Q5L3 & !y_coord_code[1]))));
+
+
 --Q7_and0 is demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0|and0
 --operation mode is normal
 
-Q7_and0 = LCELL((x_coord_and_map_code[0] & (Q5L3 & (!y_coord_code[1] & !y_coord_code[0]))));
+Q7_and0 = LCELL((x_coord_and_map_code[0] & (Q5L3 & (!y_coord_code[0] & !y_coord_code[1]))));
 
 
 --Q8_and1 is demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q8_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (y_coord_code[0] & Q5L3))));
+Q8_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (y_coord_code[1] & Q5L3))));
 
 
 --andHitsMapClk[2] is andHitsMapClk[2]
 --operation mode is normal
 
-andHitsMapClk[2] = LCELL((x_coord_and_map_code[1] & (A1L7 & (!x_coord_and_map_code[2] & !x_coord_and_map_code[0]))));
+andHitsMapClk[2] = LCELL((x_coord_and_map_code[1] & (A1L5 & (!x_coord_and_map_code[2] & !x_coord_and_map_code[0]))));
 
 
---Q9L2 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0~0
+--Q9L2 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0~2
 --operation mode is normal
 
 Q9L2 = (x_coord_and_map_code[1] & (Q5L2 & (!x_coord_and_map_code[2] & !y_coord_code[2])));
 
 
---Q9_and1 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and1
---operation mode is normal
-
-Q9_and1 = LCELL((y_coord_code[0] & (Q9L2 & (!x_coord_and_map_code[0] & !y_coord_code[1]))));
-
-
 --Q10_and1 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q10_and1 = LCELL((y_coord_code[1] & (y_coord_code[0] & (Q9L2 & !x_coord_and_map_code[0]))));
+Q10_and1 = LCELL((y_coord_code[0] & (y_coord_code[1] & (Q9L2 & !x_coord_and_map_code[0]))));
 
 
 --Q10_and0 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1|and0
@@ -1468,16 +1390,10 @@ Q10_and1 = LCELL((y_coord_code[1] & (y_coord_code[0] & (Q9L2 & !x_coord_and_map_
 Q10_and0 = LCELL((y_coord_code[1] & (Q9L2 & (!x_coord_and_map_code[0] & !y_coord_code[0]))));
 
 
---Q9_and0 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0
---operation mode is normal
-
-Q9_and0 = LCELL((Q9L2 & (!x_coord_and_map_code[0] & (!y_coord_code[1] & !y_coord_code[0]))));
-
-
 --andHitsMapClk[3] is andHitsMapClk[3]
 --operation mode is normal
 
-andHitsMapClk[3] = LCELL((x_coord_and_map_code[1] & (x_coord_and_map_code[0] & (A1L7 & !x_coord_and_map_code[2]))));
+andHitsMapClk[3] = LCELL((y_coord_code[2] & (A1L52 & (Q5L2 & !x_coord_and_map_code[2]))));
 
 
 --Q11_and1 is demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0|and1
@@ -1489,13 +1405,13 @@ Q11_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (Q9L2 & !y_coord_
 --Q12_and1 is demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q12_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (y_coord_code[0] & Q9L2))));
+Q12_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (y_coord_code[1] & Q9L2))));
 
 
 --Q11_and0 is demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0|and0
 --operation mode is normal
 
-Q11_and0 = LCELL((x_coord_and_map_code[0] & (Q9L2 & (!y_coord_code[1] & !y_coord_code[0]))));
+Q11_and0 = LCELL((x_coord_and_map_code[0] & (Q9L2 & (!y_coord_code[0] & !y_coord_code[1]))));
 
 
 --Q12_and0 is demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1|and0
@@ -1507,10 +1423,10 @@ Q12_and0 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (Q9L2 & !y_coord_
 --andHitsMapClk[4] is andHitsMapClk[4]
 --operation mode is normal
 
-andHitsMapClk[4] = LCELL((x_coord_and_map_code[2] & (A1L7 & (!x_coord_and_map_code[1] & !x_coord_and_map_code[0]))));
+andHitsMapClk[4] = LCELL((x_coord_and_map_code[2] & (A1L5 & (!x_coord_and_map_code[1] & !x_coord_and_map_code[0]))));
 
 
---Q13L2 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0~0
+--Q13L2 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0~2
 --operation mode is normal
 
 Q13L2 = (x_coord_and_map_code[2] & (Q5L2 & (!x_coord_and_map_code[1] & !y_coord_code[2])));
@@ -1522,28 +1438,10 @@ Q13L2 = (x_coord_and_map_code[2] & (Q5L2 & (!x_coord_and_map_code[1] & !y_coord_
 Q14_and0 = LCELL((y_coord_code[1] & (Q13L2 & (!x_coord_and_map_code[0] & !y_coord_code[0]))));
 
 
---Q13_and1 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and1
---operation mode is normal
-
-Q13_and1 = LCELL((y_coord_code[0] & (Q13L2 & (!x_coord_and_map_code[0] & !y_coord_code[1]))));
-
-
---Q13_and0 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0
---operation mode is normal
-
-Q13_and0 = LCELL((Q13L2 & (!x_coord_and_map_code[0] & (!y_coord_code[1] & !y_coord_code[0]))));
-
-
 --Q14_and1 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q14_and1 = LCELL((y_coord_code[1] & (y_coord_code[0] & (Q13L2 & !x_coord_and_map_code[0]))));
-
-
---Q16_and0 is demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1|and0
---operation mode is normal
-
-Q16_and0 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (Q13L2 & !y_coord_code[0]))));
+Q14_and1 = LCELL((y_coord_code[0] & (y_coord_code[1] & (Q13L2 & !x_coord_and_map_code[0]))));
 
 
 --Q15_and1 is demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0|and1
@@ -1552,40 +1450,46 @@ Q16_and0 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (Q13L2 & !y_coord
 Q15_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (Q13L2 & !y_coord_code[1]))));
 
 
+--Q16_and0 is demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1|and0
+--operation mode is normal
+
+Q16_and0 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (Q13L2 & !y_coord_code[0]))));
+
+
 --Q15_and0 is demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0|and0
 --operation mode is normal
 
-Q15_and0 = LCELL((x_coord_and_map_code[0] & (Q13L2 & (!y_coord_code[1] & !y_coord_code[0]))));
+Q15_and0 = LCELL((x_coord_and_map_code[0] & (Q13L2 & (!y_coord_code[0] & !y_coord_code[1]))));
 
 
 --Q16_and1 is demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1|and1
 --operation mode is normal
 
-Q16_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[1] & (y_coord_code[0] & Q13L2))));
+Q16_and1 = LCELL((x_coord_and_map_code[0] & (y_coord_code[0] & (y_coord_code[1] & Q13L2))));
 
 
---Q17L2 is demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0|and0~0
+--Q9L3 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0~3
 --operation mode is normal
 
-Q17L2 = (x_coord_and_map_code[1] & (x_coord_and_map_code[2] & (!x_coord_and_map_code[0] & !y_coord_code[1])));
+Q9L3 = (x_coord_and_map_code[1] & (Q5L2 & ((!y_coord_code[2]))));
 
 
 --Q17_and1 is demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0|and1
 --operation mode is normal
 
-Q17_and1 = LCELL((y_coord_code[0] & (Q5L2 & (Q17L2 & !y_coord_code[2]))));
+Q17_and1 = LCELL((x_coord_and_map_code[2] & (y_coord_code[0] & (Q5L4 & Q9L3))));
 
 
 --Q17_and0 is demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0|and0
 --operation mode is normal
 
-Q17_and0 = LCELL((Q5L2 & (Q17L2 & (!y_coord_code[0] & !y_coord_code[2]))));
+Q17_and0 = LCELL((x_coord_and_map_code[2] & (Q5L4 & (Q9L3 & !y_coord_code[0]))));
 
 
 --D1_or0 is debouncer:debouncerConfirmAttack|or0
 --operation mode is normal
 
-D1_or0 = LCELL((P13_out) # ((confirmAttack) # ((P16_out & D1L1))));
+D1_or0 = LCELL((D1L1) # ((P13_out) # ((confirmAttack))));
 
 
 --B74L8 is mux2x1:matrixColuneData_1[5]|or0~9
@@ -1594,27 +1498,39 @@ D1_or0 = LCELL((P13_out) # ((confirmAttack) # ((P16_out & D1L1))));
 B74L8 = (game_state_code[0] & (((P19_out) # (B74L7)))) # (!game_state_code[0] & (game_state_code[1] & ((P19_out) # (B74L7))));
 
 
---B3L3 is mux4x1:displayCode[0]|mux2x1:mux2|and1~6
+--Q5_and1 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and1
 --operation mode is normal
 
-B3L3 = (P18_out & (B3L2 & ((game_state_code[0]) # (game_state_code[1]))));
+Q5_and1 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (y_coord_code[0] & Q5L3))));
 
 
---B6L2 is mux4x1:displayCode[1]|mux2x1:mux2|and1~5
+--Q5_and0 is demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0
 --operation mode is normal
 
-B6L2 = (B3L1 & ((P17_out & (y_coord_code[1])) # (!P17_out & ((x_coord_and_map_code[1])))));
+Q5_and0 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (Q5L3 & !y_coord_code[0]))));
 
 
---A1L2 is andGreen~2
+--Q9_and1 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and1
 --operation mode is normal
 
-A1L2 = (P14_out & (P15_out & (P16_out & !B110L18)));
+Q9_and1 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (y_coord_code[0] & Q9L2))));
 
 
---A1L10 is andRed~2
+--Q9_and0 is demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0
 --operation mode is normal
 
-A1L10 = (P14_out & (P15_out & (B110L18 & P16_out)));
+Q9_and0 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (Q9L2 & !y_coord_code[0]))));
+
+
+--Q13_and1 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and1
+--operation mode is normal
+
+Q13_and1 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (y_coord_code[0] & Q13L2))));
+
+
+--Q13_and0 is demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0
+--operation mode is normal
+
+Q13_and0 = LCELL((!x_coord_and_map_code[0] & (!y_coord_code[1] & (Q13L2 & !y_coord_code[0]))));
 
 
