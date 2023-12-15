@@ -6,7 +6,8 @@ module batalha_naval
     input confirmAttack , cpld_clk ,
 
     output [6:0] matrix_colune_data , display_colune_data ,
-	output [4:0] matrix_colune_activator , display_colune_activator ,
+	output [4:0] matrix_colune_activator , 
+    output [3:0] display_colune_activator ,
     output [1:0] ledRgb
 
  );
@@ -67,7 +68,7 @@ module batalha_naval
 
     and matrixColuneActivator [4:0] (matrix_colune_activator , registerOut);
 
-    not displayColuneActivator [4:0] (display_colune_activator , registerOut);//lógica inversa do display
+    not displayColuneActivator [3:0] (display_colune_activator , registerOut[4:1]);//lógica inversa do display
 
     //Lógica para mostrar os dados:
     //O shift register funciona da esquerda para a direita
