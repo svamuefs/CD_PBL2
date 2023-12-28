@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Wed Dec 27 20:54:51 2023
+Wed Dec 27 22:57:03 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 27 20:54:51 2023          ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 27 22:57:03 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
@@ -806,7 +806,7 @@ The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 27 20:54:24 2023
+    Info: Processing started: Wed Dec 27 22:56:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Info (16303): Aggressive Area optimization mode selected -- logic area will be prioritized at the potential cost of reduced timing performance
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -842,7 +842,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.
 Warning (12019): Can't analyze file -- file freq_div.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
     Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2/d_flipflop.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(147): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(163): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 163
 Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
     Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2/batalha_naval.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(9): created implicit net for "enable" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 9
@@ -883,7 +883,7 @@ Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(19): cre
 Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 28
 Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 37
 Warning (10236): Verilog HDL Implicit Net warning at register5bitSIPO.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(21): created implicit net for "notEnable" File: C:/CD/CD_PBL_2/display_decoder.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(27): created implicit net for "notEnable" File: C:/CD/CD_PBL_2/display_decoder.v Line: 27
 Warning (10236): Verilog HDL Implicit Net warning at demux1x2.v(6): created implicit net for "notSelect" File: C:/CD/CD_PBL_2/demux1x2.v Line: 6
 Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(9): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2/demux1x4.v Line: 9
 Warning (10236): Verilog HDL Implicit Net warning at demux1x4.v(11): created implicit net for "enable0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 11
@@ -894,46 +894,46 @@ Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(10): created impli
 Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(9): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2/demux1x8.v Line: 9
 Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(11): created implicit net for "enable1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 11
 Warning (10236): Verilog HDL Implicit Net warning at demux1x8.v(12): created implicit net for "enable2" File: C:/CD/CD_PBL_2/demux1x8.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "clk_w" File: C:/CD/CD_PBL_2/debouncer.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(7): created implicit net for "enable" File: C:/CD/CD_PBL_2/debouncer.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "notButton" File: C:/CD/CD_PBL_2/debouncer.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(15): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(24): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "and2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(34): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "clk_w" File: C:/CD/CD_PBL_2/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(8): created implicit net for "enable" File: C:/CD/CD_PBL_2/debouncer.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(10): created implicit net for "notButton" File: C:/CD/CD_PBL_2/debouncer.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(18): created implicit net for "tff0Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(27): created implicit net for "tff1Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(30): created implicit net for "and2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at debouncer.v(37): created implicit net for "tff2Out" File: C:/CD/CD_PBL_2/debouncer.v Line: 37
 Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(18): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2/mux8x1.v Line: 18
 Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(29): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux8x1.v Line: 29
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(15): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 15
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(23): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(22): created implicit net for "enable" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(27): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(33): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(40): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(51): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(133): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 133
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(151): created implicit net for "notXCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 151
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(153): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 153
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(252): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 252
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(255): created implicit net for "invalidYCoord" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 255
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(257): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 257
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "enable" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(29): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(30): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(37): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(46): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(56): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(147): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(170): created implicit net for "notXCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 170
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(172): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 172
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(286): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 286
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(290): created implicit net for "invalidYCoord" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 290
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(292): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 292
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Warning (10030): Net "game_state_code_w[2]" at batalha_naval.v(79) has no driver or initial value, using a default initial value '0' File: C:/CD/CD_PBL_2/batalha_naval.v Line: 79
-Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 34
+Warning (10030): Net "game_state_code_w[2]" at batalha_naval.v(86) has no driver or initial value, using a default initial value '0' File: C:/CD/CD_PBL_2/batalha_naval.v Line: 86
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 38
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:freq_div_1|t_flipflop:tff0" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 12
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 41
-Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 53
-Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 65
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 47
+Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 58
+Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 70
 Info (12128): Elaborating entity "d_flipflop" for hierarchy "register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 11
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode0[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 91
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode0[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 99
 Info (12128): Elaborating entity "mux2x1" for hierarchy "mux4x1:displayCode0[0]|mux2x1:mux0" File: C:/CD/CD_PBL_2/mux4x1.v Line: 16
-Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 100
-Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 129
-Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:yCoordDemuxHitsMap" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 110
+Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 142
+Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:yCoordDemuxHitsMap" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 163
 Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 23
 Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 21
-Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:yCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 253
+Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:yCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 287
 Info (13014): Ignored 47 buffer(s)
     Info (13019): Ignored 47 SOFT buffer(s)
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -944,8 +944,8 @@ Info (21057): Implemented 257 device resources after synthesis - the final resou
     Info (21061): Implemented 222 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
     Info: Peak virtual memory: 4718 megabytes
-    Info: Processing ended: Wed Dec 27 20:54:51 2023
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Processing ended: Wed Dec 27 22:57:03 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

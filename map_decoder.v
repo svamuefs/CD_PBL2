@@ -21,6 +21,10 @@ module map_decoder #(
 //2 -
 // .... 
 
+//c = map_code[2]
+//b = map_code[1]
+//a = map_code[0]
+
 //pixel a1 , e1 , a2 , d7
 
 // c + b + a

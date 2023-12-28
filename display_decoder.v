@@ -11,6 +11,12 @@ module display_decoder #(
 
 );
 
+//a = binary_code[3]
+//b = binary_code[2]
+//c = binary_code[1]
+//d = binary_code[0]
+
+
     wire [COLUNE_SIZE-1:0] digitOut_w , T0 , T1 , T2;
     wire [3:0] not_binary_code;
 
