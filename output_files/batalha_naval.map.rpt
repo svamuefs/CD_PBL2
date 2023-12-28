@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Tue Dec 12 15:42:00 2023
+Wed Dec 27 20:54:51 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -16,7 +16,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Parameter Settings for User Entity Instance: display_decoder:displayDecoder
- 11. Port Connectivity Checks: "mux8x1:xCoordMuxLedRgb"
+ 11. Port Connectivity Checks: "mux8x1:yCoordMuxLedRgb"
  12. Port Connectivity Checks: "d_flipflop:hits_map_register[34]"
  13. Port Connectivity Checks: "d_flipflop:hits_map_register[33]"
  14. Port Connectivity Checks: "d_flipflop:hits_map_register[32]"
@@ -52,7 +52,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  44. Port Connectivity Checks: "d_flipflop:hits_map_register[2]"
  45. Port Connectivity Checks: "d_flipflop:hits_map_register[1]"
  46. Port Connectivity Checks: "d_flipflop:hits_map_register[0]"
- 47. Port Connectivity Checks: "demux1x8:xCoordDemuxHitsMap"
+ 47. Port Connectivity Checks: "demux1x8:yCoordDemuxHitsMap"
  48. Port Connectivity Checks: "display_decoder:displayDecoder"
  49. Port Connectivity Checks: "mux4x1:displayCode0[2]"
  50. Port Connectivity Checks: "mux4x1:displayCode0[1]"
@@ -88,13 +88,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Dec 12 15:42:00 2023          ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 27 20:54:51 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
 ; Total logic elements        ; 222                                            ;
-; Total pins                  ; 36                                             ;
+; Total pins                  ; 35                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
@@ -221,9 +221,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Combinational with a register        ; 51       ;
 ;                                             ;          ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 130      ;
-;     -- 3 input functions                    ; 37       ;
-;     -- 2 input functions                    ; 14       ;
+;     -- 4 input functions                    ; 133      ;
+;     -- 3 input functions                    ; 33       ;
+;     -- 2 input functions                    ; 15       ;
 ;     -- 1 input functions                    ; 3        ;
 ;     -- 0 input functions                    ; 31       ;
 ;                                             ;          ;
@@ -236,11 +236,11 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 58       ;
 ;                                             ;          ;
 ; Total registers                             ; 58       ;
-; I/O pins                                    ; 36       ;
+; I/O pins                                    ; 35       ;
 ; Maximum fan-out node                        ; orEnable ;
 ; Maximum fan-out                             ; 42       ;
-; Total fan-out                               ; 811      ;
-; Average fan-out                             ; 3.14     ;
+; Total fan-out                               ; 812      ;
+; Average fan-out                             ; 3.16     ;
 +---------------------------------------------+----------+
 
 
@@ -249,7 +249,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Entity Name       ; Library Name ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
-; |batalha_naval                              ; 222 (16)    ; 58           ; 0          ; 36   ; 0            ; 164 (16)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
+; |batalha_naval                              ; 222 (17)    ; 58           ; 0          ; 35   ; 0            ; 164 (17)     ; 7 (0)             ; 51 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
 ;    |d_flipflop:hits_map_register[0]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[0]                                ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[10]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[10]                               ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[11]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[11]                               ; d_flipflop        ; work         ;
@@ -288,26 +288,26 @@ https://fpgasoftware.intel.com/eula.
 ;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff0               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff1               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff2               ; t_flipflop        ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[1]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[4]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[1]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[4]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;    |display_decoder:displayDecoder|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
 ;    |map_decoder_5maps:mapDecoder|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
 ;    |mux2x1:codeSelect[0]|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux2x1:codeSelect[0]                                           ; mux2x1            ; work         ;
@@ -325,10 +325,10 @@ https://fpgasoftware.intel.com/eula.
 ;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[1]|mux2x1:mux2                             ; mux2x1            ; work         ;
 ;    |mux4x1:displayCode0[2]|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]                                         ; mux4x1            ; work         ;
 ;       |mux2x1:mux2|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]|mux2x1:mux2                             ; mux2x1            ; work         ;
-;    |mux8x1:xCoordMuxLedRgb|                 ; 37 (0)      ; 0            ; 0          ; 0    ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb                                         ; mux8x1            ; work         ;
-;       |mux2x1:mux_2|                        ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
-;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
-;          |mux2x1:mux2|                      ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0|mux2x1:mux2                ; mux2x1            ; work         ;
+;    |mux8x1:yCoordMuxLedRgb|                 ; 36 (0)      ; 0            ; 0          ; 0    ; 0            ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb                                         ; mux8x1            ; work         ;
+;       |mux2x1:mux_2|                        ; 17 (17)     ; 0            ; 0          ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
+;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
+;          |mux2x1:mux2|                      ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux4x1:mux_0|mux2x1:mux2                ; mux2x1            ; work         ;
 ;    |register5bitSIPO:registerMatrixDisplay| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay                         ; register5bitSIPO  ; work         ;
 ;       |d_flipflop:d_flipflop_0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0 ; d_flipflop        ; work         ;
 ;       |d_flipflop:d_flipflop_1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1 ; d_flipflop        ; work         ;
@@ -398,7 +398,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux8x1:xCoordMuxLedRgb"                                                                                                                     ;
+; Port Connectivity Checks: "mux8x1:yCoordMuxLedRgb"                                                                                                                     ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -722,7 +722,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "demux1x8:xCoordDemuxHitsMap"                                                                              ;
+; Port Connectivity Checks: "demux1x8:yCoordDemuxHitsMap"                                                                              ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                                                  ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -806,7 +806,7 @@ The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Dec 12 15:41:48 2023
+    Info: Processing started: Wed Dec 27 20:54:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Info (16303): Aggressive Area optimization mode selected -- logic area will be prioritized at the potential cost of reduced timing performance
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -842,7 +842,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.
 Warning (12019): Can't analyze file -- file freq_div.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
     Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2/d_flipflop.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(146): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 146
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(147): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
 Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
     Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2/batalha_naval.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at map_decoder_5maps.v(9): created implicit net for "enable" File: C:/CD/CD_PBL_2/map_decoder_5maps.v Line: 9
@@ -905,47 +905,47 @@ Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(18): created impli
 Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(29): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux8x1.v Line: 29
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(15): created implicit net for "mux0_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 15
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(23): created implicit net for "mux1_w" File: C:/CD/CD_PBL_2/mux4x1.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(21): created implicit net for "enable" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(23): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(25): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(32): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 32
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(39): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(50): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(132): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 132
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(150): created implicit net for "notYCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 150
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(152): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 152
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(251): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 251
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(254): created implicit net for "invalidXCoord" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 254
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(256): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 256
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(22): created implicit net for "enable" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(24): created implicit net for "enablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): created implicit net for "notEnablePreparation" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(27): created implicit net for "enableAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(33): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(40): created implicit net for "debouncedConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(51): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(133): created implicit net for "notConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 133
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(151): created implicit net for "notXCoordCode2" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 151
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(153): created implicit net for "enableDemux0" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 153
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(252): created implicit net for "ledRgbRed" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 252
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(255): created implicit net for "invalidYCoord" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 255
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(257): created implicit net for "ledRgbGreen" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 257
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Warning (10030): Net "game_state_code_w[2]" at batalha_naval.v(78) has no driver or initial value, using a default initial value '0' File: C:/CD/CD_PBL_2/batalha_naval.v Line: 78
-Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 33
+Warning (10030): Net "game_state_code_w[2]" at batalha_naval.v(79) has no driver or initial value, using a default initial value '0' File: C:/CD/CD_PBL_2/batalha_naval.v Line: 79
+Info (12128): Elaborating entity "sync_freq_divider" for hierarchy "sync_freq_divider:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 34
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "sync_freq_divider:freq_div_1|t_flipflop:tff0" File: C:/CD/CD_PBL_2/sync_freq_divider.v Line: 12
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 40
-Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 52
-Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 64
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:debouncerConfirmAttack" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 41
+Info (12128): Elaborating entity "sync_3b_counter" for hierarchy "sync_3b_counter:counterMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 53
+Info (12128): Elaborating entity "register5bitSIPO" for hierarchy "register5bitSIPO:registerMatrixDisplay" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 65
 Info (12128): Elaborating entity "d_flipflop" for hierarchy "register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register5bitSIPO.v Line: 11
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode0[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 90
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:displayCode0[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 91
 Info (12128): Elaborating entity "mux2x1" for hierarchy "mux4x1:displayCode0[0]|mux2x1:mux0" File: C:/CD/CD_PBL_2/mux4x1.v Line: 16
-Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 99
-Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 128
-Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:xCoordDemuxHitsMap" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 146
-Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 23
-Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:xCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 21
-Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:xCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 252
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:displayDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 100
+Info (12128): Elaborating entity "map_decoder_5maps" for hierarchy "map_decoder_5maps:mapDecoder" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 129
+Info (12128): Elaborating entity "demux1x8" for hierarchy "demux1x8:yCoordDemuxHitsMap" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 147
+Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_1" File: C:/CD/CD_PBL_2/demux1x8.v Line: 23
+Info (12128): Elaborating entity "demux1x2" for hierarchy "demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_1|demux1x2:demux0" File: C:/CD/CD_PBL_2/demux1x4.v Line: 21
+Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:yCoordMuxLedRgb" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 253
 Info (13014): Ignored 47 buffer(s)
     Info (13019): Ignored 47 SOFT buffer(s)
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 257 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 26 output pins
+    Info (21059): Implemented 25 output pins
     Info (21061): Implemented 222 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
     Info: Peak virtual memory: 4718 megabytes
-    Info: Processing ended: Tue Dec 12 15:42:00 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Processing ended: Wed Dec 27 20:54:51 2023
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:01:00
 
 

@@ -132,9 +132,9 @@ module batalha_naval
     
     not not_confirm_attack (notConfirmAttack , debouncedConfirmAttack);
 
-    demux1x8 xCoordDemuxHitsMap (
+    demux1x8 yCoordDemuxHitsMap (
         .in     (notConfirmAttack) , 
-        .select (x_coord_code) ,
+        .select (y_coord_code) ,
         .enable (enableAttack) ,
 
         .out_a  (hits_map_clk_colune[0]) ,
@@ -148,13 +148,13 @@ module batalha_naval
     
 	wire [6:0] hits_map_clk_colune;
 
-    not notYCoord2 (notYCoordCode2 , y_coord_code[2]);
+    not notXCoord2 (notXCoordCode2 , x_coord_code[2]);
 
-    and andEnableDemux0 (enableDemux0 , notYCoordCode2 , enableAttack);
+    and andEnableDemux0 (enableDemux0 , notXCoordCode2 , enableAttack);
 
-    demux1x4 yCoordDemuxHitsMap_0 [6:0] (
+    demux1x4 xCoordDemuxHitsMap_0 [6:0] (
         .in     (hits_map_clk_colune) , 
-        .select (y_coord_code[1:0]) ,
+        .select (x_coord_code[1:0]) ,
         .enable (enableDemux0) ,
         
         .out_a  (hits_map_clk[34:28]) ,
@@ -163,7 +163,7 @@ module batalha_naval
         .out_d  (hits_map_clk[13:7]) 
     );
 
-    and andHitsMapClk [6:0] (hits_map_clk[6:0] , hits_map_clk_colune , y_coord_code[2] , enableAttack);
+    and andHitsMapClk [6:0] (hits_map_clk[6:0] , hits_map_clk_colune , x_coord_code[2] , enableAttack);
 	 
 	wire [34:0] hits_map_clk;
 
@@ -216,21 +216,21 @@ module batalha_naval
 
     //Indicar acerto ou erro atraves do led rgb
 
-    mux4x1 yCoordMuxLedRgb_0 [6:0](
+    mux4x1 xCoordMuxLedRgb_0 [6:0](
         .in_a   (correctHitsOut[34:28]) ,
         .in_b   (correctHitsOut[27:21]) ,
         .in_c   (correctHitsOut[20:14]) ,
         .in_d   (correctHitsOut[13:7]) ,
-        .select (y_coord_code[1:0]) ,
+        .select (x_coord_code[1:0]) ,
         .enable (enableAttack) ,
 
         .out    (correctHitsOut_colune_0)
     );
 
-    mux2x1 yCoordMuxLedRgb_1 [6:0] (
+    mux2x1 xCoordMuxLedRgb_1 [6:0] (
         .in_a   (correctHitsOut_colune_0) ,
         .in_b   (correctHitsOut[6:0]) ,
-        .select (y_coord_code[2]) ,
+        .select (x_coord_code[2]) ,
         .enable (enableAttack) ,
 
         .out    (correctHitsOut_colune)
@@ -238,7 +238,7 @@ module batalha_naval
 
     wire [6:0] correctHitsOut_colune_0 , correctHitsOut_colune;
 
-    mux8x1 xCoordMuxLedRgb (
+    mux8x1 yCoordMuxLedRgb (
         .in_a   (correctHitsOut_colune[0]) ,
         .in_b   (correctHitsOut_colune[1]) ,
         .in_c   (correctHitsOut_colune[2]) ,
@@ -246,18 +246,18 @@ module batalha_naval
         .in_e   (correctHitsOut_colune[4]) ,
         .in_f   (correctHitsOut_colune[5]) ,
         .in_g   (correctHitsOut_colune[6]) ,
-        .select (x_coord_code) ,
+        .select (y_coord_code) ,
         .enable (enableAttack) ,
 
         .out    (ledRgbRed)
     );
 
-    nand nandInvalidXCoord ( invalidXCoord , x_coord_code[2] , x_coord_code[1] , x_coord_code[0] );
+    nand nandInvalidYCoord ( invalidYCoord , y_coord_code[2] , y_coord_code[1] , y_coord_code[0] );
 
     not notRed (ledRgbGreen , ledRgbRed);
 
-    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , invalidXCoord , enableAttack);
-    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , invalidXCoord , enableAttack);
+    and andGreen (ledRgb[0] , ledRgbGreen , notConfirmAttack , invalidYCoord , enableAttack);
+    and andRed   (ledRgb[1] , ledRgbRed   , notConfirmAttack , invalidYCoord , enableAttack);
 
 
 endmodule

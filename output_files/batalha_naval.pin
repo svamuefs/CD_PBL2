@@ -99,7 +99,7 @@ game_state_code[0]           : 33        : input  : 3.3-V LVTTL       :         
 x_coord_and_map_code[1]      : 34        : input  : 3.3-V LVTTL       :         : 1         : Y              
 game_state_code[1]           : 35        : input  : 3.3-V LVTTL       :         : 1         : Y              
 x_coord_and_map_code[0]      : 36        : input  : 3.3-V LVTTL       :         : 1         : Y              
-display_colune_activator[1]  : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
+display_colune_activator[0]  : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
 y_coord_code[2]              : 38        : input  : 3.3-V LVTTL       :         : 1         : Y              
 display_colune_data[6]       : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
 y_coord_code[1]              : 40        : input  : 3.3-V LVTTL       :         : 1         : Y              
@@ -128,16 +128,16 @@ GND*                         : 62        :        :                   :         
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
-display_colune_activator[3]  : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
+display_colune_activator[2]  : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 67        :        :                   :         : 2         :                
-display_colune_activator[2]  : 68        : output : 3.3-V LVTTL       :         : 2         : Y              
+display_colune_activator[1]  : 68        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 69        :        :                   :         : 2         :                
 display_colune_data[1]       : 70        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 71        :        :                   :         : 2         :                
 ledRgb[0]                    : 72        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 73        :        :                   :         : 2         :                
 GND*                         : 74        :        :                   :         : 2         :                
-display_colune_activator[0]  : 75        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 75        :        :                   :         : 2         :                
 GND*                         : 76        :        :                   :         : 2         :                
 GND*                         : 77        :        :                   :         : 2         :                
 matrix_colune_activator[0]   : 78        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -150,7 +150,7 @@ matrix_colune_data[2]        : 84        : output : 3.3-V LVTTL       :         
 matrix_colune_data[0]        : 85        : output : 3.3-V LVTTL       :         : 2         : Y              
 ledRgb[1]                    : 86        : output : 3.3-V LVTTL       :         : 2         : Y              
 matrix_colune_data[3]        : 87        : output : 3.3-V LVTTL       :         : 2         : Y              
-display_colune_activator[4]  : 88        : output : 3.3-V LVTTL       :         : 2         : Y              
+display_colune_activator[3]  : 88        : output : 3.3-V LVTTL       :         : 2         : Y              
 matrix_colune_data[6]        : 89        : output : 3.3-V LVTTL       :         : 2         : Y              
 display_colune_data[0]       : 90        : output : 3.3-V LVTTL       :         : 2         : Y              
 matrix_colune_data[5]        : 91        : output : 3.3-V LVTTL       :         : 2         : Y              

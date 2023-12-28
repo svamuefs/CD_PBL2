@@ -1,5 +1,5 @@
 Fitter report for batalha_naval
-Tue Dec 12 15:42:06 2023
+Wed Dec 27 20:55:01 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,31 +10,29 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Ignored Assignments
-  6. Fitter Equations
-  7. Pin-Out File
-  8. Fitter Resource Usage Summary
-  9. Input Pins
- 10. Output Pins
- 11. I/O Bank Usage
- 12. All Package Pins
- 13. Output Pin Default Load For Reported TCO
- 14. I/O Assignment Warnings
- 15. Fitter Resource Utilization by Entity
- 16. Delay Chain Summary
- 17. Control Signals
- 18. Global & Other Fast Signals
- 19. Routing Usage Summary
- 20. LAB Logic Elements
- 21. LAB-wide Signals
- 22. LAB Signals Sourced
- 23. LAB Signals Sourced Out
- 24. LAB Distinct Inputs
- 25. Fitter Device Options
- 26. Estimated Delay Added for Hold Timing Summary
- 27. Estimated Delay Added for Hold Timing Details
- 28. Fitter Messages
- 29. Fitter Suppressed Messages
+  5. Fitter Equations
+  6. Pin-Out File
+  7. Fitter Resource Usage Summary
+  8. Input Pins
+  9. Output Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Delay Chain Summary
+ 15. Control Signals
+ 16. Global & Other Fast Signals
+ 17. Routing Usage Summary
+ 18. LAB Logic Elements
+ 19. LAB-wide Signals
+ 20. LAB Signals Sourced
+ 21. LAB Signals Sourced Out
+ 22. LAB Distinct Inputs
+ 23. Fitter Device Options
+ 24. Estimated Delay Added for Hold Timing Summary
+ 25. Estimated Delay Added for Hold Timing Details
+ 26. Fitter Messages
+ 27. Fitter Suppressed Messages
 
 
 
@@ -61,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------+
 ; Fitter Summary                                                         ;
 +-----------------------+------------------------------------------------+
-; Fitter Status         ; Successful - Tue Dec 12 15:42:06 2023          ;
+; Fitter Status         ; Successful - Wed Dec 27 20:55:01 2023          ;
 ; Quartus Prime Version ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name         ; batalha_naval                                  ;
 ; Top-level Entity Name ; batalha_naval                                  ;
@@ -69,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                ; EPM240T100C5                                   ;
 ; Timing Models         ; Final                                          ;
 ; Total logic elements  ; 215 / 240 ( 90 % )                             ;
-; Total pins            ; 37 / 80 ( 46 % )                               ;
+; Total pins            ; 36 / 80 ( 45 % )                               ;
 ; Total virtual pins    ; 0                                              ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                                  ;
 +-----------------------+------------------------------------------------+
@@ -142,15 +140,6 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                                ;
-+--------------+----------------+--------------+--------------------+---------------+----------------+
-; Name         ; Ignored Entity ; Ignored From ; Ignored To         ; Ignored Value ; Ignored Source ;
-+--------------+----------------+--------------+--------------------+---------------+----------------+
-; I/O Standard ; batalha_naval  ;              ; game_state_code[2] ; 3.3-V LVTTL   ; QSF Assignment ;
-+--------------+----------------+--------------+--------------------+---------------+----------------+
-
-
 +------------------+
 ; Fitter Equations ;
 +------------------+
@@ -174,9 +163,9 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ;     -- Combinational with a register        ; 58                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 130                   ;
-;     -- 3 input functions                    ; 37                    ;
-;     -- 2 input functions                    ; 14                    ;
+;     -- 4 input functions                    ; 133                   ;
+;     -- 3 input functions                    ; 33                    ;
+;     -- 2 input functions                    ; 15                    ;
 ;     -- 1 input functions                    ; 3                     ;
 ;     -- 0 input functions                    ; 31                    ;
 ;                                             ;                       ;
@@ -192,7 +181,7 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; Total LABs                                  ; 24 / 24 ( 100 % )     ;
 ; Logic elements in carry chains              ; 0                     ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 37 / 80 ( 46 % )      ;
+; I/O pins                                    ; 36 / 80 ( 45 % )      ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )        ;
 ;                                             ;                       ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )         ;
@@ -203,12 +192,12 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; Global signals                              ; 4                     ;
 ;     -- Global clocks                        ; 4 / 4 ( 100 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 25.4% / 30.1% / 20.4% ;
-; Peak interconnect usage (total/H/V)         ; 25.4% / 30.1% / 20.4% ;
+; Average interconnect usage (total/H/V)      ; 25.7% / 28.1% / 23.2% ;
+; Peak interconnect usage (total/H/V)         ; 25.7% / 28.1% / 23.2% ;
 ; Maximum fan-out                             ; 45                    ;
 ; Highest non-global fan-out                  ; 42                    ;
-; Total fan-out                               ; 798                   ;
-; Average fan-out                             ; 3.17                  ;
+; Total fan-out                               ; 799                   ;
+; Average fan-out                             ; 3.18                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -221,12 +210,12 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; cpld_clk                ; 12    ; 1        ; 1            ; 3            ; 3           ; 13                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; game_state_code[0]      ; 33    ; 1        ; 3            ; 0            ; 2           ; 31                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; game_state_code[1]      ; 35    ; 1        ; 3            ; 0            ; 0           ; 7                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; x_coord_and_map_code[0] ; 36    ; 1        ; 4            ; 0            ; 2           ; 40                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; x_coord_and_map_code[1] ; 34    ; 1        ; 3            ; 0            ; 1           ; 16                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; x_coord_and_map_code[2] ; 30    ; 1        ; 3            ; 0            ; 3           ; 15                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; y_coord_code[0]         ; 42    ; 1        ; 5            ; 0            ; 0           ; 37                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; y_coord_code[1]         ; 40    ; 1        ; 5            ; 0            ; 2           ; 38                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; y_coord_code[2]         ; 38    ; 1        ; 4            ; 0            ; 0           ; 12                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; x_coord_and_map_code[0] ; 36    ; 1        ; 4            ; 0            ; 2           ; 33                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; x_coord_and_map_code[1] ; 34    ; 1        ; 3            ; 0            ; 1           ; 40                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; x_coord_and_map_code[2] ; 30    ; 1        ; 3            ; 0            ; 3           ; 12                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; y_coord_code[0]         ; 42    ; 1        ; 5            ; 0            ; 0           ; 32                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; y_coord_code[1]         ; 40    ; 1        ; 5            ; 0            ; 2           ; 17                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; y_coord_code[2]         ; 38    ; 1        ; 4            ; 0            ; 0           ; 28                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +-------------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -235,11 +224,10 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 +-----------------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name                        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-----------------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; display_colune_activator[0] ; 75    ; 2        ; 7            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; display_colune_activator[1] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; display_colune_activator[2] ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; display_colune_activator[3] ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; display_colune_activator[4] ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; display_colune_activator[0] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; display_colune_activator[1] ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; display_colune_activator[2] ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; display_colune_activator[3] ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_colune_data[0]      ; 90    ; 2        ; 4            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_colune_data[1]      ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; display_colune_data[2]      ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -271,7 +259,7 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 13 / 38 ( 34 % ) ; 3.3V          ; --           ;
-; 2        ; 24 / 42 ( 57 % ) ; 3.3V          ; --           ;
+; 2        ; 23 / 42 ( 55 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -316,7 +304,7 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; 34       ; 26         ; 1        ; x_coord_and_map_code[1]     ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 35       ; 27         ; 1        ; game_state_code[1]          ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 36       ; 28         ; 1        ; x_coord_and_map_code[0]     ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 37       ; 29         ; 1        ; display_colune_activator[1] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 37       ; 29         ; 1        ; display_colune_activator[0] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 38       ; 30         ; 1        ; y_coord_code[2]             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 39       ; 31         ; 1        ; display_colune_data[6]      ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 40       ; 32         ; 1        ; y_coord_code[1]             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -345,16 +333,16 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; 63       ;            ;          ; VCCINT                      ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 64       ; 51         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 65       ;            ;          ; GNDINT                      ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 66       ; 52         ; 2        ; display_colune_activator[3] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 66       ; 52         ; 2        ; display_colune_activator[2] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 67       ; 53         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 68       ; 54         ; 2        ; display_colune_activator[2] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 68       ; 54         ; 2        ; display_colune_activator[1] ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 69       ; 55         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 70       ; 56         ; 2        ; display_colune_data[1]      ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 71       ; 57         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 72       ; 58         ; 2        ; ledRgb[0]                   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 73       ; 59         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 74       ; 60         ; 2        ; GND*                        ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 75       ; 61         ; 2        ; display_colune_activator[0] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 75       ; 61         ; 2        ; GND*                        ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 76       ; 62         ; 2        ; GND*                        ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 77       ; 63         ; 2        ; GND*                        ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 78       ; 64         ; 2        ; matrix_colune_activator[0]  ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -367,7 +355,7 @@ The pin-out file can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.pin.
 ; 85       ; 69         ; 2        ; matrix_colune_data[0]       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 86       ; 70         ; 2        ; ledRgb[1]                   ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 87       ; 71         ; 2        ; matrix_colune_data[3]       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 88       ; 72         ; 2        ; display_colune_activator[4] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 88       ; 72         ; 2        ; display_colune_activator[3] ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 89       ; 73         ; 2        ; matrix_colune_data[6]       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 90       ; 74         ; 2        ; display_colune_data[0]      ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 91       ; 75         ; 2        ; matrix_colune_data[5]       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -400,21 +388,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------+
-; I/O Assignment Warnings                                   ;
-+-----------------------------+-----------------------------+
-; Pin Name                    ; Reason                      ;
-+-----------------------------+-----------------------------+
-; display_colune_activator[0] ; Missing location assignment ;
-+-----------------------------+-----------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                           ; Entity Name       ; Library Name ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------+-------------------+--------------+
-; |batalha_naval                              ; 215 (14)    ; 58           ; 0          ; 37   ; 0            ; 157 (14)     ; 0 (0)             ; 58 (0)           ; 0 (0)           ; 7 (2)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
+; |batalha_naval                              ; 215 (15)    ; 58           ; 0          ; 36   ; 0            ; 157 (15)     ; 0 (0)             ; 58 (0)           ; 0 (0)           ; 7 (2)      ; |batalha_naval                                                                ; batalha_naval     ; work         ;
 ;    |d_flipflop:hits_map_register[0]|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[0]                                ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[10]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[10]                               ; d_flipflop        ; work         ;
 ;    |d_flipflop:hits_map_register[11]|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|d_flipflop:hits_map_register[11]                               ; d_flipflop        ; work         ;
@@ -453,26 +432,26 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |t_flipflop:tff0|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff0               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff1|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff1               ; t_flipflop        ; work         ;
 ;       |t_flipflop:tff2|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:tff2               ; t_flipflop        ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[1]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[4]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
-;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
-;    |demux1x4:yCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
-;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[0]|       ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[1]|       ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[2]|       ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[3]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[4]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[5]|       ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux0               ; demux1x2          ; work         ;
+;       |demux1x2:demux1|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux1               ; demux1x2          ; work         ;
+;    |demux1x4:xCoordDemuxHitsMap_0[6]|       ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[6]                               ; demux1x4          ; work         ;
+;       |demux1x2:demux0|                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|demux1x4:xCoordDemuxHitsMap_0[6]|demux1x2:demux0               ; demux1x2          ; work         ;
 ;    |display_decoder:displayDecoder|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|display_decoder:displayDecoder                                 ; display_decoder   ; work         ;
 ;    |map_decoder_5maps:mapDecoder|           ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 2 (2)      ; |batalha_naval|map_decoder_5maps:mapDecoder                                   ; map_decoder_5maps ; work         ;
 ;    |mux2x1:codeSelect[0]|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 1 (1)      ; |batalha_naval|mux2x1:codeSelect[0]                                           ; mux2x1            ; work         ;
@@ -490,10 +469,10 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |mux2x1:mux2|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[1]|mux2x1:mux2                             ; mux2x1            ; work         ;
 ;    |mux4x1:displayCode0[2]|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]                                         ; mux4x1            ; work         ;
 ;       |mux2x1:mux2|                         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux4x1:displayCode0[2]|mux2x1:mux2                             ; mux2x1            ; work         ;
-;    |mux8x1:xCoordMuxLedRgb|                 ; 37 (0)      ; 0            ; 0          ; 0    ; 0            ; 37 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb                                         ; mux8x1            ; work         ;
-;       |mux2x1:mux_2|                        ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
-;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
-;          |mux2x1:mux2|                      ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:xCoordMuxLedRgb|mux4x1:mux_0|mux2x1:mux2                ; mux2x1            ; work         ;
+;    |mux8x1:yCoordMuxLedRgb|                 ; 36 (0)      ; 0            ; 0          ; 0    ; 0            ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb                                         ; mux8x1            ; work         ;
+;       |mux2x1:mux_2|                        ; 17 (17)     ; 0            ; 0          ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux2x1:mux_2                            ; mux2x1            ; work         ;
+;       |mux4x1:mux_0|                        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux4x1:mux_0                            ; mux4x1            ; work         ;
+;          |mux2x1:mux2|                      ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|mux8x1:yCoordMuxLedRgb|mux4x1:mux_0|mux2x1:mux2                ; mux2x1            ; work         ;
 ;    |register5bitSIPO:registerMatrixDisplay| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay                         ; register5bitSIPO  ; work         ;
 ;       |d_flipflop:d_flipflop_0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0 ; d_flipflop        ; work         ;
 ;       |d_flipflop:d_flipflop_1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_1 ; d_flipflop        ; work         ;
@@ -550,7 +529,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_colune_activator[1] ; Output   ; --            ;
 ; display_colune_activator[2] ; Output   ; --            ;
 ; display_colune_activator[3] ; Output   ; --            ;
-; display_colune_activator[4] ; Output   ; --            ;
 ; ledRgb[0]                   ; Output   ; --            ;
 ; ledRgb[1]                   ; Output   ; --            ;
 ; game_state_code[0]          ; Input    ; (0)           ;
@@ -571,43 +549,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------+-------------+---------+---------------------+--------+----------------------+------------------+
 ; Name                                                  ; Location    ; Fan-Out ; Usage               ; Global ; Global Resource Used ; Global Line Name ;
 +-------------------------------------------------------+-------------+---------+---------------------+--------+----------------------+------------------+
-; andEnableAttack                                       ; LC_X2_Y3_N6 ; 39      ; Async. clear, Clock ; yes    ; Global Clock         ; GCLK2            ;
-; andHitsMapClk[0]                                      ; LC_X4_Y1_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; andHitsMapClk[1]                                      ; LC_X4_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; andHitsMapClk[2]                                      ; LC_X4_Y1_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; andHitsMapClk[3]                                      ; LC_X2_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; andHitsMapClk[4]                                      ; LC_X4_Y1_N3 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; andEnableAttack                                       ; LC_X2_Y3_N1 ; 38      ; Async. clear, Clock ; yes    ; Global Clock         ; GCLK2            ;
+; andHitsMapClk[0]                                      ; LC_X7_Y2_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; andHitsMapClk[1]                                      ; LC_X7_Y2_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; andHitsMapClk[2]                                      ; LC_X7_Y2_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; andHitsMapClk[3]                                      ; LC_X7_Y2_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; andHitsMapClk[4]                                      ; LC_X7_Y2_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
 ; confirmAttack                                         ; PIN_44      ; 4       ; Async. clear        ; no     ; --                   ; --               ;
 ; cpld_clk                                              ; PIN_12      ; 13      ; Clock               ; yes    ; Global Clock         ; GCLK0            ;
-; debouncer:debouncerConfirmAttack|or0                  ; LC_X2_Y1_N1 ; 3       ; Clock               ; yes    ; Global Clock         ; GCLK1            ;
-; demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0 ; LC_X7_Y2_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and1 ; LC_X7_Y3_N0 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1|and0 ; LC_X7_Y3_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux1|and1 ; LC_X7_Y2_N3 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0|and0 ; LC_X7_Y2_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux0|and1 ; LC_X7_Y2_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1|and0 ; LC_X7_Y2_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[1]|demux1x2:demux1|and1 ; LC_X7_Y2_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0 ; LC_X2_Y2_N1 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux0|and1 ; LC_X4_Y2_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1|and0 ; LC_X3_Y2_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[2]|demux1x2:demux1|and1 ; LC_X4_Y2_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0|and0 ; LC_X3_Y3_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux0|and1 ; LC_X5_Y2_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1|and0 ; LC_X3_Y2_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[3]|demux1x2:demux1|and1 ; LC_X5_Y2_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0 ; LC_X3_Y1_N1 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux0|and1 ; LC_X3_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1|and0 ; LC_X4_Y1_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[4]|demux1x2:demux1|and1 ; LC_X3_Y3_N1 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0|and0 ; LC_X3_Y3_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux0|and1 ; LC_X3_Y3_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1|and0 ; LC_X3_Y3_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[5]|demux1x2:demux1|and1 ; LC_X3_Y3_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0|and0 ; LC_X7_Y1_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; demux1x4:yCoordDemuxHitsMap_0[6]|demux1x2:demux0|and1 ; LC_X7_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
-; orEnable                                              ; LC_X4_Y4_N2 ; 39      ; Async. clear        ; no     ; --                   ; --               ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out     ; LC_X3_Y4_N5 ; 10      ; Clock               ; yes    ; Global Clock         ; GCLK3            ;
+; debouncer:debouncerConfirmAttack|or0                  ; LC_X6_Y3_N1 ; 3       ; Clock               ; yes    ; Global Clock         ; GCLK3            ;
+; demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0 ; LC_X5_Y2_N0 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux0|and1 ; LC_X5_Y1_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux1|and0 ; LC_X5_Y2_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[0]|demux1x2:demux1|and1 ; LC_X5_Y1_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux0|and0 ; LC_X7_Y1_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux0|and1 ; LC_X3_Y1_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux1|and0 ; LC_X7_Y1_N3 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[1]|demux1x2:demux1|and1 ; LC_X3_Y1_N9 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux0|and0 ; LC_X4_Y3_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux0|and1 ; LC_X7_Y3_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux1|and0 ; LC_X4_Y3_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[2]|demux1x2:demux1|and1 ; LC_X7_Y3_N0 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux0|and0 ; LC_X5_Y3_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux0|and1 ; LC_X6_Y3_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux1|and0 ; LC_X5_Y3_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[3]|demux1x2:demux1|and1 ; LC_X6_Y3_N3 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux0|and0 ; LC_X4_Y2_N7 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux0|and1 ; LC_X5_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux1|and0 ; LC_X5_Y2_N1 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[4]|demux1x2:demux1|and1 ; LC_X5_Y1_N5 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux0|and0 ; LC_X3_Y1_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux0|and1 ; LC_X3_Y1_N2 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux1|and0 ; LC_X5_Y1_N0 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[5]|demux1x2:demux1|and1 ; LC_X3_Y1_N4 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[6]|demux1x2:demux0|and0 ; LC_X7_Y4_N6 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; demux1x4:xCoordDemuxHitsMap_0[6]|demux1x2:demux0|and1 ; LC_X7_Y4_N8 ; 1       ; Clock               ; no     ; --                   ; --               ;
+; orEnable                                              ; LC_X3_Y4_N6 ; 39      ; Async. clear        ; no     ; --                   ; --               ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out     ; LC_X2_Y4_N9 ; 10      ; Clock               ; yes    ; Global Clock         ; GCLK1            ;
 +-------------------------------------------------------+-------------+---------+---------------------+--------+----------------------+------------------+
 
 
@@ -616,10 +594,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------+-------------+---------+----------------------+------------------+
 ; Name                                              ; Location    ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +---------------------------------------------------+-------------+---------+----------------------+------------------+
-; andEnableAttack                                   ; LC_X2_Y3_N6 ; 39      ; Global Clock         ; GCLK2            ;
+; andEnableAttack                                   ; LC_X2_Y3_N1 ; 38      ; Global Clock         ; GCLK2            ;
 ; cpld_clk                                          ; PIN_12      ; 13      ; Global Clock         ; GCLK0            ;
-; debouncer:debouncerConfirmAttack|or0              ; LC_X2_Y1_N1 ; 3       ; Global Clock         ; GCLK1            ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; LC_X3_Y4_N5 ; 10      ; Global Clock         ; GCLK3            ;
+; debouncer:debouncerConfirmAttack|or0              ; LC_X6_Y3_N1 ; 3       ; Global Clock         ; GCLK3            ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; LC_X2_Y4_N9 ; 10      ; Global Clock         ; GCLK1            ;
 +---------------------------------------------------+-------------+---------+----------------------+------------------+
 
 
@@ -628,13 +606,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 ; Routing Resource Type ; Usage              ;
 +-----------------------+--------------------+
-; C4s                   ; 130 / 784 ( 17 % ) ;
-; Direct links          ; 32 / 888 ( 4 % )   ;
+; C4s                   ; 144 / 784 ( 18 % ) ;
+; Direct links          ; 27 / 888 ( 3 % )   ;
 ; Global clocks         ; 4 / 4 ( 100 % )    ;
-; LAB clocks            ; 11 / 32 ( 34 % )   ;
-; LUT chains            ; 12 / 216 ( 6 % )   ;
-; Local interconnects   ; 326 / 888 ( 37 % ) ;
-; R4s                   ; 169 / 704 ( 24 % ) ;
+; LAB clocks            ; 10 / 32 ( 31 % )   ;
+; LUT chains            ; 16 / 216 ( 7 % )   ;
+; Local interconnects   ; 327 / 888 ( 37 % ) ;
+; R4s                   ; 160 / 704 ( 23 % ) ;
 +-----------------------+--------------------+
 
 
@@ -644,24 +622,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of Logic Elements  (Average = 8.96) ; Number of LABs  (Total = 24) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 0                            ;
-; 2                                          ; 0                            ;
-; 3                                          ; 0                            ;
+; 2                                          ; 1                            ;
+; 3                                          ; 1                            ;
 ; 4                                          ; 0                            ;
-; 5                                          ; 2                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 2                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 7                            ;
-; 10                                         ; 12                           ;
+; 5                                          ; 0                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 2                            ;
+; 9                                          ; 2                            ;
+; 10                                         ; 17                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.29) ; Number of LABs  (Total = 24) ;
+; LAB-wide Signals  (Average = 1.38) ; Number of LABs  (Total = 24) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 17                           ;
+; 1 Async. clear                     ; 19                           ;
 ; 1 Clock                            ; 9                            ;
 ; 2 Async. clears                    ; 1                            ;
 ; 2 Clocks                           ; 4                            ;
@@ -675,17 +653,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 1                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 7                            ;
-; 10                                          ; 10                           ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 15                           ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
@@ -694,17 +672,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.42) ; Number of LABs  (Total = 24) ;
+; Number of Signals Sourced Out  (Average = 4.75) ; Number of LABs  (Total = 24) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 0                            ;
-; 2                                               ; 5                            ;
+; 2                                               ; 4                            ;
 ; 3                                               ; 5                            ;
-; 4                                               ; 6                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 1                            ;
+; 4                                               ; 4                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 2                            ;
 ; 9                                               ; 0                            ;
 ; 10                                              ; 0                            ;
 ; 11                                              ; 0                            ;
@@ -717,27 +695,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.79) ; Number of LABs  (Total = 24) ;
+; Number of Distinct Inputs  (Average = 11.29) ; Number of LABs  (Total = 24) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 6                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 2                            ;
 ; 9                                            ; 3                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 3                            ;
 ; 13                                           ; 3                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 3                            ;
 ; 16                                           ; 1                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -760,7 +737,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; game_state_code[0]   ; 80.8              ;
+; I/O             ; game_state_code[0]   ; 73.6              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -771,9 +748,9 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------------------------+--------------------------------------------------------------------+-------------------+
 ; Source Register                                   ; Destination Register                                               ; Delay Added in ns ;
 +---------------------------------------------------+--------------------------------------------------------------------+-------------------+
-; game_state_code[1]                                ; d_flipflop:hits_map_register[30]|out                               ; 5.825             ;
-; game_state_code[0]                                ; d_flipflop:hits_map_register[30]|out                               ; 5.825             ;
-; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; 1.000             ;
+; game_state_code[1]                                ; d_flipflop:hits_map_register[11]|out                               ; 5.368             ;
+; game_state_code[0]                                ; d_flipflop:hits_map_register[11]|out                               ; 5.368             ;
+; sync_freq_divider:freq_div_1|t_flipflop:tff12|out ; register5bitSIPO:registerMatrixDisplay|d_flipflop:d_flipflop_0|out ; 1.437             ;
 +---------------------------------------------------+--------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
 
@@ -795,7 +772,6 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device EPM570T100C5 is compatible
     Info (176445): Device EPM570T100I5 is compatible
     Info (176445): Device EPM570T100A5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 37 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'batalha_naval.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -811,52 +787,43 @@ Info (186215): Automatically promoted signal "cpld_clk" to use Global clock in P
 Info (186216): Automatically promoted some destinations of signal "sync_freq_divider:freq_div_1|t_flipflop:tff12|out" to use Global clock File: C:/CD/CD_PBL_2/t_flipflop.v Line: 4
     Info (186217): Destination "sync_freq_divider:freq_div_1|t_flipflop:tff12|out" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/t_flipflop.v Line: 4
     Info (186217): Destination "debouncer:debouncerConfirmAttack|or0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/debouncer.v Line: 7
-Info (186216): Automatically promoted some destinations of signal "andEnableAttack" to use Global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
+Info (186216): Automatically promoted some destinations of signal "andEnableAttack" to use Global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
     Info (186217): Destination "mux2x1:codeSelect[1]|or0~1" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/mux2x1.v Line: 12
     Info (186217): Destination "mux2x1:codeSelect[1]|or0~0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/mux2x1.v Line: 12
-    Info (186217): Destination "correctHits[24]~0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 181
+    Info (186217): Destination "correctHits[24]~0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 182
     Info (186217): Destination "mux2x1:codeSelect[0]|and1" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/mux2x1.v Line: 10
-    Info (186217): Destination "correctHits[18]~2" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 181
+    Info (186217): Destination "correctHits[18]~1" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 182
     Info (186217): Destination "mux2x1:codeSelect[0]|or0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/mux2x1.v Line: 12
-    Info (186217): Destination "mux8x1:xCoordMuxLedRgb|mux2x1:mux_2|or0~6" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/mux2x1.v Line: 12
-    Info (186217): Destination "demux1x4:yCoordDemuxHitsMap_0[0]|demux1x2:demux0|and0~2" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/demux1x2.v Line: 8
+    Info (186217): Destination "andRed~0" may be non-global or may not use global clock File: C:/CD/CD_PBL_2/batalha_naval.v Line: 260
 Info (186215): Automatically promoted signal "debouncer:debouncerConfirmAttack|or0" to use Global clock File: C:/CD/CD_PBL_2/debouncer.v Line: 7
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 1 (unused VREF, 3.3V VCCIO, 0 input, 1 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 13 total pin(s) used --  25 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 23 total pin(s) used --  19 pins available
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
-Info (170089): 8e+01 ns of routing delay (approximately 5.2% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
-Info (170195): Router estimated average interconnect usage is 20% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 20% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
+Info (170089): 8e+01 ns of routing delay (approximately 4.8% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
+Info (170195): Router estimated average interconnect usage is 19% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.58 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/CD/CD_PBL_2/output_files/batalha_naval.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5605 megabytes
-    Info: Processing ended: Tue Dec 12 15:42:06 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 5619 megabytes
+    Info: Processing ended: Wed Dec 27 20:55:01 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
